@@ -1,0 +1,128 @@
+# Local/private files
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+
+# Dependency folders
+node_modules/
+venv/
+.venv/
+env/
+myenv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# JavaScript/TypeScript generated files
+.next/
+.nuxt/
+dist/
+build/
+coverage/
+.turbo/
+.vite/
+
+# Logs, caches, and temp output
+logs/
+log/
+*.log
+tmp/
+temp/
+cache/
+Cache/
+.cache/
+*.tmp
+*.bak
+
+# Tool indexes generated during analysis
+graphify-out/
+.gitnexus/
+
+# Local assistant/skill bundles with broken links in this archive
+idea_payment_gateway/.claude/skills/
+idea_payment_gateway/skills/
+
+# Browser profile/cache leftovers kept local only
+a/
+
+# Existing standalone Git repos are pushed/backed up separately.
+alg/
+CG-casestudy/
+cyber_research/
+dcai/
+dv_research/
+Dyple/
+githubstats-readme-master/
+mediverse/
+mri/
+pl/
+aaa/knotwork/knotwork/
+samsung_project/SIC-25-26-Team090/
+z_ai_project/moon-lander-detector/yolov5/
+z_open_source/matrixlib/
+z_projects/ai-code-agent/
+z_projects/algkit/
+z_projects/MedicalImageAI/
+z_projects/texttoimage/
+
+# GitHub normal Git cannot accept files >= 100 MB.
+# These are documented in docs/large-file-manifest.md and should be backed up
+# as GitHub Release assets instead of normal Git objects.
+aaa/mtnn/mri_ann_index.annie.bin
+z_projects/36 thon/New/wind_power_prediction_model_v3.pkl
+z_projects/36 thon/wind_power_prediction_model_optimized_5.pkl
+z_projects/Jarvis/models/vosk-model-hi-0.22/rescore/G.carpa
+zz_projects/xray/processed_data/classification/X_train.npy
+zz_projects/medAI/mri/processed_data/segmentation/X_train.npy
+zz_projects/medAI/mri/processed_data/classification/X_train.npy
+z_projects/36 thon/New folder/wind_power_prediction_model_2.pkl
+z_projects/sol.zip
+z_projects/Jarvis/models/vosk-model-hi-0.22/graph/HCLG.fst
+z_projects/36 thon/New best/wind_power_prediction_model_2.pkl
+zz_projects/xray/processed_data/classification/X_val.npy
+zz_projects/medAI/mri/processed_data/segmentation/X_val.npy
+zz_projects/medAI/mri/processed_data/classification/X_val.npy
+zz_projects/xray/models/fracture_classifier_custom.h5
+z_projects/diagnosis/mri/models/classification_model.keras
+z_projects/py-js-connector-main/backend/models/classification_model.h5
+zz_projects/medAI/mri/models/classification_model.h5
+zzz_project/previous/backup/py-js-connector-main/backend/models/classification_model.h5
+cyber_research/data/TrafficLabelling/Wednesday-workingHours.pcap_ISCX.csv
+cyber_research/data/TrafficLabelling/Monday-WorkingHours.pcap_ISCX.csv
+z_projects/sol/models/distilbert-intent-classifier/model.safetensors
+z_projects/fake-news-detector/backend/models/model.safetensors
+z_projects/sol/models/distilbert-intent-classifier/previous_v3/model.safetensors
+z_projects/diagnosis/mri/models/classification_model_v1.keras
+zz_projects/xray/processed_data/classification/X_test.npy
+cyber_research/data/MachineLearningCVE/Wednesday-workingHours.pcap_ISCX.csv
+zz_projects/medAI/mri/processed_data/segmentation/y_train.npy
+cyber_research/data/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv
+cyber_research/data/TrafficLabelling/Tuesday-WorkingHours.pcap_ISCX.csv
+z_projects/algkit/data/emnist/gzip/emnist-bymerge-train-images-idx3-ubyte.gz
+z_projects/algkit/data/emnist/gzip/emnist-byclass-train-images-idx3-ubyte.gz
+z_projects/Jarvis/models/vosk-model-hi-0.22/rescore/G.fst
+z_projects/site/customer-support-system.zip
+cyber_research/data/MachineLearningCVE/Tuesday-WorkingHours.pcap_ISCX.csv
+z_projects/36 thon/bhadla_solar_synthetic_data_100y.csv
+z_projects/diagnosiss/mri/models/classification_model.keras
+z_projects/36 thon/synthetic_solar_wind_forecasting_100y.csv
+z_projects/py-js-connector-main/backend/models/xray_classification_model.keras
+z_projects/36 thon/synthetic_muppandal_wind_farm_data_100y.csv
+zzz_project/previous/backup/py-js-connector-main/backend/models/xray_classification_model.keras
+zzz_project/previous/backup/py-js-connector-main/backend/models/xray_detection_model.keras
+z_projects/diagnosis/xray/models/xray_fracture_classification_model.keras
+z_projects/diagnosis/xray/models/xray_detection_model.keras
+z_projects/py-js-connector-main/backend/models/xray_detection_model.keras
+cyber_research/data/TrafficLabelling/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
