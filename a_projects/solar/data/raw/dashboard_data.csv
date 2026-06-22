@@ -1,0 +1,9 @@
+ticket_type,customer,priority,time,status,scheduled_date
+"Inverter not functioning","John Smith","high","2h ago","open","N/A"
+"Panel cleaning request","Sarah Johnson","medium","3h ago","open","N/A"
+"System monitoring error","Michael Brown","medium","5h ago","resolved","N/A"
+"Battery backup failure","Emily Davis","high","6h ago","open","N/A"
+"Annual maintenance","Robert Wilson","low","1d ago","scheduled","2025-04-30"
+"Panel replacement","Laura Adams","high","4h ago","resolved","N/A"
+"Emergency repair","David Lee","urgent","1h ago","open","N/A"
+"System checkup","Karen White","low","2d ago","scheduled","2025-05-01"

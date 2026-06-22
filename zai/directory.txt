@@ -1,0 +1,18 @@
+ai-saas-platform/
+│── frontend/              # Next.js App (UI)
+│   ├── app/               # App Router (Next.js 13+)
+│   ├── components/        # UI components
+│   ├── pages/             # API routes (optional)
+│   ├── utils/             # Firebase client setup
+│   └── package.json
+│
+│── backend/               # FastAPI App (API server for ML models)
+│   ├── main.py
+│   ├── routers/
+│   │    ├── image.py      # Stable Diffusion / Img gen
+│   │    ├── resume.py     # Resume Analyzer
+│   │    ├── text.py       # Text generator
+│   │    └── video.py      # Text-to-Video
+│   ├── requirements.txt
+│
+└── README.md

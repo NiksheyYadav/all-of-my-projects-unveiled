@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Lander Detector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Moon Lander Detector</h1>
+        <!-- Authentication Section -->
+        <div id="auth" class="card p-4">
+            <button id="loginBtn" class="btn btn-primary m-2">Login</button>
+            <button id="registerBtn" class="btn btn-secondary m-2">Register</button>
+        </div>
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="card p-4" style="display:none;">
+            <h2>Dashboard</h2>
+            <div class="input-group mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search lunar images (e.g., moon)">
+                <button id="searchBtn" class="btn btn-primary">Search</button>
+            </div>
+            <div id="imageGallery" class="row"></div>
+            <div id="loading" class="text-center" style="display:none;">
+                <div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
+            </div>
+        </div>
+        <!-- Add image upload functionality -->
+        <div id="uploadSection" class="card p-4">
+            <h2>Upload Image for Analysis</h2>
+            <input type="file" id="imageUpload" class="form-control mb-3" accept="image/*">
+            <button id="uploadBtn" class="btn btn-primary">Upload and Analyze</button>
+        </div>
+        <!-- Analysis Section -->
+        <div id="analysis" class="card p-4" style="display:none;">
+            <h2>Analysis Results</h2>
+            <div id="imageContainer" class="position-relative mb-3"></div>
+            <canvas id="statsChart" class="w-100"></canvas>
+            <!-- Add progress bar for real-time updates -->
+            <div id="progressBar" class="progress mb-3" style="display:none;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <button id="downloadBtn" class="btn btn-success mt-3" style="display:none;">Download Results</button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+    <!-- Add event listener for image upload and analysis -->
+    <script>
+        document.getElementById('uploadBtn').addEventListener('click', async () => {
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select an image to upload.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            // Show progress bar
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.display = 'block';
+
+            try {
+                const response = await fetch('/upload-and-analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to analyze image.');
+                }
+
+                const result = await response.json();
+
+                // Hide progress bar
+                progressBar.style.display = 'none';
+
+                // Display analysis results
+                const imageContainer = document.getElementById('imageContainer');
+                imageContainer.innerHTML = `<img src="${result.imageUrl}" class="img-fluid">`;
+
+                const statsChart = document.getElementById('statsChart');
+                const ctx = statsChart.getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: result.labels,
+                        datasets: [{
+                            label: 'Confidence',
+                            data: result.confidences,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                           

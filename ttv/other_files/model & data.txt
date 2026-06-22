@@ -1,0 +1,11 @@
+already trained model
+
+https://huggingface.co/nkp37/OpenVid-1M
+
+
+OpenVid-1M
+https://huggingface.co/datasets/nkp37/OpenVid-1M/tree/main
+
+hdvilla-100M
+https://huggingface.co/datasets/TempoFunk/hdvila-100M
+

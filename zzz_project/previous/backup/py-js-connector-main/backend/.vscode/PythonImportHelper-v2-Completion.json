@@ -1,0 +1,412 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "keras",
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "isExtraImport": true,
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "importPath": "utils.preprocessing",
+        "description": "utils.preprocessing",
+        "isExtraImport": true,
+        "detail": "utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "test_dir",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "test_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_train",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "datagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,\n    fill_mode='nearest'\n)",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_val_test",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "datagen_val_test = ImageDataGenerator(rescale=1./255)\n# Load datasets\ntrain_generator = datagen_train.flow_from_directory(\n    train_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\nval_generator = datagen_val_test.flow_from_directory(\n    val_dir,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "train_generator",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "train_generator = datagen_train.flow_from_directory(\n    train_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\nval_generator = datagen_val_test.flow_from_directory(\n    val_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "val_generator",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "val_generator = datagen_val_test.flow_from_directory(\n    val_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\ntest_generator = datagen_val_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "test_generator = datagen_val_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels\nclass_indices = train_generator.class_indices\nprint(\"Class Labels:\", class_indices)",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "class_indices",
+        "kind": 5,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "class_indices = train_generator.class_indices\nprint(\"Class Labels:\", class_indices)\n# Example usage\nif __name__ == \"__main__\":\n    sample_images, sample_labels = next(train_generator)\n    print(\"Sample batch shape:\", sample_images.shape)\n    print(\"Sample labels shape:\", sample_labels.shape)",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "kind": 2,
+        "importPath": "utils.preprocessing",
+        "description": "utils.preprocessing",
+        "peekOfCode": "def preprocess_image(image_path, target_size=(224, 224), mean=None, std=None):\n    \"\"\"\n    Preprocess an image for model prediction.\n    Args:\n        image_path (str): Path to the image file.\n        target_size (tuple): Target size for resizing (width, height).\n        mean (list or np.array): Mean values for normalization.\n        std (list or np.array): Standard deviation values for normalization.\n    Returns:\n        np.array: Preprocessed image ready for model input.",
+        "detail": "utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_image",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def load_and_preprocess_image(image_path, img_size):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    img = cv2.resize(img, (img_size, img_size))\n    img = img / 255.0\n    img = img.reshape(1, img_size, img_size, 1)\n    return img\ndef predict_classification_xray(model, image_path, categories, img_size=224):\n    processed_img = load_and_preprocess_image(image_path, img_size)",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "predict_classification_xray",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def predict_classification_xray(model, image_path, categories, img_size=224):\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    prediction = model.predict(processed_img)\n    predicted_class_idx = np.argmax(prediction, axis=1)[0]\n    confidence = prediction[0][predicted_class_idx] * 100\n    predicted_class = categories[predicted_class_idx]\n    return predicted_class, confidence, prediction\ndef predict_classification_mri(model, image_path, categories, img_size=224):\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    prediction = model.predict(processed_img)",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "predict_classification_mri",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def predict_classification_mri(model, image_path, categories, img_size=224):\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    prediction = model.predict(processed_img)\n    predicted_class_idx = np.argmax(prediction, axis=1)[0]\n    confidence = prediction[0][predicted_class_idx] * 100\n    predicted_class = categories[predicted_class_idx]\n    return predicted_class, confidence, prediction\ndef predict_segmentation(model, image_path, threshold=0.1, img_size=256):\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    predicted_mask = model.predict(processed_img)",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "predict_segmentation",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def predict_segmentation(model, image_path, threshold=0.1, img_size=256):\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    predicted_mask = model.predict(processed_img)\n    predicted_mask_binary = (predicted_mask > threshold).astype(np.uint8)\n    predicted_mask_binary_2d = np.squeeze(predicted_mask_binary, axis=(0, 3))\n    kernel = np.ones((3, 3), np.uint8)\n    predicted_mask_binary_2d = cv2.dilate(predicted_mask_binary_2d, kernel, iterations=1)\n    predicted_mask_binary_2d = cv2.erode(predicted_mask_binary_2d, kernel, iterations=1)\n    predicted_mask_binary = predicted_mask_binary_2d.reshape(1, img_size, img_size, 1)\n    return np.squeeze(load_and_preprocess_image(image_path, img_size)), np.squeeze(predicted_mask), np.squeeze(predicted_mask_binary)",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "predict_image",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def predict_image(image_path, model, class_names, img_size=224):\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    image = preprocess_image(processed_img)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence\ndef write_to_csv(response, confidence):\n    try:",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "write_to_csv",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def write_to_csv(response, confidence):\n    try:\n        csv_file = \"record.csv\"\n        file_exists = os.path.isfile(csv_file)\n        with open(csv_file, mode='a', newline='', encoding='utf-8') as file:\n            writer = csv.DictWriter(file, fieldnames=[\"user\", \"message\", \"confidence\", \"segmentationImage\"])\n            if not file_exists:\n                writer.writeheader()\n            writer.writerow({\n                \"user\": response[\"user\"],",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "def main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))\n        sys.exit(1)\n    name = sys.argv[1]\n    image_type = sys.argv[2].lower() if len(sys.argv) >= 3 else \"mri\"\n    # Read image data from stdin\n    image_b64 = sys.stdin.read().strip()\n    if image_b64.startswith(\"data:\"):\n        image_b64 = image_b64.split(\",\")[1]",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['TF_CPP_MIN_LOG_LEVEL']",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suppress TensorFlow logging\ndef load_and_preprocess_image(image_path, img_size):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    img = cv2.resize(img, (img_size, img_size))\n    img = img / 255.0\n    img = img.reshape(1, img_size, img_size, 1)\n    return img\ndef predict_classification_xray(model, image_path, categories, img_size=224):",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "MRI_MODEL_PATH",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "MRI_MODEL_PATH = \"./models/mri_model.h5\"\nCLASSIFICATION_MODEL_PATH = \"./models/classification_model.h5\"\nSEGMENTATION_MODEL_PATH = \"./models/segmentation_model.h5\"\nXRAY_MODEL_PATH = \"./models/xray_detection_model.keras\"\nXRAY_CLASSIFICATION_MODEL_PATH = \"./models/xray_classification_model.keras\"\n# XRAY_SEGMENTATION_MODEL_PATH = \"./models/xray_segmentation_model.keras\"\nclass_names_mri = {0: \"Not MRI\", 1: \"MRI\"}\nclass_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "CLASSIFICATION_MODEL_PATH",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "CLASSIFICATION_MODEL_PATH = \"./models/classification_model.h5\"\nSEGMENTATION_MODEL_PATH = \"./models/segmentation_model.h5\"\nXRAY_MODEL_PATH = \"./models/xray_detection_model.keras\"\nXRAY_CLASSIFICATION_MODEL_PATH = \"./models/xray_classification_model.keras\"\n# XRAY_SEGMENTATION_MODEL_PATH = \"./models/xray_segmentation_model.keras\"\nclass_names_mri = {0: \"Not MRI\", 1: \"MRI\"}\nclass_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "SEGMENTATION_MODEL_PATH",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "SEGMENTATION_MODEL_PATH = \"./models/segmentation_model.h5\"\nXRAY_MODEL_PATH = \"./models/xray_detection_model.keras\"\nXRAY_CLASSIFICATION_MODEL_PATH = \"./models/xray_classification_model.keras\"\n# XRAY_SEGMENTATION_MODEL_PATH = \"./models/xray_segmentation_model.keras\"\nclass_names_mri = {0: \"Not MRI\", 1: \"MRI\"}\nclass_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "XRAY_MODEL_PATH",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "XRAY_MODEL_PATH = \"./models/xray_detection_model.keras\"\nXRAY_CLASSIFICATION_MODEL_PATH = \"./models/xray_classification_model.keras\"\n# XRAY_SEGMENTATION_MODEL_PATH = \"./models/xray_segmentation_model.keras\"\nclass_names_mri = {0: \"Not MRI\", 1: \"MRI\"}\nclass_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "XRAY_CLASSIFICATION_MODEL_PATH",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "XRAY_CLASSIFICATION_MODEL_PATH = \"./models/xray_classification_model.keras\"\n# XRAY_SEGMENTATION_MODEL_PATH = \"./models/xray_segmentation_model.keras\"\nclass_names_mri = {0: \"Not MRI\", 1: \"MRI\"}\nclass_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))\n        sys.exit(1)",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "class_names_mri",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "class_names_mri = {0: \"Not MRI\", 1: \"MRI\"}\nclass_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))\n        sys.exit(1)\n    name = sys.argv[1]\n    image_type = sys.argv[2].lower() if len(sys.argv) >= 3 else \"mri\"",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "class_names_mri_type",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "class_names_mri_type = {0: \"Glioma\", 1: \"Meninglioma\", 2: \"No Tumor\", 3: \"Pituitary Tumor\"}\nclass_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))\n        sys.exit(1)\n    name = sys.argv[1]\n    image_type = sys.argv[2].lower() if len(sys.argv) >= 3 else \"mri\"\n    # Read image data from stdin",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "class_names_xray",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "class_names_xray = {0: \"Not XRAY\", 1: \"XRAY\"}\nclass_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))\n        sys.exit(1)\n    name = sys.argv[1]\n    image_type = sys.argv[2].lower() if len(sys.argv) >= 3 else \"mri\"\n    # Read image data from stdin\n    image_b64 = sys.stdin.read().strip()",
+        "detail": "script",
+        "documentation": {}
+    },
+    {
+        "label": "class_names_xray_type",
+        "kind": 5,
+        "importPath": "script",
+        "description": "script",
+        "peekOfCode": "class_names_xray_type = {0: \"Not Fractured\", 1: \"Not Fractured\", 2: \"Fractured\", 3: \"Fractured\"}\ndef main():\n    if len(sys.argv) < 2:\n        print(json.dumps({\"error\": \"Missing name argument\"}))\n        sys.exit(1)\n    name = sys.argv[1]\n    image_type = sys.argv[2].lower() if len(sys.argv) >= 3 else \"mri\"\n    # Read image data from stdin\n    image_b64 = sys.stdin.read().strip()\n    if image_b64.startswith(\"data:\"):",
+        "detail": "script",
+        "documentation": {}
+    }
+]

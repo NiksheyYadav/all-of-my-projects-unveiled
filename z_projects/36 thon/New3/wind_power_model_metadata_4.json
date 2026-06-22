@@ -1,0 +1,15 @@
+{
+    "model_name": "RandomForestRegressor",
+    "hyperparameters": {
+        "n_estimators": 200,
+        "min_samples_split": 10,
+        "min_samples_leaf": 1,
+        "max_depth": 10
+    },
+    "evaluation_metrics": {
+        "MSE": 4305.898614123675,
+        "RMSE": 65.6193463402652,
+        "MAE": 34.278398766500835,
+        "R2": 0.9840738518856986
+    }
+}

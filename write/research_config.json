@@ -1,0 +1,32 @@
+{
+  "api_keys": {
+    "openai": "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",
+    "anthropic": "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",
+    "exa_ai": "7d9c18c9-3249-4b44-9c4c-2280db1c4a04",
+    "serper": "78279dbfeec4c71bacd48e2ff664ef7552932657",
+    "newsapi": "4e43aa2fbccd4b27a59512f590033a66"
+  },
+  "research_settings": {
+    "max_sources": 20,
+    "depth_level": "comprehensive",
+    "min_words_per_source": 200,
+    "include_citations": true,
+    "fact_check": true
+  },
+  "output_settings": {
+    "format": "markdown",
+    "include_toc": true,
+    "include_references": true,
+    "include_summary": true,
+    "citation_style": "APA"
+  },
+  "search_settings": {
+    "search_engines": [
+      "google",
+      "bing",
+      "scholar"
+    ],
+    "time_range": "any",
+    "language": "en"
+  }
+}

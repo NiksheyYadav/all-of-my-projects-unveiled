@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.card {
+    margin: 20px auto;
+    max-width: 800px;
+}
+.image-item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.image-item:hover {
+    transform: scale(1.05);
+}
+.bounding-box {
+    position: absolute;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+.bounding-box::after {
+    content: attr(data-type);
+    color: white;
+    background-color: red;
+    padding: 2px 5px;
+    font-size: 12px;
+}

@@ -1,0 +1,117 @@
+[
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "TensorDataset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "count_parameters",
+        "kind": 2,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "def count_parameters(model):\n    \"\"\"\n    Returns total and trainable parameter counts.\n    \"\"\"\n    total_params = sum(p.numel() for p in model.parameters())\n    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)\n    return total_params, trainable_params\n# -----------------------------\n# Inference Timing Function\n# -----------------------------",
+        "detail": "benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "benchmark_inference",
+        "kind": 2,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "def benchmark_inference(model, test_loader, device='cuda', num_batches=50, include_loader=True):\n    \"\"\"\n    Measures images/sec throughput for the model over test_loader or on synthetic data.\n    If include_loader is False, uses only a single batch from the loader.\n    If include_loader is True, traverses num_batches (or all batches if smaller) of test_loader.\n    \"\"\"\n    model.eval()\n    model.to(device)\n    torch.set_grad_enabled(False)\n    total_images = 0",
+        "detail": "benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "get_gpu_memory",
+        "kind": 2,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "def get_gpu_memory(device_index=0):\n    \"\"\"\n    Returns (total, free, used) memory (in MiB) for the GPU using pynvml.\n    \"\"\"\n    pynvml.nvmlInit()\n    handle = pynvml.nvmlDeviceGetHandleByIndex(device_index)\n    info = pynvml.nvmlDeviceGetMemoryInfo(handle)\n    total = info.total // 1024 // 1024\n    free = info.free // 1024 // 1024\n    used = info.used // 1024 // 1024",
+        "detail": "benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "get_torch_cuda_memory",
+        "kind": 2,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "def get_torch_cuda_memory(device='cuda:0'):\n    \"\"\"\n    Returns (mem_allocated, mem_reserved, max_mem_allocated, max_mem_reserved) in MiB.\n    \"\"\"\n    mem_allocated = torch.cuda.memory_allocated(device) // 1024 // 1024\n    mem_reserved = torch.cuda.memory_reserved(device) // 1024 // 1024\n    max_mem_allocated = torch.cuda.max_memory_allocated(device) // 1024 // 1024\n    max_mem_reserved = torch.cuda.max_memory_reserved(device) // 1024 // 1024\n    return mem_allocated, mem_reserved, max_mem_allocated, max_mem_reserved\n# -----------------------------",
+        "detail": "benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "print_model_summary",
+        "kind": 2,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "def print_model_summary(model, input_size, device='cuda'):\n    \"\"\"\n    Prints per-layer shape and parameter statistics using torchinfo.\n    \"\"\"\n    print(\"=\"*70)\n    print(\"Model Summary (torchinfo):\")\n    summary(model, input_size=input_size, device=device)\n    print(\"=\"*70)\n# -----------------------------\n# Run All Benchmark Metrics",
+        "detail": "benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "run_benchmarks",
+        "kind": 2,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "def run_benchmarks(model, test_loader):\n    # Detect device\n    device = 'cuda' if torch.cuda.is_available() else 'cpu'\n    print(f\"\\n🔎 Device detected: {device}\\n\")\n    # --- Parameter counting ---\n    total_params, trainable_params = count_parameters(model)\n    print(f\"🧮 Total parameters:      {total_params:,}\")\n    print(f\"🧮 Trainable parameters: {trainable_params:,}\\n\")\n    # --- Model summary (optional, only if size known) ---\n    batch = next(iter(test_loader))",
+        "detail": "benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "benchmark",
+        "description": "benchmark",
+        "peekOfCode": "model_path = \"best_ternary_model.pth\"\n# -----------------------------\n# Parameter Counting Functions\n# -----------------------------\ndef count_parameters(model):\n    \"\"\"\n    Returns total and trainable parameter counts.\n    \"\"\"\n    total_params = sum(p.numel() for p in model.parameters())\n    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)",
+        "detail": "benchmark",
+        "documentation": {}
+    }
+]

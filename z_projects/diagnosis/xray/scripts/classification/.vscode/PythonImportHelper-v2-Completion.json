@@ -1,0 +1,457 @@
+[
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "importPath": "utils.preprocessing",
+        "description": "utils.preprocessing",
+        "isExtraImport": true,
+        "detail": "utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet50",
+        "importPath": "tensorflow.keras.applications",
+        "description": "tensorflow.keras.applications",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.applications",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalAveragePooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "LearningRateScheduler",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "mixed_precision",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_fracture_classification_model.keras\"\nif not os.path.exists(model_path):\n    raise FileNotFoundError(f\"Model file not found: {model_path}\")\nmodel = tf.keras.models.load_model(model_path)\n# Dataset path\ntest_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\\test\"\n# if not os.path.exists(test_dir):\n#     raise FileNotFoundError(f\"Test dataset directory not found: {test_dir}\")\n# Image settings\nIMG_SIZE = (224, 224)",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "model = tf.keras.models.load_model(model_path)\n# Dataset path\ntest_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\\test\"\n# if not os.path.exists(test_dir):\n#     raise FileNotFoundError(f\"Test dataset directory not found: {test_dir}\")\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "test_dir",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "test_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\\test\"\n# if not os.path.exists(test_dir):\n#     raise FileNotFoundError(f\"Test dataset directory not found: {test_dir}\")\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_test",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "datagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "test_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels\nCLASS_NAMES = list(test_generator.class_indices.keys())\n# Evaluate model",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "CLASS_NAMES = list(test_generator.class_indices.keys())\n# Evaluate model\ntest_loss, test_accuracy = model.evaluate(test_generator)\nprint(f\"\\nTest Accuracy: {test_accuracy * 100:.2f}%\")\nprint(f\"Test Loss: {test_loss:.4f}\")\n# Predict on test set\ny_pred_probs = model.predict(test_generator)\ny_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_probs",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "y_pred_probs = model.predict(test_generator)\ny_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "y_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_true",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "y_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",\n            xticklabels=CLASS_NAMES, yticklabels=CLASS_NAMES)",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "conf_matrix",
+        "kind": 5,
+        "importPath": "evaluate",
+        "description": "evaluate",
+        "peekOfCode": "conf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",\n            xticklabels=CLASS_NAMES, yticklabels=CLASS_NAMES)\nplt.xlabel(\"Predicted Label\")\nplt.ylabel(\"True Label\")\nplt.title(\"Confusion Matrix\")\nplt.show()",
+        "detail": "evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "predict_image",
+        "kind": 2,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "def predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence\n# Function to save results to CSV\ndef save_results_to_csv(image_path, predicted_class, confidence, csv_filename=\"predictions.csv\"):\n    file_exists = os.path.isfile(csv_filename)",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "save_results_to_csv",
+        "kind": 2,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "def save_results_to_csv(image_path, predicted_class, confidence, csv_filename=\"predictions.csv\"):\n    file_exists = os.path.isfile(csv_filename)\n    with open(csv_filename, mode='a', newline='') as file:\n        writer = csv.writer(file)\n        if not file_exists:\n            writer.writerow([\"Image Path\", \"Prediction\", \"Confidence\"])\n        writer.writerow([image_path, predicted_class, f\"{confidence:.2f}%\"])\n    print(f\"Saved prediction to {csv_filename}\")\n# Main script\nif __name__ == \"__main__\":",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "fracture_model_path",
+        "kind": 5,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "fracture_model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_fracture_classification_model.keras\"\ndetection_model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_detection_model.keras\"\nfracture_model = tf.keras.models.load_model(fracture_model_path)\ndetection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "detection_model_path",
+        "kind": 5,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "detection_model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_detection_model.keras\"\nfracture_model = tf.keras.models.load_model(fracture_model_path)\ndetection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "fracture_model",
+        "kind": 5,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "fracture_model = tf.keras.models.load_model(fracture_model_path)\ndetection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "detection_model",
+        "kind": 5,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "detection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "FRACTURE_CLASS_NAMES",
+        "kind": 5,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "FRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "DETECTION_CLASS_NAMES",
+        "kind": 5,
+        "importPath": "predict",
+        "description": "predict",
+        "peekOfCode": "DETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence\n# Function to save results to CSV",
+        "detail": "predict",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 2,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "def scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a model\ndef create_and_train_model(model_name, num_classes, is_binary=False):\n    # Load ResNet50 model (pretrained on ImageNet)\n    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\n    # Fine-tune: freeze only the first layers, unfreezing last 30 layers instead of 50\n    base_model.trainable = True",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_model",
+        "kind": 2,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "def create_and_train_model(model_name, num_classes, is_binary=False):\n    # Load ResNet50 model (pretrained on ImageNet)\n    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\n    # Fine-tune: freeze only the first layers, unfreezing last 30 layers instead of 50\n    base_model.trainable = True\n    for layer in base_model.layers[:-30]:\n        layer.trainable = False\n    # Custom classification head with extra layer and adjusted dropout rates:\n    x = base_model.output\n    x = GlobalAveragePooling2D()(x)",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_custom_model",
+        "kind": 2,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "def create_and_train_custom_model(model_name, num_classes, is_binary=False):\n    # Load ResNet50 as the base model\n    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\n    base_model.trainable = False  # Freeze the base model\n    # Custom head modifications using ResNet50 as base:\n    x = base_model.output\n    x = GlobalAveragePooling2D()(x)\n    x = Dense(256, activation='relu')(x)\n    x = Dropout(0.4)(x)  # adjusted dropout\n    x = Dense(128, activation='relu')(x)   # extra layer added",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_scratch_model",
+        "kind": 2,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "def create_and_train_scratch_model(model_name, num_classes, is_binary=False):\n    # Build a model from scratch\n    inputs = tf.keras.Input(shape=(224, 224, 3))\n    x = tf.keras.layers.Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)\n    x = tf.keras.layers.BatchNormalization()(x)\n    x = tf.keras.layers.MaxPooling2D()(x)\n    x = tf.keras.layers.Conv2D(64, (3, 3), activation='relu', padding='same')(x)\n    x = tf.keras.layers.BatchNormalization()(x)\n    x = tf.keras.layers.MaxPooling2D()(x)\n    x = tf.keras.layers.Conv2D(128, (3, 3), activation='relu', padding='same')(x)",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile.LOAD_TRUNCATED_IMAGES",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "ImageFile.LOAD_TRUNCATED_IMAGES = True  # Allow loading of truncated images\n# Optional: Enable mixed precision training (uncomment if supported by your GPU)\nmixed_precision.set_global_policy('float32')  # uncommented\n# Dataset paths\nbase_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "BATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_train",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "datagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,\n    fill_mode='nearest'\n)",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_val",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "datagen_val = ImageDataGenerator(rescale=1./255)\n# Load datasets with error handling\ntry:\n    train_generator = datagen_train.flow_from_directory(\n        train_dir,\n        target_size=IMG_SIZE,\n        batch_size=BATCH_SIZE,\n        class_mode='categorical'\n    )\n    val_generator = datagen_val.flow_from_directory(",
+        "detail": "train",
+        "documentation": {}
+    }
+]

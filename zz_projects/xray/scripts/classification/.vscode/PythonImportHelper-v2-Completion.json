@@ -1,0 +1,240 @@
+[
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "layers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "EarlyStopping",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "ModelCheckpoint",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "processed_data_dir",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "processed_data_dir = r\"processed_data/classification\"\nmodel_save_path = r\"models/fracture_classifier_custom.h5\"\n# Image parameters\nimg_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "model_save_path",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "model_save_path = r\"models/fracture_classifier_custom.h5\"\n# Image parameters\nimg_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "img_height",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "img_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "img_width",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "img_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "num_channels",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "num_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "batch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_train",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "x_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "y_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_val",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "x_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_val",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "y_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:\n    raise ValueError(\"Test data is empty. Please check the preprocessing step.\")",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_test",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "x_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:\n    raise ValueError(\"Test data is empty. Please check the preprocessing step.\")\n# Shuffle training data",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_test",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "y_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:\n    raise ValueError(\"Test data is empty. Please check the preprocessing step.\")\n# Shuffle training data\nshuffle_indices = np.random.permutation(len(x_train))",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle_indices",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "shuffle_indices = np.random.permutation(len(x_train))\nx_train = x_train[shuffle_indices]\ny_train = y_train[shuffle_indices]\n# Verify shapes\nprint(f\"Training data shape: {x_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {x_val.shape}, Labels shape: {y_val.shape}\")\nprint(f\"Test data shape: {x_test.shape}, Labels shape: {y_test.shape}\")\n# Build a custom CNN from scratch\nmodel = models.Sequential([\n    # First Convolutional Block",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_train",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "x_train = x_train[shuffle_indices]\ny_train = y_train[shuffle_indices]\n# Verify shapes\nprint(f\"Training data shape: {x_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {x_val.shape}, Labels shape: {y_val.shape}\")\nprint(f\"Test data shape: {x_test.shape}, Labels shape: {y_test.shape}\")\n# Build a custom CNN from scratch\nmodel = models.Sequential([\n    # First Convolutional Block\n    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels), padding='same'),",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "y_train = y_train[shuffle_indices]\n# Verify shapes\nprint(f\"Training data shape: {x_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {x_val.shape}, Labels shape: {y_val.shape}\")\nprint(f\"Test data shape: {x_test.shape}, Labels shape: {y_test.shape}\")\n# Build a custom CNN from scratch\nmodel = models.Sequential([\n    # First Convolutional Block\n    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels), padding='same'),\n    layers.BatchNormalization(),",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "model = models.Sequential([\n    # First Convolutional Block\n    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels), padding='same'),\n    layers.BatchNormalization(),\n    layers.MaxPooling2D((2, 2)),\n    # Second Convolutional Block\n    layers.Conv2D(64, (3, 3), activation='relu', padding='same'),\n    layers.BatchNormalization(),\n    layers.MaxPooling2D((2, 2)),\n    # Third Convolutional Block",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "callbacks",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "callbacks = [\n    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, verbose=1, min_lr=1e-6),\n    EarlyStopping(monitor='val_loss', patience=10, verbose=1, restore_best_weights=True),\n    ModelCheckpoint(filepath=model_save_path, monitor='val_accuracy', save_best_only=True, verbose=1)\n]\n# Train the model with callbacks\nhistory = model.fit(\n    x_train,\n    y_train,\n    batch_size=batch_size,",
+        "detail": "classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "classification_train",
+        "description": "classification_train",
+        "peekOfCode": "history = model.fit(\n    x_train,\n    y_train,\n    batch_size=batch_size,\n    epochs=150,  # Increased epochs for a custom model\n    validation_data=(x_val, y_val),\n    callbacks=callbacks\n)\n# Evaluate on test set\ntest_loss, test_accuracy = model.evaluate(x_test, y_test)",
+        "detail": "classification_train",
+        "documentation": {}
+    }
+]

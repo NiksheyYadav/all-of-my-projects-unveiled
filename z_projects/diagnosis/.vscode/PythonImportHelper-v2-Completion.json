@@ -1,0 +1,1945 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "importPath": "utils.preprocessing",
+        "description": "utils.preprocessing",
+        "isExtraImport": true,
+        "detail": "utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "importPath": "utils.preprocessing",
+        "description": "utils.preprocessing",
+        "isExtraImport": true,
+        "detail": "utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet50",
+        "importPath": "tensorflow.keras.applications",
+        "description": "tensorflow.keras.applications",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.applications",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet50",
+        "importPath": "tensorflow.keras.applications",
+        "description": "tensorflow.keras.applications",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.applications",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Flatten",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalAveragePooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalAveragePooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "l2",
+        "importPath": "tensorflow.keras.regularizers",
+        "description": "tensorflow.keras.regularizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.regularizers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "ExponentialDecay",
+        "importPath": "tensorflow.keras.optimizers.schedules",
+        "description": "tensorflow.keras.optimizers.schedules",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers.schedules",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "LoginManager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDraw",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "LearningRateScheduler",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "mixed_precision",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "model_path = r\"C:\\z_projects\\diagnosis\\mri\\models\\classification_model.keras\"\nmodel = tf.keras.models.load_model(model_path)\n# Dataset path\ntest_dir = r\"C:\\z_projects\\diagnosis\\mri\\dataset\\classification\\test\"\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "model = tf.keras.models.load_model(model_path)\n# Dataset path\ntest_dir = r\"C:\\z_projects\\diagnosis\\mri\\dataset\\classification\\test\"\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "test_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "test_dir = r\"C:\\z_projects\\diagnosis\\mri\\dataset\\classification\\test\"\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_test",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "datagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "test_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels\nCLASS_NAMES = list(test_generator.class_indices.keys())\n# Evaluate model",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "CLASS_NAMES = list(test_generator.class_indices.keys())\n# Evaluate model\ntest_loss, test_accuracy = model.evaluate(test_generator)\nprint(f\"\\nTest Accuracy: {test_accuracy * 100:.2f}%\")\nprint(f\"Test Loss: {test_loss:.4f}\")\n# Predict on test set\ny_pred_probs = model.predict(test_generator)\ny_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_probs",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "y_pred_probs = model.predict(test_generator)\ny_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "y_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_true",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "y_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",\n            xticklabels=CLASS_NAMES, yticklabels=CLASS_NAMES)",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "conf_matrix",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.evaluate",
+        "description": "mri.scripts.classification.evaluate",
+        "peekOfCode": "conf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",\n            xticklabels=CLASS_NAMES, yticklabels=CLASS_NAMES)\nplt.xlabel(\"Predicted Label\")\nplt.ylabel(\"True Label\")\nplt.title(\"Confusion Matrix\")\nplt.show()",
+        "detail": "mri.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "predict_image",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.predict",
+        "description": "mri.scripts.classification.predict",
+        "peekOfCode": "def predict_image(image_path):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {CLASS_NAMES[predicted_class]} ({confidence:.2f}%)\")\n    return CLASS_NAMES[predicted_class], confidence\n# Function to save results to CSV\ndef save_results_to_csv(image_path, predicted_class, confidence, csv_filename=\"predictions.csv\"):\n    file_exists = os.path.isfile(csv_filename)",
+        "detail": "mri.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "save_results_to_csv",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.predict",
+        "description": "mri.scripts.classification.predict",
+        "peekOfCode": "def save_results_to_csv(image_path, predicted_class, confidence, csv_filename=\"predictions.csv\"):\n    file_exists = os.path.isfile(csv_filename)\n    with open(csv_filename, mode='a', newline='') as file:\n        writer = csv.writer(file)\n        if not file_exists:\n            writer.writerow([\"Image Path\", \"Prediction\", \"Confidence\"])\n        writer.writerow([image_path, predicted_class, f\"{confidence:.2f}%\"])\n    print(f\"Saved prediction to {csv_filename}\")\n# Main script\nif __name__ == \"__main__\":",
+        "detail": "mri.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.predict",
+        "description": "mri.scripts.classification.predict",
+        "peekOfCode": "model_path = r\"C:\\z_projects\\diagnosis\\mri\\models\\classification_model.keras\"\nmodel = tf.keras.models.load_model(model_path)\n# Define class labels (Make sure these match your training labels)\nCLASS_NAMES = [\"Glioma\", \"Meningioma\", \"No Tumor\", \"Pituitary\"]\n# Function to make a prediction\ndef predict_image(image_path):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage",
+        "detail": "mri.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.predict",
+        "description": "mri.scripts.classification.predict",
+        "peekOfCode": "model = tf.keras.models.load_model(model_path)\n# Define class labels (Make sure these match your training labels)\nCLASS_NAMES = [\"Glioma\", \"Meningioma\", \"No Tumor\", \"Pituitary\"]\n# Function to make a prediction\ndef predict_image(image_path):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {CLASS_NAMES[predicted_class]} ({confidence:.2f}%)\")",
+        "detail": "mri.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.predict",
+        "description": "mri.scripts.classification.predict",
+        "peekOfCode": "CLASS_NAMES = [\"Glioma\", \"Meningioma\", \"No Tumor\", \"Pituitary\"]\n# Function to make a prediction\ndef predict_image(image_path):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {CLASS_NAMES[predicted_class]} ({confidence:.2f}%)\")\n    return CLASS_NAMES[predicted_class], confidence\n# Function to save results to CSV",
+        "detail": "mri.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"OMP_NUM_THREADS\"]",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "os.environ[\"OMP_NUM_THREADS\"] = \"16\"\ntf.config.threading.set_inter_op_parallelism_threads(16)\ntf.config.threading.set_intra_op_parallelism_threads(16)\nprint(\"Using 16 logical processors\")\n# Dataset paths\nbase_dir = r\"C:\\z_projects\\diagnosis\\mri\\dataset\\classification\"\ntrain_dir = os.path.join(base_dir, 'training')\nval_dir = os.path.join(base_dir, 'validation')\n# Image settings\nIMG_SIZE = (224, 224)",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\mri\\dataset\\classification\"\ntrain_dir = os.path.join(base_dir, 'training')\nval_dir = os.path.join(base_dir, 'validation')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=30,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'training')\nval_dir = os.path.join(base_dir, 'validation')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=30,\n    width_shift_range=0.2,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'validation')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=30,\n    width_shift_range=0.2,\n    height_shift_range=0.2,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=30,\n    width_shift_range=0.2,\n    height_shift_range=0.2,\n    shear_range=0.2,\n    zoom_range=0.3,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data augmentation\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=30,\n    width_shift_range=0.2,\n    height_shift_range=0.2,\n    shear_range=0.2,\n    zoom_range=0.3,\n    horizontal_flip=True,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_train",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "datagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=30,\n    width_shift_range=0.2,\n    height_shift_range=0.2,\n    shear_range=0.2,\n    zoom_range=0.3,\n    horizontal_flip=True,\n    vertical_flip=True,\n    brightness_range=[0.8, 1.2],  # Adjust brightness",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_val",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "datagen_val = ImageDataGenerator(rescale=1./255)\n# Load datasets\ntrain_generator = datagen_train.flow_from_directory(\n    train_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='categorical'\n)\nval_generator = datagen_val.flow_from_directory(\n    val_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='categorical'\n)\n# Load ResNet50 model (pretrained on ImageNet)\nbase_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "train_generator",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "train_generator = datagen_train.flow_from_directory(\n    train_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='categorical'\n)\nval_generator = datagen_val.flow_from_directory(\n    val_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='categorical'\n)\n# Load ResNet50 model (pretrained on ImageNet)\nbase_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\nbase_model.trainable = False  # Freeze all layers initially\n# Add custom classification head",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "val_generator",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "val_generator = datagen_val.flow_from_directory(\n    val_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='categorical'\n)\n# Load ResNet50 model (pretrained on ImageNet)\nbase_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\nbase_model.trainable = False  # Freeze all layers initially\n# Add custom classification head\nx = base_model.output\nx = GlobalAveragePooling2D()(x)\nx = Dense(512, activation='relu', kernel_regularizer=l2(1e-4))(x)",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_model",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\nbase_model.trainable = False  # Freeze all layers initially\n# Add custom classification head\nx = base_model.output\nx = GlobalAveragePooling2D()(x)\nx = Dense(512, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)  # Increase dropout\nx = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_model.trainable",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "base_model.trainable = False  # Freeze all layers initially\n# Add custom classification head\nx = base_model.output\nx = GlobalAveragePooling2D()(x)\nx = Dense(512, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)  # Increase dropout\nx = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "x = base_model.output\nx = GlobalAveragePooling2D()(x)\nx = Dense(512, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)  # Increase dropout\nx = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "x = GlobalAveragePooling2D()(x)\nx = Dense(512, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)  # Increase dropout\nx = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "x = Dense(512, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)  # Increase dropout\nx = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "x = Dropout(0.4)(x)  # Increase dropout\nx = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "x = Dense(256, activation='relu', kernel_regularizer=l2(1e-4))(x)\nx = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR\n    decay_steps=STEPS_PER_EPOCH * 5,  # Faster decay",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "x = Dropout(0.4)(x)\noutput_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR\n    decay_steps=STEPS_PER_EPOCH * 5,  # Faster decay\n    decay_rate=0.90,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "output_layer",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "output_layer = Dense(train_generator.num_classes, activation='softmax')(x)\n# Create final model\nmodel = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR\n    decay_steps=STEPS_PER_EPOCH * 5,  # Faster decay\n    decay_rate=0.90,\n    staircase=True",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "model = Model(inputs=base_model.input, outputs=output_layer)\n# Learning rate scheduler\nSTEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR\n    decay_steps=STEPS_PER_EPOCH * 5,  # Faster decay\n    decay_rate=0.90,\n    staircase=True\n)\n# Define AdamW optimizer",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "STEPS_PER_EPOCH",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "STEPS_PER_EPOCH = len(train_generator)\nlr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR\n    decay_steps=STEPS_PER_EPOCH * 5,  # Faster decay\n    decay_rate=0.90,\n    staircase=True\n)\n# Define AdamW optimizer\noptimizer = AdamW(\n    learning_rate=lr_scheduler,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "lr_scheduler",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "lr_scheduler = ExponentialDecay(\n    initial_learning_rate=3e-4,  # Increased initial LR\n    decay_steps=STEPS_PER_EPOCH * 5,  # Faster decay\n    decay_rate=0.90,\n    staircase=True\n)\n# Define AdamW optimizer\noptimizer = AdamW(\n    learning_rate=lr_scheduler,\n    weight_decay=3e-4,  # Adjusted weight decay",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "optimizer = AdamW(\n    learning_rate=lr_scheduler,\n    weight_decay=3e-4,  # Adjusted weight decay\n    clipnorm=1.0,\n    amsgrad=True,\n    epsilon=1e-7\n)\n# Compile model\nmodel.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])\n# Callbacks",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "reduce_lr",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, verbose=1)\n# Train model\nEPOCHS = 100\nhistory = model.fit(\n    train_generator,\n    epochs=EPOCHS,\n    validation_data=val_generator,\n    callbacks=[reduce_lr]\n)\n# Fine-tune by unfreezing some layers after initial training",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "EPOCHS",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "EPOCHS = 100\nhistory = model.fit(\n    train_generator,\n    epochs=EPOCHS,\n    validation_data=val_generator,\n    callbacks=[reduce_lr]\n)\n# Fine-tune by unfreezing some layers after initial training\nbase_model.trainable = True\nfor layer in base_model.layers[:100]:  # Keep first 100 layers frozen",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "history = model.fit(\n    train_generator,\n    epochs=EPOCHS,\n    validation_data=val_generator,\n    callbacks=[reduce_lr]\n)\n# Fine-tune by unfreezing some layers after initial training\nbase_model.trainable = True\nfor layer in base_model.layers[:100]:  # Keep first 100 layers frozen\n    layer.trainable = False",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_model.trainable",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "base_model.trainable = True\nfor layer in base_model.layers[:100]:  # Keep first 100 layers frozen\n    layer.trainable = False\n# Lower learning rate for fine-tuning\nfine_tune_lr = 1e-5\nmodel.compile(optimizer=AdamW(learning_rate=fine_tune_lr, weight_decay=1e-4), loss='categorical_crossentropy', metrics=['accuracy'])\n# Train again for fine-tuning\nfine_tune_epochs = 30\nhistory_fine = model.fit(\n    train_generator,",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "fine_tune_lr",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "fine_tune_lr = 1e-5\nmodel.compile(optimizer=AdamW(learning_rate=fine_tune_lr, weight_decay=1e-4), loss='categorical_crossentropy', metrics=['accuracy'])\n# Train again for fine-tuning\nfine_tune_epochs = 30\nhistory_fine = model.fit(\n    train_generator,\n    epochs=fine_tune_epochs,\n    validation_data=val_generator\n)\n# Define model path with versioning",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "fine_tune_epochs",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "fine_tune_epochs = 30\nhistory_fine = model.fit(\n    train_generator,\n    epochs=fine_tune_epochs,\n    validation_data=val_generator\n)\n# Define model path with versioning\nbase_model_path = r\"C:\\z_projects\\diagnosis\\mri\\models\\classification_model\"\nversion = 1\nwhile os.path.exists(f\"{base_model_path}_v{version}.keras\"):",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "history_fine",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "history_fine = model.fit(\n    train_generator,\n    epochs=fine_tune_epochs,\n    validation_data=val_generator\n)\n# Define model path with versioning\nbase_model_path = r\"C:\\z_projects\\diagnosis\\mri\\models\\classification_model\"\nversion = 1\nwhile os.path.exists(f\"{base_model_path}_v{version}.keras\"):\n    version += 1",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_model_path",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "base_model_path = r\"C:\\z_projects\\diagnosis\\mri\\models\\classification_model\"\nversion = 1\nwhile os.path.exists(f\"{base_model_path}_v{version}.keras\"):\n    version += 1\nmodel_path = f\"{base_model_path}_v{version}.keras\"\n# Save model\nmodel.save(model_path)\nprint(f\"Model training complete! Saved as {model_path}\")\n# Plot training & validation accuracy/loss\nplt.figure(figsize=(12, 5))",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "version = 1\nwhile os.path.exists(f\"{base_model_path}_v{version}.keras\"):\n    version += 1\nmodel_path = f\"{base_model_path}_v{version}.keras\"\n# Save model\nmodel.save(model_path)\nprint(f\"Model training complete! Saved as {model_path}\")\n# Plot training & validation accuracy/loss\nplt.figure(figsize=(12, 5))\n# Accuracy Plot",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.train",
+        "description": "mri.scripts.classification.train",
+        "peekOfCode": "model_path = f\"{base_model_path}_v{version}.keras\"\n# Save model\nmodel.save(model_path)\nprint(f\"Model training complete! Saved as {model_path}\")\n# Plot training & validation accuracy/loss\nplt.figure(figsize=(12, 5))\n# Accuracy Plot\nplt.subplot(1, 2, 1)\nplt.plot(history.history['accuracy'], label='Train Accuracy')\nplt.plot(history.history['val_accuracy'], label='Validation Accuracy')",
+        "detail": "mri.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\mri\\dataset\\classification\"\ntrain_dir = os.path.join(base_dir, 'training')\nval_dir = os.path.join(base_dir, 'validation')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'training')\nval_dir = os.path.join(base_dir, 'validation')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values\n    rotation_range=20,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'validation')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values\n    rotation_range=20,\n    width_shift_range=0.1,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "test_dir",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "test_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_train",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "datagen_train = ImageDataGenerator(\n    rescale=1./255,  # Normalize pixel values\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,\n    fill_mode='nearest'\n)",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_val_test",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "datagen_val_test = ImageDataGenerator(rescale=1./255)\n# Load datasets\ntrain_generator = datagen_train.flow_from_directory(\n    train_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'  # Since we have multiple classes\n)\nval_generator = datagen_val_test.flow_from_directory(\n    val_dir,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "train_generator",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "train_generator = datagen_train.flow_from_directory(\n    train_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'  # Since we have multiple classes\n)\nval_generator = datagen_val_test.flow_from_directory(\n    val_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "val_generator",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "val_generator = datagen_val_test.flow_from_directory(\n    val_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\ntest_generator = datagen_val_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "test_generator = datagen_val_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels\nclass_indices = train_generator.class_indices\nprint(\"Class Labels:\", class_indices)",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "class_indices",
+        "kind": 5,
+        "importPath": "mri.utils.data_loader",
+        "description": "mri.utils.data_loader",
+        "peekOfCode": "class_indices = train_generator.class_indices\nprint(\"Class Labels:\", class_indices)\n# Example usage\nif __name__ == \"__main__\":\n    sample_images, sample_labels = next(train_generator)\n    print(\"Sample batch shape:\", sample_images.shape)",
+        "detail": "mri.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "kind": 2,
+        "importPath": "mri.utils.preprocessing",
+        "description": "mri.utils.preprocessing",
+        "peekOfCode": "def preprocess_image(image_path):\n    img = cv2.imread(image_path)  # Read the image\n    if img is None:\n        raise ValueError(f\"Error loading image: {image_path}\")\n    img = cv2.resize(img, (224, 224))  # Resize to model input size\n    img = img / 255.0  # Normalize\n    img = np.expand_dims(img, axis=0)  # Expand dimensions for model input\n    return img",
+        "detail": "mri.utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "load_user",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))\n@app.route('/')\ndef home():\n    return render_template('home.html')\n@app.route('/dashboard')\ndef dashboard():\n    return render_template('dashboard.html')\n@app.route('/upload')",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def home():\n    return render_template('home.html')\n@app.route('/dashboard')\ndef dashboard():\n    return render_template('dashboard.html')\n@app.route('/upload')\ndef upload():\n    return render_template('upload.html')\n@app.route('/history')\ndef history():",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def dashboard():\n    return render_template('dashboard.html')\n@app.route('/upload')\ndef upload():\n    return render_template('upload.html')\n@app.route('/history')\ndef history():\n    return render_template('history.html')\n@app.route('/report')\ndef report():",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "upload",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def upload():\n    return render_template('upload.html')\n@app.route('/history')\ndef history():\n    return render_template('history.html')\n@app.route('/report')\ndef report():\n    return render_template('report.html')\n@app.route('/customize')\ndef customize():",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def history():\n    return render_template('history.html')\n@app.route('/report')\ndef report():\n    return render_template('report.html')\n@app.route('/customize')\ndef customize():\n    return render_template('customize.html')\ndef create_db():\n    with app.app_context():",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "report",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def report():\n    return render_template('report.html')\n@app.route('/customize')\ndef customize():\n    return render_template('customize.html')\ndef create_db():\n    with app.app_context():\n        db.create_all()\nif __name__ == '__main__':\n    from auth import auth as auth_blueprint",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "customize",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def customize():\n    return render_template('customize.html')\ndef create_db():\n    with app.app_context():\n        db.create_all()\nif __name__ == '__main__':\n    from auth import auth as auth_blueprint\n    app.register_blueprint(auth_blueprint)\n    app.run(debug=True)",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 2,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "def create_db():\n    with app.app_context():\n        db.create_all()\nif __name__ == '__main__':\n    from auth import auth as auth_blueprint\n    app.register_blueprint(auth_blueprint)\n    app.run(debug=True)",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = 'your_secret_key'\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)  # Initialize db with app\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\n@login_manager.user_loader\ndef load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'your_secret_key'\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)  # Initialize db with app\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\n@login_manager.user_loader\ndef load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))\n@app.route('/')",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)  # Initialize db with app\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\n@login_manager.user_loader\ndef load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))\n@app.route('/')\ndef home():",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "db = SQLAlchemy(app)  # Initialize db with app\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\n@login_manager.user_loader\ndef load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))\n@app.route('/')\ndef home():\n    return render_template('home.html')",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "login_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\n@login_manager.user_loader\ndef load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))\n@app.route('/')\ndef home():\n    return render_template('home.html')\n@app.route('/dashboard')",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager.login_view",
+        "kind": 5,
+        "importPath": "my-medical-app.app",
+        "description": "my-medical-app.app",
+        "peekOfCode": "login_manager.login_view = 'login'\n@login_manager.user_loader\ndef load_user(user_id):\n    from models import User\n    return User.query.get(int(user_id))\n@app.route('/')\ndef home():\n    return render_template('home.html')\n@app.route('/dashboard')\ndef dashboard():",
+        "detail": "my-medical-app.app",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "my-medical-app.auth",
+        "description": "my-medical-app.auth",
+        "peekOfCode": "def login():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        password = request.form.get('password')\n        from models import User  # Local import to avoid circular import\n        user = User.query.filter_by(email=email).first()\n        if user and check_password_hash(user.password, password):\n            login_user(user)\n            return redirect(url_for('dashboard'))\n        else:",
+        "detail": "my-medical-app.auth",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "kind": 2,
+        "importPath": "my-medical-app.auth",
+        "description": "my-medical-app.auth",
+        "peekOfCode": "def signup():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        password = request.form.get('password')\n        hashed_password = generate_password_hash(password, method='pbkdf2:sha256')  # Correct hash method\n        from models import User  # Local import to avoid circular import\n        new_user = User(email=email, password=hashed_password)\n        db.session.add(new_user)\n        db.session.commit()\n        login_user(new_user)",
+        "detail": "my-medical-app.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "my-medical-app.auth",
+        "description": "my-medical-app.auth",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for('home'))\n@auth.route('/profile')\n@login_required\ndef profile():\n    return render_template('profile.html')",
+        "detail": "my-medical-app.auth",
+        "documentation": {}
+    },
+    {
+        "label": "profile",
+        "kind": 2,
+        "importPath": "my-medical-app.auth",
+        "description": "my-medical-app.auth",
+        "peekOfCode": "def profile():\n    return render_template('profile.html')",
+        "detail": "my-medical-app.auth",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "my-medical-app.auth",
+        "description": "my-medical-app.auth",
+        "peekOfCode": "auth = Blueprint('auth', __name__)\n@auth.route('/login', methods=['GET', 'POST'])\ndef login():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        password = request.form.get('password')\n        from models import User  # Local import to avoid circular import\n        user = User.query.filter_by(email=email).first()\n        if user and check_password_hash(user.password, password):\n            login_user(user)",
+        "detail": "my-medical-app.auth",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "my-medical-app.models",
+        "description": "my-medical-app.models",
+        "peekOfCode": "class User(UserMixin, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    email = db.Column(db.String(150), unique=True, nullable=False)\n    password = db.Column(db.String(150), nullable=False)\n    # Add other fields as needed",
+        "detail": "my-medical-app.models",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "kind": 2,
+        "importPath": "my-medical-app.utils",
+        "description": "my-medical-app.utils",
+        "peekOfCode": "def preprocess_image(image_path):\n    img = Image.open(image_path)\n    if img.mode == 'P':\n        img = img.convert('RGBA')\n    img = img.resize((224, 224))\n    img = np.array(img) / 255.0\n    img = np.expand_dims(img, axis=0)\n    return img",
+        "detail": "my-medical-app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_fracture_classification_model.keras\"\nif not os.path.exists(model_path):\n    raise FileNotFoundError(f\"Model file not found: {model_path}\")\nmodel = tf.keras.models.load_model(model_path)\n# Dataset path\ntest_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\\test\"\n# if not os.path.exists(test_dir):\n#     raise FileNotFoundError(f\"Test dataset directory not found: {test_dir}\")\n# Image settings\nIMG_SIZE = (224, 224)",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "model = tf.keras.models.load_model(model_path)\n# Dataset path\ntest_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\\test\"\n# if not os.path.exists(test_dir):\n#     raise FileNotFoundError(f\"Test dataset directory not found: {test_dir}\")\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "test_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "test_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\\test\"\n# if not os.path.exists(test_dir):\n#     raise FileNotFoundError(f\"Test dataset directory not found: {test_dir}\")\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data preprocessing (rescaling only, no augmentation)\ndatagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_test",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "datagen_test = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)\n# Load the test dataset\ntest_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "test_generator = datagen_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels\nCLASS_NAMES = list(test_generator.class_indices.keys())\n# Evaluate model",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "CLASS_NAMES",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "CLASS_NAMES = list(test_generator.class_indices.keys())\n# Evaluate model\ntest_loss, test_accuracy = model.evaluate(test_generator)\nprint(f\"\\nTest Accuracy: {test_accuracy * 100:.2f}%\")\nprint(f\"Test Loss: {test_loss:.4f}\")\n# Predict on test set\ny_pred_probs = model.predict(test_generator)\ny_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_probs",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "y_pred_probs = model.predict(test_generator)\ny_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "y_pred = np.argmax(y_pred_probs, axis=1)  # Convert probabilities to class indices\ny_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "y_true",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "y_true = test_generator.classes  # True class labels\n# Generate classification report\nprint(\"\\nClassification Report:\")\nprint(classification_report(y_true, y_pred, target_names=CLASS_NAMES))\n# Confusion Matrix\nconf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",\n            xticklabels=CLASS_NAMES, yticklabels=CLASS_NAMES)",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "conf_matrix",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.evaluate",
+        "description": "xray.scripts.classification.evaluate",
+        "peekOfCode": "conf_matrix = confusion_matrix(y_true, y_pred)\n# Plot Confusion Matrix\nplt.figure(figsize=(8, 6))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\",\n            xticklabels=CLASS_NAMES, yticklabels=CLASS_NAMES)\nplt.xlabel(\"Predicted Label\")\nplt.ylabel(\"True Label\")\nplt.title(\"Confusion Matrix\")\nplt.show()",
+        "detail": "xray.scripts.classification.evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "predict_image",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "def predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence\n# Function to save results to CSV\ndef save_results_to_csv(image_path, predicted_class, confidence, csv_filename=\"predictions.csv\"):\n    file_exists = os.path.isfile(csv_filename)",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "save_results_to_csv",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "def save_results_to_csv(image_path, predicted_class, confidence, csv_filename=\"predictions.csv\"):\n    file_exists = os.path.isfile(csv_filename)\n    with open(csv_filename, mode='a', newline='') as file:\n        writer = csv.writer(file)\n        if not file_exists:\n            writer.writerow([\"Image Path\", \"Prediction\", \"Confidence\"])\n        writer.writerow([image_path, predicted_class, f\"{confidence:.2f}%\"])\n    print(f\"Saved prediction to {csv_filename}\")\n# Main script\nif __name__ == \"__main__\":",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "fracture_model_path",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "fracture_model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_fracture_classification_model.keras\"\ndetection_model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_detection_model.keras\"\nfracture_model = tf.keras.models.load_model(fracture_model_path)\ndetection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "detection_model_path",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "detection_model_path = r\"C:\\z_projects\\diagnosis\\xray\\models\\xray_detection_model.keras\"\nfracture_model = tf.keras.models.load_model(fracture_model_path)\ndetection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "fracture_model",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "fracture_model = tf.keras.models.load_model(fracture_model_path)\ndetection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "detection_model",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "detection_model = tf.keras.models.load_model(detection_model_path)\n# Define class labels\nFRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "FRACTURE_CLASS_NAMES",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "FRACTURE_CLASS_NAMES = [\"No Fracture\", \"Fracture\"]\nDETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "DETECTION_CLASS_NAMES",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.predict",
+        "description": "xray.scripts.classification.predict",
+        "peekOfCode": "DETECTION_CLASS_NAMES = [\"Not X-ray\", \"X-ray\"]\n# Function to make a prediction\ndef predict_image(image_path, model, class_names):\n    image = preprocess_image(image_path)\n    prediction = model.predict(image)[0]  # Get prediction\n    predicted_class = np.argmax(prediction)  # Get class index\n    confidence = prediction[predicted_class] * 100  # Convert to percentage\n    print(f\"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)\")\n    return class_names[predicted_class], confidence\n# Function to save results to CSV",
+        "detail": "xray.scripts.classification.predict",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "def scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a model\ndef create_and_train_model(model_name, num_classes, is_binary=False):\n    # Load ResNet50 model (pretrained on ImageNet)\n    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\n    # Fine-tune: freeze only the first layers, unfreezing last 30 layers instead of 50\n    base_model.trainable = True",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_model",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "def create_and_train_model(model_name, num_classes, is_binary=False):\n    # Load ResNet50 model (pretrained on ImageNet)\n    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\n    # Fine-tune: freeze only the first layers, unfreezing last 30 layers instead of 50\n    base_model.trainable = True\n    for layer in base_model.layers[:-30]:\n        layer.trainable = False\n    # Custom classification head with extra layer and adjusted dropout rates:\n    x = base_model.output\n    x = GlobalAveragePooling2D()(x)",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_custom_model",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "def create_and_train_custom_model(model_name, num_classes, is_binary=False):\n    # Load ResNet50 as the base model\n    base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))\n    base_model.trainable = False  # Freeze the base model\n    # Custom head modifications using ResNet50 as base:\n    x = base_model.output\n    x = GlobalAveragePooling2D()(x)\n    x = Dense(256, activation='relu')(x)\n    x = Dropout(0.4)(x)  # adjusted dropout\n    x = Dense(128, activation='relu')(x)   # extra layer added",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_scratch_model",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "def create_and_train_scratch_model(model_name, num_classes, is_binary=False):\n    # Build a model from scratch\n    inputs = tf.keras.Input(shape=(224, 224, 3))\n    x = tf.keras.layers.Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)\n    x = tf.keras.layers.BatchNormalization()(x)\n    x = tf.keras.layers.MaxPooling2D()(x)\n    x = tf.keras.layers.Conv2D(64, (3, 3), activation='relu', padding='same')(x)\n    x = tf.keras.layers.BatchNormalization()(x)\n    x = tf.keras.layers.MaxPooling2D()(x)\n    x = tf.keras.layers.Conv2D(128, (3, 3), activation='relu', padding='same')(x)",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile.LOAD_TRUNCATED_IMAGES",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "ImageFile.LOAD_TRUNCATED_IMAGES = True  # Allow loading of truncated images\n# Optional: Enable mixed precision training (uncomment if supported by your GPU)\nmixed_precision.set_global_policy('float32')  # uncommented\n# Dataset paths\nbase_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "BATCH_SIZE = 32  # increased from 16\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_train",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "datagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,\n    fill_mode='nearest'\n)",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_val",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.train",
+        "description": "xray.scripts.classification.train",
+        "peekOfCode": "datagen_val = ImageDataGenerator(rescale=1./255)\n# Load datasets with error handling\ntry:\n    train_generator = datagen_train.flow_from_directory(\n        train_dir,\n        target_size=IMG_SIZE,\n        batch_size=BATCH_SIZE,\n        class_mode='categorical'\n    )\n    val_generator = datagen_val.flow_from_directory(",
+        "detail": "xray.scripts.classification.train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\ntest_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "test_dir",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "test_dir = os.path.join(base_dir, 'test')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "BATCH_SIZE = 32\n# Data augmentation for training set\ndatagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_train",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "datagen_train = ImageDataGenerator(\n    rescale=1./255,\n    rotation_range=20,\n    width_shift_range=0.1,\n    height_shift_range=0.1,\n    shear_range=0.1,\n    zoom_range=0.2,\n    horizontal_flip=True,\n    fill_mode='nearest'\n)",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "datagen_val_test",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "datagen_val_test = ImageDataGenerator(rescale=1./255)\n# Load datasets\ntrain_generator = datagen_train.flow_from_directory(\n    train_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\nval_generator = datagen_val_test.flow_from_directory(\n    val_dir,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "train_generator",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "train_generator = datagen_train.flow_from_directory(\n    train_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\nval_generator = datagen_val_test.flow_from_directory(\n    val_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "val_generator",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "val_generator = datagen_val_test.flow_from_directory(\n    val_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical'\n)\ntest_generator = datagen_val_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "test_generator = datagen_val_test.flow_from_directory(\n    test_dir,\n    target_size=IMG_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode='categorical',\n    shuffle=False  # Keep order for evaluation\n)\n# Get class labels\nclass_indices = train_generator.class_indices\nprint(\"Class Labels:\", class_indices)",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "class_indices",
+        "kind": 5,
+        "importPath": "xray.utils.data_loader",
+        "description": "xray.utils.data_loader",
+        "peekOfCode": "class_indices = train_generator.class_indices\nprint(\"Class Labels:\", class_indices)\n# Example usage\nif __name__ == \"__main__\":\n    sample_images, sample_labels = next(train_generator)\n    print(\"Sample batch shape:\", sample_images.shape)\n    print(\"Sample labels shape:\", sample_labels.shape)",
+        "detail": "xray.utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "kind": 2,
+        "importPath": "xray.utils.preprocessing",
+        "description": "xray.utils.preprocessing",
+        "peekOfCode": "def preprocess_image(image_path):\n    img = Image.open(image_path)  # Read the image using PIL\n    if img.mode == 'P':  # Check if the image is in palette mode\n        img = img.convert('RGBA')  # Convert to RGBA\n    img = img.resize((224, 224))  # Resize to model input size\n    img = np.array(img) / 255.0  # Normalize\n    img = np.expand_dims(img, axis=0)  # Expand dimensions for model input\n    return img",
+        "detail": "xray.utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "process_images",
+        "kind": 2,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "def process_images(image_list, subset):\n    for img_path in image_list:\n        category = \"Fractured\" if \"Fractured\" in img_path else \"Non_fractured\"\n        # Copy image\n        dest_img_folder = os.path.join(destination_path, subset, \"images\", category.lower())\n        os.makedirs(dest_img_folder, exist_ok=True)\n        shutil.copy(img_path, dest_img_folder)\n        print(f\"Copied {os.path.basename(img_path)} to {dest_img_folder}\")\n        # Get image ID and generate mask\n        img_id = next(id for id, path in images.items() if path == img_path)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "source_images_base",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "source_images_base = r\"C:\\zzz_project\\xray\\FracAtlas\\images\"  # Base path for images\nsource_annotations_path = r\"C:\\zzz_project\\xray\\FracAtlas\\Annotations\\COCO JSON\\annotations.json\"  # Corrected path\ndestination_path = r\"C:\\zzz_project\\xray\\dataset\\segmentation\"  # Update to your project structure\n# Define split ratios\ntrain_ratio = 0.7\nval_ratio = 0.2\ntest_ratio = 0.1\n# Ensure destination folders exist\nfor subset in [\"train\", \"val\", \"test\"]:\n    os.makedirs(os.path.join(destination_path, subset, \"images\"), exist_ok=True)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "source_annotations_path",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "source_annotations_path = r\"C:\\zzz_project\\xray\\FracAtlas\\Annotations\\COCO JSON\\annotations.json\"  # Corrected path\ndestination_path = r\"C:\\zzz_project\\xray\\dataset\\segmentation\"  # Update to your project structure\n# Define split ratios\ntrain_ratio = 0.7\nval_ratio = 0.2\ntest_ratio = 0.1\n# Ensure destination folders exist\nfor subset in [\"train\", \"val\", \"test\"]:\n    os.makedirs(os.path.join(destination_path, subset, \"images\"), exist_ok=True)\n    os.makedirs(os.path.join(destination_path, subset, \"masks\"), exist_ok=True)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "destination_path",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "destination_path = r\"C:\\zzz_project\\xray\\dataset\\segmentation\"  # Update to your project structure\n# Define split ratios\ntrain_ratio = 0.7\nval_ratio = 0.2\ntest_ratio = 0.1\n# Ensure destination folders exist\nfor subset in [\"train\", \"val\", \"test\"]:\n    os.makedirs(os.path.join(destination_path, subset, \"images\"), exist_ok=True)\n    os.makedirs(os.path.join(destination_path, subset, \"masks\"), exist_ok=True)\n# Load COCO annotations",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "train_ratio",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "train_ratio = 0.7\nval_ratio = 0.2\ntest_ratio = 0.1\n# Ensure destination folders exist\nfor subset in [\"train\", \"val\", \"test\"]:\n    os.makedirs(os.path.join(destination_path, subset, \"images\"), exist_ok=True)\n    os.makedirs(os.path.join(destination_path, subset, \"masks\"), exist_ok=True)\n# Load COCO annotations\nif not os.path.exists(source_annotations_path):\n    print(f\"Annotation file not found at {source_annotations_path}. Please check the path.\")",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "val_ratio",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "val_ratio = 0.2\ntest_ratio = 0.1\n# Ensure destination folders exist\nfor subset in [\"train\", \"val\", \"test\"]:\n    os.makedirs(os.path.join(destination_path, subset, \"images\"), exist_ok=True)\n    os.makedirs(os.path.join(destination_path, subset, \"masks\"), exist_ok=True)\n# Load COCO annotations\nif not os.path.exists(source_annotations_path):\n    print(f\"Annotation file not found at {source_annotations_path}. Please check the path.\")\n    exit()",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "test_ratio",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "test_ratio = 0.1\n# Ensure destination folders exist\nfor subset in [\"train\", \"val\", \"test\"]:\n    os.makedirs(os.path.join(destination_path, subset, \"images\"), exist_ok=True)\n    os.makedirs(os.path.join(destination_path, subset, \"masks\"), exist_ok=True)\n# Load COCO annotations\nif not os.path.exists(source_annotations_path):\n    print(f\"Annotation file not found at {source_annotations_path}. Please check the path.\")\n    exit()\nwith open(source_annotations_path, 'r') as f:",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "images",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "images = {}\nfor img in data['images']:\n    img_path = os.path.join(source_images_base, \"Fractured\" if any(ann['image_id'] == img['id'] for ann in data['annotations']) else \"Non_fractured\", img['file_name'])\n    if os.path.exists(img_path):\n        images[img['id']] = img_path\nprint(f\"Found {len(images)} images matching annotations.\")\nannotations = data['annotations']\nimg_mask = {}\nfor ann in annotations:\n    img_id = ann['image_id']",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "annotations = data['annotations']\nimg_mask = {}\nfor ann in annotations:\n    img_id = ann['image_id']\n    if img_id in images:  # Only process images with annotations\n        if img_id not in img_mask:\n            img_mask[img_id] = []\n        # Extract the first segmentation polygon\n        mask = ann['segmentation'][0] if ann['segmentation'] else []\n        img_mask[img_id].append(mask)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "img_mask",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "img_mask = {}\nfor ann in annotations:\n    img_id = ann['image_id']\n    if img_id in images:  # Only process images with annotations\n        if img_id not in img_mask:\n            img_mask[img_id] = []\n        # Extract the first segmentation polygon\n        mask = ann['segmentation'][0] if ann['segmentation'] else []\n        img_mask[img_id].append(mask)\n# Collect image paths (only Fractured with masks)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "image_paths",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "image_paths = [path for img_id, path in images.items() if img_id in img_mask]\nprint(f\"Images with masks: {len(image_paths)}\")\n# Shuffle and split images\nrandom.shuffle(image_paths)\ntotal_images = len(image_paths)\nif total_images == 0:\n    print(f\"No images with masks found in {source_images_base}. Skipping...\")\n    exit()\ntrain_end = int(total_images * train_ratio)\nval_end = train_end + int(total_images * val_ratio)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "total_images",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "total_images = len(image_paths)\nif total_images == 0:\n    print(f\"No images with masks found in {source_images_base}. Skipping...\")\n    exit()\ntrain_end = int(total_images * train_ratio)\nval_end = train_end + int(total_images * val_ratio)\ntrain_images = image_paths[:train_end]\nval_images = image_paths[train_end:val_end]\ntest_images = image_paths[val_end:]\n# Function to copy images and generate masks",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "train_end",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "train_end = int(total_images * train_ratio)\nval_end = train_end + int(total_images * val_ratio)\ntrain_images = image_paths[:train_end]\nval_images = image_paths[train_end:val_end]\ntest_images = image_paths[val_end:]\n# Function to copy images and generate masks\ndef process_images(image_list, subset):\n    for img_path in image_list:\n        category = \"Fractured\" if \"Fractured\" in img_path else \"Non_fractured\"\n        # Copy image",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "val_end",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "val_end = train_end + int(total_images * val_ratio)\ntrain_images = image_paths[:train_end]\nval_images = image_paths[train_end:val_end]\ntest_images = image_paths[val_end:]\n# Function to copy images and generate masks\ndef process_images(image_list, subset):\n    for img_path in image_list:\n        category = \"Fractured\" if \"Fractured\" in img_path else \"Non_fractured\"\n        # Copy image\n        dest_img_folder = os.path.join(destination_path, subset, \"images\", category.lower())",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "train_images",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "train_images = image_paths[:train_end]\nval_images = image_paths[train_end:val_end]\ntest_images = image_paths[val_end:]\n# Function to copy images and generate masks\ndef process_images(image_list, subset):\n    for img_path in image_list:\n        category = \"Fractured\" if \"Fractured\" in img_path else \"Non_fractured\"\n        # Copy image\n        dest_img_folder = os.path.join(destination_path, subset, \"images\", category.lower())\n        os.makedirs(dest_img_folder, exist_ok=True)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "val_images",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "val_images = image_paths[train_end:val_end]\ntest_images = image_paths[val_end:]\n# Function to copy images and generate masks\ndef process_images(image_list, subset):\n    for img_path in image_list:\n        category = \"Fractured\" if \"Fractured\" in img_path else \"Non_fractured\"\n        # Copy image\n        dest_img_folder = os.path.join(destination_path, subset, \"images\", category.lower())\n        os.makedirs(dest_img_folder, exist_ok=True)\n        shutil.copy(img_path, dest_img_folder)",
+        "detail": "p2",
+        "documentation": {}
+    },
+    {
+        "label": "test_images",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "test_images = image_paths[val_end:]\n# Function to copy images and generate masks\ndef process_images(image_list, subset):\n    for img_path in image_list:\n        category = \"Fractured\" if \"Fractured\" in img_path else \"Non_fractured\"\n        # Copy image\n        dest_img_folder = os.path.join(destination_path, subset, \"images\", category.lower())\n        os.makedirs(dest_img_folder, exist_ok=True)\n        shutil.copy(img_path, dest_img_folder)\n        print(f\"Copied {os.path.basename(img_path)} to {dest_img_folder}\")",
+        "detail": "p2",
+        "documentation": {}
+    }
+]

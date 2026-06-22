@@ -1,0 +1,779 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "layers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "layers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "layers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "to_categorical",
+        "importPath": "tensorflow.keras.utils",
+        "description": "tensorflow.keras.utils",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.utils",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "EarlyStopping",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "ModelCheckpoint",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "EarlyStopping",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "ModelCheckpoint",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_image",
+        "kind": 2,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "def load_and_preprocess_image(image_path):\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    img = cv2.resize(img, (img_width, img_height))\n    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n    img = img.astype(np.float32) / 255.0\n    return img\ndef main():\n    # Use user defined image path if provided",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "def main():\n    # Use user defined image path if provided\n    image_path = sys.argv[1] if len(sys.argv) > 1 else default_image_path\n    model = tf.keras.models.load_model(model_path)\n    print(\"Model loaded successfully.\")\n    image = load_and_preprocess_image(image_path)\n    input_image = np.expand_dims(image, axis=0)\n    # Make prediction\n    prediction = model.predict(input_image)[0][0]\n    pred_class = \"Fracture Detected\" if prediction > 0.5 else \"No Fracture\"",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "model_path = r\"models/fracture_classifier_custom.h5\"\ndefault_image_path = input(\"Enter image path: \")\n# Image parameters (should match training)\nimg_height = 224\nimg_width = 224\nnum_channels = 3\ndef load_and_preprocess_image(image_path):\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "default_image_path",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "default_image_path = input(\"Enter image path: \")\n# Image parameters (should match training)\nimg_height = 224\nimg_width = 224\nnum_channels = 3\ndef load_and_preprocess_image(image_path):\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    img = cv2.resize(img, (img_width, img_height))",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "img_height",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "img_height = 224\nimg_width = 224\nnum_channels = 3\ndef load_and_preprocess_image(image_path):\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    img = cv2.resize(img, (img_width, img_height))\n    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n    img = img.astype(np.float32) / 255.0",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "img_width",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "img_width = 224\nnum_channels = 3\ndef load_and_preprocess_image(image_path):\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    img = cv2.resize(img, (img_width, img_height))\n    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n    img = img.astype(np.float32) / 255.0\n    return img",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "num_channels",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_predict",
+        "description": "scripts.classification.classification_predict",
+        "peekOfCode": "num_channels = 3\ndef load_and_preprocess_image(image_path):\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    img = cv2.resize(img, (img_width, img_height))\n    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n    img = img.astype(np.float32) / 255.0\n    return img\ndef main():",
+        "detail": "scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "processed_data_dir",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "processed_data_dir = r\"C:\\zzz_project\\xray\\processed_data\\classification\"\nmodel_save_path = r\"models/fracture_classifier_custom.h5\"\n# Image parameters\nimg_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "model_save_path",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "model_save_path = r\"models/fracture_classifier_custom.h5\"\n# Image parameters\nimg_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "img_height",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "img_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "img_width",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "img_width = 224\nnum_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "num_channels",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "num_channels = 3  # RGB images\nbatch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "batch_size = 32\n# Load preprocessed data\nx_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_train",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "x_train = np.load(os.path.join(processed_data_dir, 'X_train.npy'))\ny_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "y_train = np.load(os.path.join(processed_data_dir, 'y_train.npy'))\nx_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_val",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "x_val = np.load(os.path.join(processed_data_dir, 'X_val.npy'))\ny_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_val",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "y_val = np.load(os.path.join(processed_data_dir, 'y_val.npy'))\nx_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:\n    raise ValueError(\"Test data is empty. Please check the preprocessing step.\")",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_test",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "x_test = np.load(os.path.join(processed_data_dir, 'X_test.npy'))\ny_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:\n    raise ValueError(\"Test data is empty. Please check the preprocessing step.\")\n# Shuffle training data",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_test",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "y_test = np.load(os.path.join(processed_data_dir, 'y_test.npy'))\n# Verify that the loaded data is not empty\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty. Please check the preprocessing step.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty. Please check the preprocessing step.\")\nif x_test.size == 0 or y_test.size == 0:\n    raise ValueError(\"Test data is empty. Please check the preprocessing step.\")\n# Shuffle training data\nshuffle_indices = np.random.permutation(len(x_train))",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle_indices",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "shuffle_indices = np.random.permutation(len(x_train))\nx_train = x_train[shuffle_indices]\ny_train = y_train[shuffle_indices]\n# Verify shapes\nprint(f\"Training data shape: {x_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {x_val.shape}, Labels shape: {y_val.shape}\")\nprint(f\"Test data shape: {x_test.shape}, Labels shape: {y_test.shape}\")\n# Build a custom CNN from scratch\nmodel = models.Sequential([\n    # First Convolutional Block",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_train",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "x_train = x_train[shuffle_indices]\ny_train = y_train[shuffle_indices]\n# Verify shapes\nprint(f\"Training data shape: {x_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {x_val.shape}, Labels shape: {y_val.shape}\")\nprint(f\"Test data shape: {x_test.shape}, Labels shape: {y_test.shape}\")\n# Build a custom CNN from scratch\nmodel = models.Sequential([\n    # First Convolutional Block\n    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels), padding='same'),",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "y_train = y_train[shuffle_indices]\n# Verify shapes\nprint(f\"Training data shape: {x_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {x_val.shape}, Labels shape: {y_val.shape}\")\nprint(f\"Test data shape: {x_test.shape}, Labels shape: {y_test.shape}\")\n# Build a custom CNN from scratch\nmodel = models.Sequential([\n    # First Convolutional Block\n    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels), padding='same'),\n    layers.BatchNormalization(),",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "model = models.Sequential([\n    # First Convolutional Block\n    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels), padding='same'),\n    layers.BatchNormalization(),\n    layers.MaxPooling2D((2, 2)),\n    # Second Convolutional Block\n    layers.Conv2D(64, (3, 3), activation='relu', padding='same'),\n    layers.BatchNormalization(),\n    layers.MaxPooling2D((2, 2)),\n    # Third Convolutional Block",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "scripts.classification.classification_train",
+        "description": "scripts.classification.classification_train",
+        "peekOfCode": "history = model.fit(\n    x_train,\n    y_train,\n    batch_size=batch_size,\n    epochs=150,  # Increased epochs for a custom model\n    validation_data=(x_val, y_val)\n)\n# Evaluate on test set\ntest_loss, test_accuracy = model.evaluate(x_test, y_test)\nprint(f\"Test accuracy: {test_accuracy:.4f}\")",
+        "detail": "scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_images",
+        "kind": 2,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "def load_and_preprocess_images(image_dir, mask_dir):\n    image_dir = os.path.normpath(image_dir)  # Normalize path\n    mask_dir = os.path.normpath(mask_dir)    # Normalize path\n    # Check if directories exist\n    if not os.path.exists(image_dir):\n        raise FileNotFoundError(f\"Directory not found: {image_dir}\")\n    if not os.path.exists(mask_dir):\n        raise FileNotFoundError(f\"Directory not found: {mask_dir}\")\n    images = []\n    masks = []",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "save_preprocessed_data",
+        "kind": 2,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "def save_preprocessed_data(x, y, prefix):\n    np.save(os.path.join(processed_data_dir, f\"{prefix}_X.npy\"), x)\n    np.save(os.path.join(processed_data_dir, f\"{prefix}_Y.npy\"), y)\n# Create processed data directory if it doesn't exist\nos.makedirs(processed_data_dir, exist_ok=True)\n# Load and preprocess training data\nx_train, y_train = load_and_preprocess_images(\n    os.path.join(raw_data_dir, \"train/images\"),\n    os.path.join(raw_data_dir, \"train/masks\")\n)",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "raw_data_dir",
+        "kind": 5,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "raw_data_dir = r\"c:\\zzz_project\\xray\\dataset\\segmentation\"  # Changed to absolute path\nprocessed_data_dir = r\"processed_data/segmentation\"\n# Image parameters\nimg_height = 256\nimg_width = 256\nnum_channels = 3  # RGB images\ndef load_and_preprocess_images(image_dir, mask_dir):\n    image_dir = os.path.normpath(image_dir)  # Normalize path\n    mask_dir = os.path.normpath(mask_dir)    # Normalize path\n    # Check if directories exist",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "processed_data_dir",
+        "kind": 5,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "processed_data_dir = r\"processed_data/segmentation\"\n# Image parameters\nimg_height = 256\nimg_width = 256\nnum_channels = 3  # RGB images\ndef load_and_preprocess_images(image_dir, mask_dir):\n    image_dir = os.path.normpath(image_dir)  # Normalize path\n    mask_dir = os.path.normpath(mask_dir)    # Normalize path\n    # Check if directories exist\n    if not os.path.exists(image_dir):",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "img_height",
+        "kind": 5,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "img_height = 256\nimg_width = 256\nnum_channels = 3  # RGB images\ndef load_and_preprocess_images(image_dir, mask_dir):\n    image_dir = os.path.normpath(image_dir)  # Normalize path\n    mask_dir = os.path.normpath(mask_dir)    # Normalize path\n    # Check if directories exist\n    if not os.path.exists(image_dir):\n        raise FileNotFoundError(f\"Directory not found: {image_dir}\")\n    if not os.path.exists(mask_dir):",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "img_width",
+        "kind": 5,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "img_width = 256\nnum_channels = 3  # RGB images\ndef load_and_preprocess_images(image_dir, mask_dir):\n    image_dir = os.path.normpath(image_dir)  # Normalize path\n    mask_dir = os.path.normpath(mask_dir)    # Normalize path\n    # Check if directories exist\n    if not os.path.exists(image_dir):\n        raise FileNotFoundError(f\"Directory not found: {image_dir}\")\n    if not os.path.exists(mask_dir):\n        raise FileNotFoundError(f\"Directory not found: {mask_dir}\")",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "num_channels",
+        "kind": 5,
+        "importPath": "scripts.segmentation.data_preprocessing",
+        "description": "scripts.segmentation.data_preprocessing",
+        "peekOfCode": "num_channels = 3  # RGB images\ndef load_and_preprocess_images(image_dir, mask_dir):\n    image_dir = os.path.normpath(image_dir)  # Normalize path\n    mask_dir = os.path.normpath(mask_dir)    # Normalize path\n    # Check if directories exist\n    if not os.path.exists(image_dir):\n        raise FileNotFoundError(f\"Directory not found: {image_dir}\")\n    if not os.path.exists(mask_dir):\n        raise FileNotFoundError(f\"Directory not found: {mask_dir}\")\n    images = []",
+        "detail": "scripts.segmentation.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "load_npy",
+        "kind": 2,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "def load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))  # normalized file path\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found. Check your dataset path.\")\n    return np.load(file_path)\n# Load preprocessed data using load_npy helper\nx_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')\ny_val   = load_npy('val_Y.npy')",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "unet_model",
+        "kind": 2,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "def unet_model(input_shape):\n    inputs = layers.Input(shape=input_shape)\n    # Encoder block 1\n    c1 = layers.Conv2D(16, (3, 3), activation='relu', padding='same')(inputs)\n    c1 = layers.Conv2D(16, (3, 3), activation='relu', padding='same')(c1)\n    p1 = layers.MaxPooling2D((2, 2))(c1)\n    # Encoder block 2\n    c2 = layers.Conv2D(32, (3, 3), activation='relu', padding='same')(p1)\n    c2 = layers.Conv2D(32, (3, 3), activation='relu', padding='same')(c2)\n    p2 = layers.MaxPooling2D((2, 2))(c2)",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "data_dir",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "data_dir = os.path.abspath(r\"processed_data/segmentation\")  # Convert to absolute path\nmodel_save_path = r\"models/segmentation_model.h5\"\n# Image parameters\nimg_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))  # normalized file path\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found. Check your dataset path.\")",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "model_save_path",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "model_save_path = r\"models/segmentation_model.h5\"\n# Image parameters\nimg_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))  # normalized file path\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found. Check your dataset path.\")\n    return np.load(file_path)",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "img_height",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "img_height = 224\nimg_width = 224\nnum_channels = 3  # RGB images\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))  # normalized file path\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found. Check your dataset path.\")\n    return np.load(file_path)\n# Load preprocessed data using load_npy helper\nx_train = load_npy('train_X.npy')",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "img_width",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "img_width = 224\nnum_channels = 3  # RGB images\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))  # normalized file path\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found. Check your dataset path.\")\n    return np.load(file_path)\n# Load preprocessed data using load_npy helper\nx_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "num_channels",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "num_channels = 3  # RGB images\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))  # normalized file path\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found. Check your dataset path.\")\n    return np.load(file_path)\n# Load preprocessed data using load_npy helper\nx_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "x_train",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "x_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')\ny_val   = load_npy('val_Y.npy')\nx_test  = load_npy('test_X.npy')\ny_test  = load_npy('test_Y.npy')\n# Verify data is loaded\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty.\")\nif x_val.size == 0 or y_val.size == 0:",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "y_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')\ny_val   = load_npy('val_Y.npy')\nx_test  = load_npy('test_X.npy')\ny_test  = load_npy('test_Y.npy')\n# Verify data is loaded\nif x_train.size == 0 or y_train.size == 0:\n    raise ValueError(\"Training data is empty.\")\nif x_val.size == 0 or y_val.size == 0:\n    raise ValueError(\"Validation data is empty.\")",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "fracatlas_utilities",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "fracatlas_utilities = os.path.abspath(\n    os.path.join(os.path.dirname(__file__), \"..\", \"..\", \"FracAtlas\", \"Utilities\")\n)\nprint(\"\\n=== FracAtlas Utilities Contents ===\")\nif os.path.exists(fracatlas_utilities):\n    for root, dirs, files in os.walk(fracatlas_utilities):\n        print(f\"{root}: {files}\")\nelse:\n    print(\"FracAtlas Utilities folder not found.\")\n# Build a simple U-Net model",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "model = unet_model((img_height, img_width, num_channels))\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])\nmodel.summary()\n# Define callbacks\ncallbacks = [\n    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6, verbose=1),\n    EarlyStopping(monitor='val_loss', patience=10, verbose=1, restore_best_weights=True),\n    ModelCheckpoint(filepath=model_save_path, monitor='val_accuracy', save_best_only=True, verbose=1)\n]\n# Train the model",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "callbacks",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "callbacks = [\n    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6, verbose=1),\n    EarlyStopping(monitor='val_loss', patience=10, verbose=1, restore_best_weights=True),\n    ModelCheckpoint(filepath=model_save_path, monitor='val_accuracy', save_best_only=True, verbose=1)\n]\n# Train the model\nhistory = model.fit(\n    x_train, y_train,\n    batch_size=32,\n    epochs=150,",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "scripts.segmentation.segmentation_train",
+        "description": "scripts.segmentation.segmentation_train",
+        "peekOfCode": "history = model.fit(\n    x_train, y_train,\n    batch_size=32,\n    epochs=150,\n    validation_data=(x_val, y_val),\n    callbacks=callbacks\n)\n# Evaluate on test data\ntest_loss, test_accuracy = model.evaluate(x_test, y_test)\nprint(f\"Test accuracy: {test_accuracy:.4f}\")",
+        "detail": "scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "load_npy",
+        "kind": 2,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "def load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found.\")\n    return np.load(file_path)\n# Load preprocessed data\nx_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')\ny_val   = load_npy('val_Y.npy')",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "yolo_segmentation_model",
+        "kind": 2,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "def yolo_segmentation_model(input_shape):\n    inputs = layers.Input(shape=input_shape)\n    # Backbone: several YOLO-like conv blocks\n    # Block 1\n    x = layers.Conv2D(32, (3,3), strides=1, padding='same', activation='relu')(inputs)\n    x = layers.BatchNormalization()(x)\n    x = layers.MaxPooling2D((2,2))(x)\n    # Block 2\n    x = layers.Conv2D(64, (3,3), strides=1, padding='same', activation='relu')(x)\n    x = layers.BatchNormalization()(x)",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "data_dir",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "data_dir = os.path.abspath(r\"processed_data/segmentation\")\nmodel_save_path = r\"models/yolo_segmentation_model.h5\"\n# Image parameters\nimg_height = 256  # to match preprocessing\nimg_width = 256\nnum_channels = 3\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found.\")",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "model_save_path",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "model_save_path = r\"models/yolo_segmentation_model.h5\"\n# Image parameters\nimg_height = 256  # to match preprocessing\nimg_width = 256\nnum_channels = 3\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found.\")\n    return np.load(file_path)",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "img_height",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "img_height = 256  # to match preprocessing\nimg_width = 256\nnum_channels = 3\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found.\")\n    return np.load(file_path)\n# Load preprocessed data\nx_train = load_npy('train_X.npy')",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "img_width",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "img_width = 256\nnum_channels = 3\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found.\")\n    return np.load(file_path)\n# Load preprocessed data\nx_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "num_channels",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "num_channels = 3\ndef load_npy(file_name):\n    file_path = os.path.normpath(os.path.join(data_dir, file_name))\n    if not os.path.exists(file_path):\n        raise FileNotFoundError(f\"Required file {file_path} not found.\")\n    return np.load(file_path)\n# Load preprocessed data\nx_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "x_train",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "x_train = load_npy('train_X.npy')\ny_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')\ny_val   = load_npy('val_Y.npy')\nx_test  = load_npy('test_X.npy')\ny_test  = load_npy('test_Y.npy')\n# Simple check on dataset sizes\nprint(f\"Train samples: {x_train.shape[0]}, Validation: {x_val.shape[0]}, Test: {x_test.shape[0]}\")\n# Define a YOLO-inspired segmentation model\ndef yolo_segmentation_model(input_shape):",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "y_train = load_npy('train_Y.npy')\nx_val   = load_npy('val_X.npy')\ny_val   = load_npy('val_Y.npy')\nx_test  = load_npy('test_X.npy')\ny_test  = load_npy('test_Y.npy')\n# Simple check on dataset sizes\nprint(f\"Train samples: {x_train.shape[0]}, Validation: {x_val.shape[0]}, Test: {x_test.shape[0]}\")\n# Define a YOLO-inspired segmentation model\ndef yolo_segmentation_model(input_shape):\n    inputs = layers.Input(shape=input_shape)",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "model = yolo_segmentation_model((img_height, img_width, num_channels))\nmodel.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])\nmodel.summary()\n# Callbacks for training\ncallbacks = [\n    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6, verbose=1),\n    EarlyStopping(monitor='val_loss', patience=10, verbose=1, restore_best_weights=True),\n    ModelCheckpoint(filepath=model_save_path, monitor='val_accuracy', save_best_only=True, verbose=1)\n]\n# Train the model",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "callbacks",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "callbacks = [\n    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6, verbose=1),\n    EarlyStopping(monitor='val_loss', patience=10, verbose=1, restore_best_weights=True),\n    ModelCheckpoint(filepath=model_save_path, monitor='val_accuracy', save_best_only=True, verbose=1)\n]\n# Train the model\nhistory = model.fit(\n    x_train, y_train,\n    batch_size=16,\n    epochs=100,",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "scripts.segmentation.yolo_segmentation",
+        "description": "scripts.segmentation.yolo_segmentation",
+        "peekOfCode": "history = model.fit(\n    x_train, y_train,\n    batch_size=16,\n    epochs=100,\n    validation_data=(x_val, y_val),\n    callbacks=callbacks\n)\n# Evaluate the model\ntest_loss, test_accuracy = model.evaluate(x_test, y_test)\nprint(f\"Test accuracy: {test_accuracy:.4f}\")",
+        "detail": "scripts.segmentation.yolo_segmentation",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_split",
+        "kind": 2,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "def preprocess_split(split_name):\n    \"\"\"Process a dataset split with enhanced error handling and logging\"\"\"\n    x_data, y_data = [], []\n    split_stats = defaultdict(int)\n    error_log = []\n    split_dir = os.path.join(source_base_dir, split_name)\n    print(f\"\\n{'='*40}\\nProcessing {split_name.upper()} split\\n{'='*40}\")\n    for cls in classes:\n        class_dir = os.path.join(split_dir, cls)\n        if not os.path.exists(class_dir):",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "verify_dataset",
+        "kind": 2,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "def verify_dataset():\n    print(\"\\nData Verification:\")\n    for split in splits:\n        try:\n            x = np.load(os.path.join(processed_data_dir, f'X_{split}.npy'))\n            y = np.load(os.path.join(processed_data_dir, f'y_{split}.npy'))\n            print(f\"{split.upper():<10} | Features: {x.shape} | Labels: {y.shape} | \"\n                  f\"Mean: {x.mean():.3f} | Range: [{x.min():.3f}, {x.max():.3f}]\")\n        except FileNotFoundError:\n            print(f\"{split.upper():<10} | Data not found\")",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "source_base_dir",
+        "kind": 5,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "source_base_dir = r\"dataset/classification\"\nprocessed_data_dir = r\"processed_data\\classification\"\nsplits = [\"train\", \"val\", \"test\"]\nimg_height, img_width = 224, 224\nclasses = ['no_fracture', 'fracture']\nclass_to_idx = {cls: idx for idx, cls in enumerate(classes)}\n# Create output directory\nos.makedirs(processed_data_dir, exist_ok=True)\ndef preprocess_split(split_name):\n    \"\"\"Process a dataset split with enhanced error handling and logging\"\"\"",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "processed_data_dir",
+        "kind": 5,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "processed_data_dir = r\"processed_data\\classification\"\nsplits = [\"train\", \"val\", \"test\"]\nimg_height, img_width = 224, 224\nclasses = ['no_fracture', 'fracture']\nclass_to_idx = {cls: idx for idx, cls in enumerate(classes)}\n# Create output directory\nos.makedirs(processed_data_dir, exist_ok=True)\ndef preprocess_split(split_name):\n    \"\"\"Process a dataset split with enhanced error handling and logging\"\"\"\n    x_data, y_data = [], []",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "splits",
+        "kind": 5,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "splits = [\"train\", \"val\", \"test\"]\nimg_height, img_width = 224, 224\nclasses = ['no_fracture', 'fracture']\nclass_to_idx = {cls: idx for idx, cls in enumerate(classes)}\n# Create output directory\nos.makedirs(processed_data_dir, exist_ok=True)\ndef preprocess_split(split_name):\n    \"\"\"Process a dataset split with enhanced error handling and logging\"\"\"\n    x_data, y_data = [], []\n    split_stats = defaultdict(int)",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "classes = ['no_fracture', 'fracture']\nclass_to_idx = {cls: idx for idx, cls in enumerate(classes)}\n# Create output directory\nos.makedirs(processed_data_dir, exist_ok=True)\ndef preprocess_split(split_name):\n    \"\"\"Process a dataset split with enhanced error handling and logging\"\"\"\n    x_data, y_data = [], []\n    split_stats = defaultdict(int)\n    error_log = []\n    split_dir = os.path.join(source_base_dir, split_name)",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "class_to_idx",
+        "kind": 5,
+        "importPath": "scripts.data_preprocessing",
+        "description": "scripts.data_preprocessing",
+        "peekOfCode": "class_to_idx = {cls: idx for idx, cls in enumerate(classes)}\n# Create output directory\nos.makedirs(processed_data_dir, exist_ok=True)\ndef preprocess_split(split_name):\n    \"\"\"Process a dataset split with enhanced error handling and logging\"\"\"\n    x_data, y_data = [], []\n    split_stats = defaultdict(int)\n    error_log = []\n    split_dir = os.path.join(source_base_dir, split_name)\n    print(f\"\\n{'='*40}\\nProcessing {split_name.upper()} split\\n{'='*40}\")",
+        "detail": "scripts.data_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_image",
+        "kind": 2,
+        "importPath": "scripts.predict",
+        "description": "scripts.predict",
+        "peekOfCode": "def load_and_preprocess_image(image_path):\n    # Load image and check if image exists\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    # Resize image\n    img = cv2.resize(img, (img_width, img_height))\n    # Normalize and convert color from BGR to RGB\n    img = img.astype(np.float32) / 255.0\n    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)",
+        "detail": "scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.predict",
+        "description": "scripts.predict",
+        "peekOfCode": "def main():\n    # Load the trained model\n    model = tf.keras.models.load_model(model_path)\n    print(\"Model loaded successfully.\")\n    # Load and preprocess the input image\n    image = load_and_preprocess_image(image_path)\n    input_image = np.expand_dims(image, axis=0)  # add batch dimension\n    # Get model prediction\n    pred_mask = model.predict(input_image)[0]\n    pred_mask = (pred_mask > 0.5).astype(np.uint8)  # threshold to binary mask",
+        "detail": "scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "model_path",
+        "kind": 5,
+        "importPath": "scripts.predict",
+        "description": "scripts.predict",
+        "peekOfCode": "model_path = r\"models/yolo_segmentation_model.h5\"\nimage_path = r\"processed_data/segmentation/sample.jpg\"  # update with a valid image file\n# Image parameters (should match training settings)\nimg_height, img_width = 256, 256\ndef load_and_preprocess_image(image_path):\n    # Load image and check if image exists\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    # Resize image",
+        "detail": "scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "scripts.predict",
+        "description": "scripts.predict",
+        "peekOfCode": "image_path = r\"processed_data/segmentation/sample.jpg\"  # update with a valid image file\n# Image parameters (should match training settings)\nimg_height, img_width = 256, 256\ndef load_and_preprocess_image(image_path):\n    # Load image and check if image exists\n    img = cv2.imread(image_path)\n    if img is None:\n        raise FileNotFoundError(f\"Image not found: {image_path}\")\n    # Resize image\n    img = cv2.resize(img, (img_width, img_height))",
+        "detail": "scripts.predict",
+        "documentation": {}
+    }
+]

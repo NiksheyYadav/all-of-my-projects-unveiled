@@ -1,0 +1,241 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "queue",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "queue",
+        "description": "queue",
+        "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "speech_recognition",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "vosk",
+        "description": "vosk",
+        "isExtraImport": true,
+        "detail": "vosk",
+        "documentation": {}
+    },
+    {
+        "label": "KaldiRecognizer",
+        "importPath": "vosk",
+        "description": "vosk",
+        "isExtraImport": true,
+        "detail": "vosk",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "vosk",
+        "description": "vosk",
+        "isExtraImport": true,
+        "detail": "vosk",
+        "documentation": {}
+    },
+    {
+        "label": "KaldiRecognizer",
+        "importPath": "vosk",
+        "description": "vosk",
+        "isExtraImport": true,
+        "detail": "vosk",
+        "documentation": {}
+    },
+    {
+        "label": "pyaudio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyaudio",
+        "description": "pyaudio",
+        "detail": "pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "def speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to recognize speech from microphone\ndef listen():\n    r = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"Listening...\")\n        r.adjust_for_ambient_noise(source)\n        audio = r.listen(source)",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "listen",
+        "kind": 2,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "def listen():\n    r = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"Listening...\")\n        r.adjust_for_ambient_noise(source)\n        audio = r.listen(source)\n    try:\n        text = recognizer.AcceptWaveform(audio.get_wav_data())\n        text = json.loads(text)[\"text\"]\n        print(f\"You said: {text}\")",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "execute_command",
+        "kind": 2,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "def execute_command(command):\n    if \"open notepad\" in command:\n        speak(\"Opening Notepad\")\n        os.system(\"notepad.exe\")\n    elif \"open browser\" in command:\n        speak(\"Opening browser\")\n        os.system(\"start chrome\")\n    elif \"time\" in command:\n        speak(f\"The time is {time.strftime('%H:%M')}\")\n    elif \"exit\" in command:",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "engine = pyttsx3.init()\nengine.setProperty('rate', 170)  # Adjust voice speed\n# Load Vosk speech model (Ensure you downloaded it)\nMODEL_PATH = \"vosk-model-small-en-us-0.15\"\nif not os.path.exists(MODEL_PATH):\n    print(\"Vosk model not found! Download from: https://alphacephei.com/vosk/models\")\n    exit(1)\nmodel = Model(MODEL_PATH)\nrecognizer = KaldiRecognizer(model, 16000)\n# Function to make Jarvis speak",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "MODEL_PATH = \"vosk-model-small-en-us-0.15\"\nif not os.path.exists(MODEL_PATH):\n    print(\"Vosk model not found! Download from: https://alphacephei.com/vosk/models\")\n    exit(1)\nmodel = Model(MODEL_PATH)\nrecognizer = KaldiRecognizer(model, 16000)\n# Function to make Jarvis speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "model = Model(MODEL_PATH)\nrecognizer = KaldiRecognizer(model, 16000)\n# Function to make Jarvis speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to recognize speech from microphone\ndef listen():\n    r = sr.Recognizer()\n    with sr.Microphone() as source:",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "recognizer",
+        "kind": 5,
+        "importPath": ".ipynb_checkpoints.jarvis-checkpoint",
+        "description": ".ipynb_checkpoints.jarvis-checkpoint",
+        "peekOfCode": "recognizer = KaldiRecognizer(model, 16000)\n# Function to make Jarvis speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to recognize speech from microphone\ndef listen():\n    r = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"Listening...\")",
+        "detail": ".ipynb_checkpoints.jarvis-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "def speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to Recognize Speech using Vosk\ndef listen():\n    print(\"🎙 Listening...\")\n    data = stream.read(4000, exception_on_overflow=False)\n    if recognizer.AcceptWaveform(data):\n        result = json.loads(recognizer.Result())[\"text\"]\n        print(f\" You said: {result}\")",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "listen",
+        "kind": 2,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "def listen():\n    print(\"🎙 Listening...\")\n    data = stream.read(4000, exception_on_overflow=False)\n    if recognizer.AcceptWaveform(data):\n        result = json.loads(recognizer.Result())[\"text\"]\n        print(f\" You said: {result}\")\n        return result.lower()\n    return \"\"\n# Function to Execute Commands\ndef execute_command(command):",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "execute_command",
+        "kind": 2,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "def execute_command(command):\n    if \"note\" in command or \"नोटपैड खोलो\" in command:\n        speak(\"Opening Notepad...\")\n        os.system(\"notepad.exe\")\n    elif \"open website\" in command or \"ब्राउज़र खोलो\" in command:\n        speak(\"Opening Browser...\")\n        os.system(\"start https://www.microsoft.com/en-us/edge/?form=MA13FJ\")\n    elif \"play music\" in command or \"गाना बजाओ\" in command:\n        speak(\"Playing Music...\")\n        os.system(\"start https://www.youtube.com/watch?v=LLAvgTeXXy8\")",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "engine = pyttsx3.init()\nengine.setProperty('rate', 170)  # Adjust speaking speed\n# Load Vosk Model\nMODEL_PATH = \"models/vosk-model-small-en-in-0.4\"\nif not os.path.exists(MODEL_PATH):\n    print(\"Vosk model not found! Download from: https://alphacephei.com/vosk/models\")\n    exit(1)\nmodel = Model(MODEL_PATH)\nrecognizer = KaldiRecognizer(model, 16000)\n# Initialize Microphone Stream",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "MODEL_PATH = \"models/vosk-model-small-en-in-0.4\"\nif not os.path.exists(MODEL_PATH):\n    print(\"Vosk model not found! Download from: https://alphacephei.com/vosk/models\")\n    exit(1)\nmodel = Model(MODEL_PATH)\nrecognizer = KaldiRecognizer(model, 16000)\n# Initialize Microphone Stream\npa = pyaudio.PyAudio()\nstream = pa.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)\nstream.start_stream()",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "model = Model(MODEL_PATH)\nrecognizer = KaldiRecognizer(model, 16000)\n# Initialize Microphone Stream\npa = pyaudio.PyAudio()\nstream = pa.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)\nstream.start_stream()\n# Function to Make Jarvis Speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "recognizer",
+        "kind": 5,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "recognizer = KaldiRecognizer(model, 16000)\n# Initialize Microphone Stream\npa = pyaudio.PyAudio()\nstream = pa.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)\nstream.start_stream()\n# Function to Make Jarvis Speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to Recognize Speech using Vosk",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "pa",
+        "kind": 5,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "pa = pyaudio.PyAudio()\nstream = pa.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)\nstream.start_stream()\n# Function to Make Jarvis Speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to Recognize Speech using Vosk\ndef listen():\n    print(\"🎙 Listening...\")",
+        "detail": "jarvis",
+        "documentation": {}
+    },
+    {
+        "label": "stream",
+        "kind": 5,
+        "importPath": "jarvis",
+        "description": "jarvis",
+        "peekOfCode": "stream = pa.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=4000)\nstream.start_stream()\n# Function to Make Jarvis Speak\ndef speak(text):\n    engine.say(text)\n    engine.runAndWait()\n# Function to Recognize Speech using Vosk\ndef listen():\n    print(\"🎙 Listening...\")\n    data = stream.read(4000, exception_on_overflow=False)",
+        "detail": "jarvis",
+        "documentation": {}
+    }
+]

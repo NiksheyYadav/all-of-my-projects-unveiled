@@ -1,0 +1,58 @@
+[2025-04-03 16:40:24] Image: C:\zz_projects\medAI\mri\dataset\classification\test\notumor\notumor_25.jpg
+Classification Prediction: 2 (Glioma Tumor)
+Segmentation Prediction Range: 2.7079094522264313e-09 to 0.11508845537900925
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:41:37] Image: C:\zz_projects\medAI\mri\dataset\classification\validation\pituitary\pituitary_25.jpg
+Classification Prediction: 3 (Pituitary Tumor)
+Segmentation Prediction Range: 1.3888254695587632e-12 to 0.46669769287109375
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:47:37] Image: C:\zz_projects\medAI\mri\dataset\classification\test\glioma\glioma_99.jpg
+Classification Prediction: 3 (Pituitary Tumor)
+Segmentation Prediction Range: 3.2365030794290206e-12 to 0.43183353543281555
+Segmentation Prediction Shape: (1, 256, 256, 1)
+Ground Truth Mask Path: C:\zz_projects\medAI\mri\dataset\classification\test\glioma\glioma_99.jpg
+[2025-04-03 16:48:11] Image: C:\zz_projects\medAI\mri\dataset\classification\test\glioma\glioma_83.jpg
+Classification Prediction: 0 (No Tumor)
+Segmentation Prediction Range: 9.448430536226904e-13 to 0.11011743545532227
+Segmentation Prediction Shape: (1, 256, 256, 1)
+Ground Truth Mask Path: C:\zz_projects\medAI\mri\dataset\classification\test\glioma\glioma_41.jpg
+[2025-04-03 16:49:35] Image: C:\zz_projects\medAI\mri\dataset\classification\test\glioma\glioma_39.jpg
+Classification Prediction: 0 (No Tumor)
+Segmentation Prediction Range: 3.4161097561824505e-11 to 0.35572412610054016
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:53:07] Image: C:\zz_projects\medAI\mri\dataset\classification\test\glioma\glioma_550.jpg
+Classification Prediction: 0 (No Tumor)
+Segmentation Prediction Range: 1.9174180472536495e-12 to 0.19715970754623413
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:53:43] Image: C:\zz_projects\medAI\mri\dataset\classification\test\meningioma\meningioma_35.jpg
+Classification Prediction: 0 (No Tumor)
+Segmentation Prediction Range: 4.7746004198934155e-12 to 0.3830318748950958
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:54:30] Image: C:\zz_projects\medAI\mri\dataset\classification\test\meningioma\meningioma_1214.jpg
+Classification Prediction: 1 (Meningioma Tumor)
+Segmentation Prediction Range: 1.0498672244063645e-12 to 0.44500821828842163
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:57:15] Image: C:\zz_projects\medAI\mri\dataset\classification\test\meningioma\meningioma_1290.jpg
+Classification Prediction: 2 (Glioma Tumor)
+Segmentation Prediction Range: 1.30623951325598e-12 to 0.5061538219451904
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 16:59:32] Image: C:\zz_projects\medAI\mri\dataset\classification\test\notumor\notumor_59.jpg
+Classification Prediction: 2 (Glioma Tumor)
+Segmentation Prediction Range: 1.9148662419154333e-13 to 0.20961067080497742
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 17:02:12] Image: C:\zz_projects\medAI\mri\dataset\classification\test\notumor\notumor_59.jpg
+Classification Prediction: 2 (Glioma Tumor)
+Segmentation Prediction Range: 1.9148662419154333e-13 to 0.20961067080497742
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 17:47:28] Image: C:\zz_projects\medAI\mri\dataset\classification\training\pituitary\pituitary_9.jpg
+Classification Prediction: 3 (Pituitary Tumor)
+Segmentation Prediction Range: 1.806997802257515e-12 to 0.36611834168434143
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 17:49:31] Image: C:\zz_projects\medAI\mri\dataset\classification\training\pituitary\pituitary_17.jpg
+Classification Prediction: 1 (Meningioma Tumor)
+Segmentation Prediction Range: 5.70366800664579e-12 to 0.1923280507326126
+Segmentation Prediction Shape: (1, 256, 256, 1)
+[2025-04-03 17:50:04] Image: C:\zz_projects\medAI\mri\dataset\classification\training\pituitary\pituitary_10.jpg
+Classification Prediction: 3 (Pituitary Tumor)
+Segmentation Prediction Range: 4.490256777511803e-10 to 0.5013594031333923
+Segmentation Prediction Shape: (1, 256, 256, 1)

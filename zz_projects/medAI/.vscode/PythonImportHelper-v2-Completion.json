@@ -1,0 +1,1158 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "to_categorical",
+        "importPath": "tensorflow.keras.utils",
+        "description": "tensorflow.keras.utils",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.utils",
+        "documentation": {}
+    },
+    {
+        "label": "to_categorical",
+        "importPath": "tensorflow.keras.utils",
+        "description": "tensorflow.keras.utils",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.utils",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Conv2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MaxPooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalAveragePooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "BatchNormalization",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Conv2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MaxPooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalAveragePooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "BatchNormalization",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Conv2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MaxPooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dropout",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "GlobalAveragePooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "BatchNormalization",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "tensorflow.keras.optimizers",
+        "description": "tensorflow.keras.optimizers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.optimizers",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "ImageDataGenerator",
+        "importPath": "tensorflow.keras.preprocessing.image",
+        "description": "tensorflow.keras.preprocessing.image",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing.image",
+        "documentation": {}
+    },
+    {
+        "label": "LearningRateScheduler",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "LearningRateScheduler",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "LearningRateScheduler",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "mixed_precision",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "layers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "mixed_precision",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "mixed_precision",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_image",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.classification_predict",
+        "description": "mri.scripts.classification.classification_predict",
+        "peekOfCode": "def load_and_preprocess_image(image_path, img_size=224):\n    \"\"\"Load and preprocess a single image for prediction.\"\"\"\n    # Read the image in grayscale\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    # Resize to match training dimensions\n    img = cv2.resize(img, (img_size, img_size))\n    # Reshape and normalize\n    img = img.reshape(1, img_size, img_size, 1) / 255.0",
+        "detail": "mri.scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "predict_image",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.classification_predict",
+        "description": "mri.scripts.classification.classification_predict",
+        "peekOfCode": "def predict_image(model, image_path, categories):\n    \"\"\"Make a prediction on a single image.\"\"\"\n    # Load and preprocess the image\n    processed_img = load_and_preprocess_image(image_path)\n    # Make prediction\n    prediction = model.predict(processed_img)\n    # Get the predicted class index and confidence\n    predicted_class_idx = np.argmax(prediction, axis=1)[0]\n    confidence = prediction[0][predicted_class_idx] * 100\n    # Get the predicted class name",
+        "detail": "mri.scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.classification_predict",
+        "description": "mri.scripts.classification.classification_predict",
+        "peekOfCode": "def main():\n    # Paths\n    model_path = \"C:/zz_projects/medAI/mri/models/classification_model.h5\"\n    data_dir = \"mri/dataset/classification/training/\"\n    # Load categories (consistent with training)\n    categories = sorted(os.listdir(data_dir))\n    print(f\"Categories: {categories}\")\n    # Load the trained model\n    try:\n        model = load_model(model_path)",
+        "detail": "mri.scripts.classification.classification_predict",
+        "documentation": {}
+    },
+    {
+        "label": "data_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "data_dir = \"mri/dataset/classification/training/\"\ncategories = sorted(os.listdir(data_dir))  # Ensure consistent label ordering\n# Parameters\nIMG_SIZE = 224\nnum_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "categories",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "categories = sorted(os.listdir(data_dir))  # Ensure consistent label ordering\n# Parameters\nIMG_SIZE = 224\nnum_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "IMG_SIZE = 224\nnum_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "num_classes",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "num_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n        if img is not None:",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "data = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n        if img is not None:\n            img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n            data.append(img)",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "labels",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "labels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n        if img is not None:\n            img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n            data.append(img)\n            labels.append(idx)",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "data = np.array(data).reshape(-1, IMG_SIZE, IMG_SIZE, 1) / 255.0  # Normalize\nlabels = to_categorical(labels, num_classes)\n# Split dataset into training and validation sets\nX_train, X_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)\n# Create a processed data directory if not exists\nprocessed_dir = \"mri/processed_data/classification\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "labels",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "labels = to_categorical(labels, num_classes)\n# Split dataset into training and validation sets\nX_train, X_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)\n# Create a processed data directory if not exists\nprocessed_dir = \"mri/processed_data/classification\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)\nnp.save(os.path.join(processed_dir, \"X_val.npy\"), X_val)",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "processed_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_preprocessing",
+        "description": "mri.scripts.classification.classification_preprocessing",
+        "peekOfCode": "processed_dir = \"mri/processed_data/classification\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)\nnp.save(os.path.join(processed_dir, \"X_val.npy\"), X_val)\nnp.save(os.path.join(processed_dir, \"y_val.npy\"), y_val)\nprint(\"Classification data preprocessed and saved successfully!\")\n# print(\"Number of training samples:\", len(X_train))\n# print(\"Number of validation samples:\", len(X_val))",
+        "detail": "mri.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "def scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))\n    # Custom CNN architecture\n    x = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_model",
+        "kind": 2,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "def create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))\n    # Custom CNN architecture\n    x = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)\n    x = BatchNormalization()(x)\n    x = MaxPooling2D((2, 2))(x)  # 112x112\n    x = Conv2D(64, (3, 3), activation='relu', padding='same')(x)\n    x = BatchNormalization()(x)\n    x = MaxPooling2D((2, 2))(x)  # 56x56",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile.LOAD_TRUNCATED_IMAGES",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "ImageFile.LOAD_TRUNCATED_IMAGES = True\n# Enable mixed precision training\nmixed_precision.set_global_policy('mixed_float16')\n# Dataset paths\nbase_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "base_dir = r\"C:\\z_projects\\diagnosis\\xray\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.classification.classification_train",
+        "description": "mri.scripts.classification.classification_train",
+        "peekOfCode": "BATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))",
+        "detail": "mri.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_image",
+        "kind": 2,
+        "importPath": "mri.scripts.segmentation.segmentation_predict",
+        "description": "mri.scripts.segmentation.segmentation_predict",
+        "peekOfCode": "def load_and_preprocess_image(image_path, img_size=256):\n    \"\"\"Load and preprocess a single image for segmentation prediction.\"\"\"\n    # Read the image in grayscale\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    # Resize to match training dimensions\n    img = cv2.resize(img, (img_size, img_size))\n    # Normalize and reshape\n    img = img / 255.0",
+        "detail": "mri.scripts.segmentation.segmentation_predict",
+        "documentation": {}
+    },
+    {
+        "label": "predict_segmentation",
+        "kind": 2,
+        "importPath": "mri.scripts.segmentation.segmentation_predict",
+        "description": "mri.scripts.segmentation.segmentation_predict",
+        "peekOfCode": "def predict_segmentation(model, image_path, threshold=0.1):\n    \"\"\"Make a segmentation prediction on a single image with adjustable threshold.\"\"\"\n    # Load and preprocess the image\n    processed_img = load_and_preprocess_image(image_path)\n    # Make prediction\n    predicted_mask = model.predict(processed_img)\n    # Debug: Print the range and shape of predicted mask values\n    print(f\"Predicted Mask Value Range: {predicted_mask.min():.4f} to {predicted_mask.max():.4f}\")\n    print(f\"Predicted Mask Shape: {predicted_mask.shape}\")\n    # Threshold the prediction to get a binary mask",
+        "detail": "mri.scripts.segmentation.segmentation_predict",
+        "documentation": {}
+    },
+    {
+        "label": "visualize_prediction",
+        "kind": 2,
+        "importPath": "mri.scripts.segmentation.segmentation_predict",
+        "description": "mri.scripts.segmentation.segmentation_predict",
+        "peekOfCode": "def visualize_prediction(original_img, predicted_mask, predicted_mask_binary):\n    \"\"\"Visualize the original image, predicted mask, and binary mask.\"\"\"\n    plt.figure(figsize=(15, 5))\n    # Original Image\n    plt.subplot(1, 3, 1)\n    plt.title(\"Original Image\")\n    plt.imshow(original_img, cmap='gray')\n    plt.axis('off')\n    # Predicted Mask (continuous values)\n    plt.subplot(1, 3, 2)",
+        "detail": "mri.scripts.segmentation.segmentation_predict",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "mri.scripts.segmentation.segmentation_predict",
+        "description": "mri.scripts.segmentation.segmentation_predict",
+        "peekOfCode": "def main():\n    # Paths\n    model_path = \"C:/zz_projects/medAI/mri/models/segmentation_model.h5\"\n    # Load the trained model with custom loss function\n    def dice_loss(y_true, y_pred):\n        numerator = 2 * tf.reduce_sum(y_true * y_pred)\n        denominator = tf.reduce_sum(y_true + y_pred)\n        return 1 - numerator / (denominator + tf.keras.backend.epsilon())\n    try:\n        model = load_model(model_path, custom_objects={'dice_loss': dice_loss})",
+        "detail": "mri.scripts.segmentation.segmentation_predict",
+        "documentation": {}
+    },
+    {
+        "label": "image_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "image_dir = \"mri/dataset/segmentation/images/\"\nmask_dir = \"mri/dataset/segmentation/masks/\"\nIMG_SIZE = 256  # Resize images to 256x256\n# Load images and masks\nimage_files = sorted(glob.glob(os.path.join(image_dir, \"*.tif\")))\nmask_files = sorted(glob.glob(os.path.join(mask_dir, \"*.tif\")))\nimages = []\nmasks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "mask_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "mask_dir = \"mri/dataset/segmentation/masks/\"\nIMG_SIZE = 256  # Resize images to 256x256\n# Load images and masks\nimage_files = sorted(glob.glob(os.path.join(image_dir, \"*.tif\")))\nmask_files = sorted(glob.glob(os.path.join(mask_dir, \"*.tif\")))\nimages = []\nmasks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "IMG_SIZE = 256  # Resize images to 256x256\n# Load images and masks\nimage_files = sorted(glob.glob(os.path.join(image_dir, \"*.tif\")))\nmask_files = sorted(glob.glob(os.path.join(mask_dir, \"*.tif\")))\nimages = []\nmasks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)\n    if img is not None and mask is not None:",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "image_files",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "image_files = sorted(glob.glob(os.path.join(image_dir, \"*.tif\")))\nmask_files = sorted(glob.glob(os.path.join(mask_dir, \"*.tif\")))\nimages = []\nmasks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)\n    if img is not None and mask is not None:\n        # Resize images\n        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "mask_files",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "mask_files = sorted(glob.glob(os.path.join(mask_dir, \"*.tif\")))\nimages = []\nmasks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)\n    if img is not None and mask is not None:\n        # Resize images\n        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n        mask = cv2.resize(mask, (IMG_SIZE, IMG_SIZE))",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "images",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "images = []\nmasks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)\n    if img is not None and mask is not None:\n        # Resize images\n        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n        mask = cv2.resize(mask, (IMG_SIZE, IMG_SIZE))\n        # Normalize images",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "masks",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "masks = []\nfor img_path, mask_path in zip(image_files, mask_files):\n    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)\n    if img is not None and mask is not None:\n        # Resize images\n        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n        mask = cv2.resize(mask, (IMG_SIZE, IMG_SIZE))\n        # Normalize images\n        img = img / 255.0",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "images",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "images = np.array(images).reshape(-1, IMG_SIZE, IMG_SIZE, 1)\nmasks = np.array(masks).reshape(-1, IMG_SIZE, IMG_SIZE, 1)\n# Split dataset into training and validation sets\nX_train, X_val, y_train, y_val = train_test_split(images, masks, test_size=0.2, random_state=42)\n# Create a processed data directory if not exists\nprocessed_dir = \"mri/processed_data/segmentation\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "masks",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "masks = np.array(masks).reshape(-1, IMG_SIZE, IMG_SIZE, 1)\n# Split dataset into training and validation sets\nX_train, X_val, y_train, y_val = train_test_split(images, masks, test_size=0.2, random_state=42)\n# Create a processed data directory if not exists\nprocessed_dir = \"mri/processed_data/segmentation\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)\nnp.save(os.path.join(processed_dir, \"X_val.npy\"), X_val)",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "processed_dir",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_preprocessing",
+        "description": "mri.scripts.segmentation.segmentation_preprocessing",
+        "peekOfCode": "processed_dir = \"mri/processed_data/segmentation\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)\nnp.save(os.path.join(processed_dir, \"X_val.npy\"), X_val)\nnp.save(os.path.join(processed_dir, \"y_val.npy\"), y_val)\nprint(\" Segmentation data preprocessed and saved successfully!\")\nprint(\" Number of training samples:\", len(X_train))\nprint(\" Number of validation samples:\", len(X_val))",
+        "detail": "mri.scripts.segmentation.segmentation_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "dice_loss",
+        "kind": 2,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "def dice_loss(y_true, y_pred):\n    # Cast y_true to float32 for compatibility with y_pred\n    y_true = tf.cast(y_true, tf.float32)\n    numerator = 2 * tf.reduce_sum(y_true * y_pred)\n    denominator = tf.reduce_sum(y_true + y_pred)\n    return 1 - numerator / (denominator + tf.keras.backend.epsilon())\n# Define U-Net Model\ndef unet_model(input_size=(256, 256, 1)):\n    inputs = layers.Input(input_size)\n    # Encoder",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "unet_model",
+        "kind": 2,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "def unet_model(input_size=(256, 256, 1)):\n    inputs = layers.Input(input_size)\n    # Encoder\n    conv1 = layers.Conv2D(64, (3, 3), activation='relu', padding='same')(inputs)\n    pool1 = layers.MaxPooling2D(pool_size=(2, 2))(conv1)\n    conv2 = layers.Conv2D(128, (3, 3), activation='relu', padding='same')(pool1)\n    pool2 = layers.MaxPooling2D(pool_size=(2, 2))(conv2)\n    # Bottleneck\n    conv3 = layers.Conv2D(256, (3, 3), activation='relu', padding='same')(pool2)\n    # Decoder",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "data_path",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "data_path = \"C:/zz_projects/medAI/mri/processed_data/segmentation/\"\n# Load Preprocessed Data\nX_train = np.load(data_path + \"X_train.npy\")\ny_train = np.load(data_path + \"y_train.npy\")\nX_val = np.load(data_path + \"X_val.npy\")\ny_val = np.load(data_path + \"y_val.npy\")\n# Check dataset shape\nprint(f\"Training data shape: {X_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {X_val.shape}, Labels shape: {y_val.shape}\")\n# Data Augmentation",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "X_train",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "X_train = np.load(data_path + \"X_train.npy\")\ny_train = np.load(data_path + \"y_train.npy\")\nX_val = np.load(data_path + \"X_val.npy\")\ny_val = np.load(data_path + \"y_val.npy\")\n# Check dataset shape\nprint(f\"Training data shape: {X_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {X_val.shape}, Labels shape: {y_val.shape}\")\n# Data Augmentation\ndatagen = ImageDataGenerator(\n    rotation_range=20,",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "y_train = np.load(data_path + \"y_train.npy\")\nX_val = np.load(data_path + \"X_val.npy\")\ny_val = np.load(data_path + \"y_val.npy\")\n# Check dataset shape\nprint(f\"Training data shape: {X_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {X_val.shape}, Labels shape: {y_val.shape}\")\n# Data Augmentation\ndatagen = ImageDataGenerator(\n    rotation_range=20,\n    width_shift_range=0.2,",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "X_val",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "X_val = np.load(data_path + \"X_val.npy\")\ny_val = np.load(data_path + \"y_val.npy\")\n# Check dataset shape\nprint(f\"Training data shape: {X_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {X_val.shape}, Labels shape: {y_val.shape}\")\n# Data Augmentation\ndatagen = ImageDataGenerator(\n    rotation_range=20,\n    width_shift_range=0.2,\n    height_shift_range=0.2,",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "y_val",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "y_val = np.load(data_path + \"y_val.npy\")\n# Check dataset shape\nprint(f\"Training data shape: {X_train.shape}, Labels shape: {y_train.shape}\")\nprint(f\"Validation data shape: {X_val.shape}, Labels shape: {y_val.shape}\")\n# Data Augmentation\ndatagen = ImageDataGenerator(\n    rotation_range=20,\n    width_shift_range=0.2,\n    height_shift_range=0.2,\n    horizontal_flip=True",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "datagen",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "datagen = ImageDataGenerator(\n    rotation_range=20,\n    width_shift_range=0.2,\n    height_shift_range=0.2,\n    horizontal_flip=True\n)\ndatagen.fit(X_train)\n# Define Dice Loss\ndef dice_loss(y_true, y_pred):\n    # Cast y_true to float32 for compatibility with y_pred",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "model = unet_model()\nmodel.compile(optimizer='adam', loss=dice_loss, metrics=['accuracy'])\n# Define callbacks for early stopping and learning rate reduction\ncallbacks = [\n    tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True),\n    tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6)\n]\n# Train Model with Data Augmentation and Callbacks\nhistory = model.fit(datagen.flow(X_train, y_train, batch_size=8),\n                    validation_data=(X_val, y_val),",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "callbacks",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "callbacks = [\n    tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True),\n    tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6)\n]\n# Train Model with Data Augmentation and Callbacks\nhistory = model.fit(datagen.flow(X_train, y_train, batch_size=8),\n                    validation_data=(X_val, y_val),\n                    epochs=100,\n                    callbacks=callbacks)\n# Save Model",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "mri.scripts.segmentation.segmentation_train",
+        "description": "mri.scripts.segmentation.segmentation_train",
+        "peekOfCode": "history = model.fit(datagen.flow(X_train, y_train, batch_size=8),\n                    validation_data=(X_val, y_val),\n                    epochs=100,\n                    callbacks=callbacks)\n# Save Model\nos.makedirs(\"C:/zz_projects/medAI/mri/models\", exist_ok=True)\nmodel.save(\"C:/zz_projects/medAI/mri/models/segmentation_model.h5\")\nprint(\"Segmentation Model Trained and Saved Successfully!\")\n# Plot training history\nplt.figure(figsize=(12, 5))",
+        "detail": "mri.scripts.segmentation.segmentation_train",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_preprocess_image",
+        "kind": 2,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "def load_and_preprocess_image(image_path, img_size):\n    \"\"\"Load and preprocess a single image for prediction (classification or segmentation).\"\"\"\n    # Read the image in grayscale\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    # Resize to match training dimensions\n    img = cv2.resize(img, (img_size, img_size))\n    # Normalize and reshape\n    img = img / 255.0",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "predict_classification",
+        "kind": 2,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "def predict_classification(model, image_path, categories, img_size=224):\n    \"\"\"Make a classification prediction on a single image.\"\"\"\n    # Load and preprocess the image\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    # Make prediction\n    prediction = model.predict(processed_img)\n    # Get the predicted class index and confidence\n    predicted_class_idx = np.argmax(prediction, axis=1)[0]\n    confidence = prediction[0][predicted_class_idx] * 100\n    # Get the predicted class name",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "predict_segmentation",
+        "kind": 2,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "def predict_segmentation(model, image_path, threshold=0.1, img_size=256):\n    \"\"\"Make a segmentation prediction on a single image with adjustable threshold.\"\"\"\n    # Load and preprocess the image\n    processed_img = load_and_preprocess_image(image_path, img_size)\n    # Make prediction\n    predicted_mask = model.predict(processed_img)\n    # Debug: Print the range and shape of predicted mask values\n    print(f\"Predicted Mask Value Range: {predicted_mask.min():.4f} to {predicted_mask.max():.4f}\")\n    print(f\"Predicted Mask Shape: {predicted_mask.shape}\")\n    # Threshold the prediction to get a binary mask",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "visualize_segmentation",
+        "kind": 2,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "def visualize_segmentation(original_img, predicted_mask, predicted_mask_binary):\n    \"\"\"Visualize the original image, predicted mask, and binary mask for segmentation.\"\"\"\n    plt.figure(figsize=(15, 5))\n    # Original Image\n    plt.subplot(1, 3, 1)\n    plt.title(\"Original Image\")\n    plt.imshow(original_img, cmap='gray')\n    plt.axis('off')\n    # Predicted Mask (continuous values)\n    plt.subplot(1, 3, 2)",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "def main():\n    # Load categories for classification\n    categories = sorted(os.listdir(CLASSIFICATION_DATA_DIR))\n    print(f\"Categories: {categories}\")\n    # Load the classification model\n    try:\n        classification_model = load_model(CLASSIFICATION_MODEL_PATH)\n        print(\"Classification model loaded successfully!\")\n    except Exception as e:\n        print(f\"Error loading classification model: {e}\")",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "CLASSIFICATION_MODEL_PATH",
+        "kind": 5,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "CLASSIFICATION_MODEL_PATH = \"C:/zz_projects/medAI/mri/models/classification_model.h5\"\nSEGMENTATION_MODEL_PATH = \"C:/zz_projects/medAI/mri/models/segmentation_model.h5\"\nCLASSIFICATION_DATA_DIR = \"mri/dataset/classification/training/\"\ndef load_and_preprocess_image(image_path, img_size):\n    \"\"\"Load and preprocess a single image for prediction (classification or segmentation).\"\"\"\n    # Read the image in grayscale\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    # Resize to match training dimensions",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "SEGMENTATION_MODEL_PATH",
+        "kind": 5,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "SEGMENTATION_MODEL_PATH = \"C:/zz_projects/medAI/mri/models/segmentation_model.h5\"\nCLASSIFICATION_DATA_DIR = \"mri/dataset/classification/training/\"\ndef load_and_preprocess_image(image_path, img_size):\n    \"\"\"Load and preprocess a single image for prediction (classification or segmentation).\"\"\"\n    # Read the image in grayscale\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    # Resize to match training dimensions\n    img = cv2.resize(img, (img_size, img_size))",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "CLASSIFICATION_DATA_DIR",
+        "kind": 5,
+        "importPath": "mri.scripts.predict",
+        "description": "mri.scripts.predict",
+        "peekOfCode": "CLASSIFICATION_DATA_DIR = \"mri/dataset/classification/training/\"\ndef load_and_preprocess_image(image_path, img_size):\n    \"\"\"Load and preprocess a single image for prediction (classification or segmentation).\"\"\"\n    # Read the image in grayscale\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    if img is None:\n        raise ValueError(f\"Failed to load image: {image_path}\")\n    # Resize to match training dimensions\n    img = cv2.resize(img, (img_size, img_size))\n    # Normalize and reshape",
+        "detail": "mri.scripts.predict",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 2,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "def scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))\n    # Custom CNN architecture\n    x = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_model",
+        "kind": 2,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "def create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))\n    # Custom CNN architecture\n    x = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)\n    x = BatchNormalization()(x)\n    x = MaxPooling2D((2, 2))(x)  # 112x112\n    x = Conv2D(64, (3, 3), activation='relu', padding='same')(x)\n    x = BatchNormalization()(x)\n    x = MaxPooling2D((2, 2))(x)  # 56x56",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile.LOAD_TRUNCATED_IMAGES",
+        "kind": 5,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "ImageFile.LOAD_TRUNCATED_IMAGES = True\n# Enable mixed precision training\nmixed_precision.set_global_policy('float32')\n# Dataset paths\nbase_dir = r\"C:\\zz_projects\\medAI\\mri\\xray-dataset\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "base_dir = r\"C:\\zz_projects\\medAI\\mri\\xray-dataset\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "description": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "peekOfCode": "BATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))",
+        "detail": "xray.scripts.classification..ipynb_checkpoints.classification_train-checkpoint",
+        "documentation": {}
+    },
+    {
+        "label": "data_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "data_dir = \"xray/dataset/classification/train/\"\ncategories = sorted(os.listdir(data_dir))  # Ensure consistent label ordering\n# Parameters\nIMG_SIZE = 224\nnum_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "categories",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "categories = sorted(os.listdir(data_dir))  # Ensure consistent label ordering\n# Parameters\nIMG_SIZE = 224\nnum_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "IMG_SIZE = 224\nnum_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "num_classes",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "num_classes = len(categories)\n# Load images\ndata = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n        if img is not None:",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "data = []\nlabels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n        if img is not None:\n            img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n            data.append(img)",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "labels",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "labels = []\nfor idx, category in enumerate(categories):\n    category_path = os.path.join(data_dir, category)\n    for img_name in os.listdir(category_path):\n        img_path = os.path.join(category_path, img_name)\n        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)\n        if img is not None:\n            img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n            data.append(img)\n            labels.append(idx)",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "data = np.array(data).reshape(-1, IMG_SIZE, IMG_SIZE, 1) / 255.0  # Normalize\nlabels = to_categorical(labels, num_classes)\n# Split dataset into training and validation sets\nX_train, X_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)\n# Create a processed data directory if not exists\nprocessed_dir = \"xray/processed_data/classification\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "labels",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "labels = to_categorical(labels, num_classes)\n# Split dataset into training and validation sets\nX_train, X_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)\n# Create a processed data directory if not exists\nprocessed_dir = \"xray/processed_data/classification\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)\nnp.save(os.path.join(processed_dir, \"X_val.npy\"), X_val)",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "processed_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_preprocessing",
+        "description": "xray.scripts.classification.classification_preprocessing",
+        "peekOfCode": "processed_dir = \"xray/processed_data/classification\"\nos.makedirs(processed_dir, exist_ok=True)\n# Save preprocessed data\nnp.save(os.path.join(processed_dir, \"X_train.npy\"), X_train)\nnp.save(os.path.join(processed_dir, \"y_train.npy\"), y_train)\nnp.save(os.path.join(processed_dir, \"X_val.npy\"), X_val)\nnp.save(os.path.join(processed_dir, \"y_val.npy\"), y_val)\nprint(\"Classification data preprocessed and saved successfully!\")\n# print(\"Number of training samples:\", len(X_train))\n# print(\"Number of validation samples:\", len(X_val))",
+        "detail": "xray.scripts.classification.classification_preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "def scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))\n    # Custom CNN architecture\n    x = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "create_and_train_model",
+        "kind": 2,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "def create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))\n    # Custom CNN architecture\n    x = Conv2D(32, (3, 3), activation='relu', padding='same')(inputs)\n    x = BatchNormalization()(x)\n    x = MaxPooling2D((2, 2))(x)  # 112x112\n    x = Conv2D(64, (3, 3), activation='relu', padding='same')(x)\n    x = BatchNormalization()(x)\n    x = MaxPooling2D((2, 2))(x)  # 56x56",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFile.LOAD_TRUNCATED_IMAGES",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "ImageFile.LOAD_TRUNCATED_IMAGES = True\n# Enable mixed precision training\nmixed_precision.set_global_policy('float32')\n# Dataset paths\nbase_dir = r\"C:\\zz_projects\\medAI\\mri\\xray-dataset\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "base_dir = r\"C:\\zz_projects\\medAI\\mri\\xray-dataset\\dataset\"\ntrain_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "train_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "train_dir = os.path.join(base_dir, 'train')\nval_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "val_dir",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "val_dir = os.path.join(base_dir, 'val')\n# Image settings\nIMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "IMG_SIZE = (224, 224)\nBATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "xray.scripts.classification.classification_train",
+        "description": "xray.scripts.classification.classification_train",
+        "peekOfCode": "BATCH_SIZE = 32\n# Learning rate scheduler: Reduce by 0.9 every 5 epochs\ndef scheduler(epoch, lr):\n    if epoch > 0 and epoch % 5 == 0:\n        return lr * 0.9\n    return lr\n# Function to create and train a custom CNN model\ndef create_and_train_model(model_name, num_classes, is_binary, train_generator, val_generator):\n    # Input layer\n    inputs = Input(shape=(224, 224, 3))",
+        "detail": "xray.scripts.classification.classification_train",
+        "documentation": {}
+    }
+]

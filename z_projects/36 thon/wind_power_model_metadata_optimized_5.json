@@ -1,0 +1,21 @@
+{
+    "model_name": "Stacking Regressor",
+    "base_models": [
+        "XGBoost",
+        "LightGBM",
+        "Random Forest",
+        "MLP Regressor"
+    ],
+    "hyperparameters": {
+        "n_estimators": 73,
+        "max_depth": 7,
+        "learning_rate": 0.09415764322172132,
+        "subsample": 0.790881124724508
+    },
+    "evaluation_metrics": {
+        "MSE": 4308.141446402591,
+        "RMSE": 65.63643383367648,
+        "MAE": 34.41713567288135,
+        "R2": 0.9840655563631444
+    }
+}

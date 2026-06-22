@@ -1,0 +1,169 @@
+[
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "PPO",
+        "importPath": "stable_baselines3",
+        "description": "stable_baselines3",
+        "isExtraImport": true,
+        "detail": "stable_baselines3",
+        "documentation": {}
+    },
+    {
+        "label": "PPO",
+        "importPath": "stable_baselines3",
+        "description": "stable_baselines3",
+        "isExtraImport": true,
+        "detail": "stable_baselines3",
+        "documentation": {}
+    },
+    {
+        "label": "FootballEnv",
+        "importPath": "train_rl_football",
+        "description": "train_rl_football",
+        "isExtraImport": true,
+        "detail": "train_rl_football",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "gym",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gym",
+        "description": "gym",
+        "detail": "gym",
+        "documentation": {}
+    },
+    {
+        "label": "spaces",
+        "importPath": "gym",
+        "description": "gym",
+        "isExtraImport": true,
+        "detail": "gym",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "model = PPO.load(\"ppo_football.zip\")\n# Create the environment\nenv = FootballEnv()\nobs = env.reset()\ndone = False\ntotal_reward = 0\nstep_count = 0\ntrajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "env = FootballEnv()\nobs = env.reset()\ndone = False\ntotal_reward = 0\nstep_count = 0\ntrajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "obs",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "obs = env.reset()\ndone = False\ntotal_reward = 0\nstep_count = 0\ntrajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)\n    trajectory.append({",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "done",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "done = False\ntotal_reward = 0\nstep_count = 0\ntrajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)\n    trajectory.append({\n        'step': step_count,",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "total_reward",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "total_reward = 0\nstep_count = 0\ntrajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)\n    trajectory.append({\n        'step': step_count,\n        'obs': obs.tolist(),",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "step_count",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "step_count = 0\ntrajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)\n    trajectory.append({\n        'step': step_count,\n        'obs': obs.tolist(),\n        'action': action.tolist() if hasattr(action, 'tolist') else list(action),",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "trajectory",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "trajectory = []\nMAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)\n    trajectory.append({\n        'step': step_count,\n        'obs': obs.tolist(),\n        'action': action.tolist() if hasattr(action, 'tolist') else list(action),\n        'reward': reward,",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_STEPS",
+        "kind": 5,
+        "importPath": "run_trained_football",
+        "description": "run_trained_football",
+        "peekOfCode": "MAX_STEPS = 5000  # Prevent infinite loops\nwhile not done and step_count < MAX_STEPS:\n    action, _states = model.predict(obs, deterministic=True)\n    obs_next, reward, done, info = env.step(action)\n    trajectory.append({\n        'step': step_count,\n        'obs': obs.tolist(),\n        'action': action.tolist() if hasattr(action, 'tolist') else list(action),\n        'reward': reward,\n        'done': done",
+        "detail": "run_trained_football",
+        "documentation": {}
+    },
+    {
+        "label": "FootballEnv",
+        "kind": 6,
+        "importPath": "train_rl_football",
+        "description": "train_rl_football",
+        "peekOfCode": "class FootballEnv(gym.Env):\n    def __init__(self):\n        super(FootballEnv, self).__init__()\n        self.action_space = spaces.MultiDiscrete([4, 10])  # Action: [action_type, strength]\n        self.observation_space = spaces.Box(low=0, high=800, shape=(8,), dtype=np.float32)\n        self.player_a_pos = [100, 300]\n        self.player_b_pos = [700, 300]\n        self.ball_pos = [400, 300]\n        self.ball_velocity = [0, 0]\n        self.score_a = 0",
+        "detail": "train_rl_football",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "kind": 5,
+        "importPath": "train_rl_football",
+        "description": "train_rl_football",
+        "peekOfCode": "env = FootballEnv()\nmodel = PPO(\"MlpPolicy\", env, verbose=1)\nmodel.learn(total_timesteps=100000)\nmodel.save(\"ppo_football\")",
+        "detail": "train_rl_football",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "train_rl_football",
+        "description": "train_rl_football",
+        "peekOfCode": "model = PPO(\"MlpPolicy\", env, verbose=1)\nmodel.learn(total_timesteps=100000)\nmodel.save(\"ppo_football\")",
+        "detail": "train_rl_football",
+        "documentation": {}
+    }
+]

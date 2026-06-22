@@ -1,0 +1,51 @@
+
+
+
+
+
+
+# AI and LLM - Cloud APIs
+anthropic>=0.18.0
+openai>=1.0.0
+
+# AI and LLM - Local Models
+transformers>=4.36.0
+torch>=2.1.0
+accelerate>=0.25.0
+bitsandbytes>=0.41.0
+sentencepiece>=0.1.99
+
+# Device Control - Windows
+pywinauto>=0.6.8
+pyautogui>=0.9.54
+pygetwindow>=0.0.9
+keyboard>=0.13.5
+mouse>=0.7.1
+psutil>=5.9.0
+
+# Screen Capture and Vision
+Pillow>=10.0.0
+pytesseract>=0.3.10
+opencv-python>=4.8.0
+mss>=9.0.0
+
+# Speech Recognition
+openai-whisper>=20231117
+sounddevice>=0.4.6
+numpy>=1.24.0
+scipy>=1.11.0
+soundfile>=0.12.1
+webrtcvad>=2.0.10
+pyttsx3>=2.90
+
+# Utilities
+python-dotenv>=1.0.0
+colorama>=0.4.6
+psutil>=5.9.0
+watchdog>=3.0.0
+requests>=2.31.0
+
+# Development
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0

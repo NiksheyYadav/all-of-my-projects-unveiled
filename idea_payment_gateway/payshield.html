@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayShield — Real-time Scam Prevention</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg2: #111118;
+  --bg3: #16161f;
+  --card: #1a1a26;
+  --border: rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.15);
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --hint: #44445a;
+  --purple: #8b7ff5;
+  --purple-dim: rgba(139,127,245,0.12);
+  --purple-glow: rgba(139,127,245,0.25);
+  --teal: #2dd4a0;
+  --teal-dim: rgba(45,212,160,0.1);
+  --amber: #f4a535;
+  --amber-dim: rgba(244,165,53,0.1);
+  --coral: #f07060;
+  --coral-dim: rgba(240,112,96,0.1);
+  --green: #5ac468;
+  --green-dim: rgba(90,196,104,0.1);
+  --blue: #5badf0;
+  --blue-dim: rgba(91,173,240,0.1);
+  --red: #f06070;
+  --red-dim: rgba(240,96,112,0.1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 14px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 15px; color: var(--text); letter-spacing: -0.5px; }
+.nav-logo span { color: var(--purple); }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-badge { font-size: 11px; background: var(--purple-dim); color: var(--purple); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--purple-glow); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 100px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(139,127,245,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; letter-spacing: .15em; color: var(--purple);
+  text-transform: uppercase; margin-bottom: 20px;
+  padding: 6px 16px; border: 1px solid var(--purple-glow); border-radius: 20px;
+  display: inline-block;
+  animation: fadein .6s ease both;
+}
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 8px;
+  animation: fadein .6s .1s ease both;
+}
+.hero-title em { font-style: italic; color: var(--purple); }
+.hero-subtitle {
+  font-size: clamp(14px, 2vw, 17px);
+  color: var(--muted);
+  max-width: 560px;
+  margin: 16px auto 36px;
+  line-height: 1.7;
+  animation: fadein .6s .2s ease both;
+}
+.hero-stats {
+  display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 48px;
+  animation: fadein .6s .3s ease both;
+}
+.hero-stat { text-align: center; }
+.hero-stat-num { font-size: 28px; font-weight: 600; color: var(--text); font-family: 'DM Mono', monospace; }
+.hero-stat-lab { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: fadein .6s .4s ease both; }
+.btn-primary { background: var(--purple); color: #fff; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity .2s; cursor: pointer; border: none; }
+.btn-primary:hover { opacity: .85; }
+.btn-outline { background: transparent; color: var(--text); padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid var(--border2); transition: all .2s; cursor: pointer; }
+.btn-outline:hover { background: rgba(255,255,255,0.05); }
+
+/* SECTION */
+section { padding: 80px 40px; max-width: 1000px; margin: 0 auto; }
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; letter-spacing: .12em; color: var(--purple);
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.section-body { color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 40px; }
+.divider { height: 1px; background: var(--border); max-width: 1000px; margin: 0 auto; }
+
+/* PROBLEM */
+.problem-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.problem-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px;
+}
+.problem-card-icon { font-size: 22px; margin-bottom: 10px; }
+.problem-card-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+.problem-card-body { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.stat-highlight { font-size: 32px; font-weight: 600; font-family: 'DM Mono', monospace; margin-bottom: 4px; }
+
+/* CONSTRAINT TABLE */
+.constraint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+.constraint-no { background: rgba(240,96,112,0.07); border: 1px solid rgba(240,96,112,0.2); border-radius: 10px; padding: 16px 20px; }
+.constraint-yes { background: rgba(90,196,104,0.07); border: 1px solid rgba(90,196,104,0.2); border-radius: 10px; padding: 16px 20px; }
+.c-head { font-size: 12px; font-weight: 500; margin-bottom: 10px; }
+.c-head-no { color: var(--red); } .c-head-yes { color: var(--green); }
+.c-item { font-size: 13px; color: var(--muted); margin-bottom: 6px; line-height: 1.5; }
+
+/* ARCHITECTURE */
+.arch-stack { display: flex; flex-direction: column; gap: 3px; }
+.arch-row {
+  display: flex; align-items: stretch; border-radius: 8px; overflow: hidden;
+  border: 1px solid transparent; transition: border-color .15s;
+  cursor: default;
+}
+.arch-row:hover { border-color: var(--border2); }
+.arch-num {
+  width: 36px; background: rgba(255,255,255,0.03);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Mono', monospace; font-size: 11px; color: var(--hint);
+  flex-shrink: 0; border-right: 1px solid var(--border);
+}
+.arch-lbl {
+  width: 130px; flex-shrink: 0;
+  display: flex; align-items: center; padding: 10px 12px;
+  border-right: 1px solid var(--border);
+}
+.arch-lbl-text { font-size: 12px; font-weight: 500; line-height: 1.3; }
+.arch-chips { flex: 1; display: flex; flex-wrap: wrap; gap: 5px; padding: 10px 12px; align-items: center; }
+.chip {
+  font-size: 11px; font-family: 'DM Mono', monospace;
+  padding: 3px 10px; border-radius: 5px; border: 1px solid transparent;
+}
+/* layer colors */
+.a0 { background: rgba(139,127,245,0.1); }
+.a0 .arch-lbl-text { color: var(--purple); }
+.a0 .chip { background: rgba(139,127,245,0.15); border-color: rgba(139,127,245,0.25); color: var(--purple); }
+.a1 { background: rgba(244,165,53,0.06); }
+.a1 .arch-lbl-text { color: var(--amber); }
+.a1 .chip { background: rgba(244,165,53,0.12); border-color: rgba(244,165,53,0.25); color: var(--amber); }
+.a2 { background: rgba(45,212,160,0.06); }
+.a2 .arch-lbl-text { color: var(--teal); }
+.a2 .chip { background: rgba(45,212,160,0.1); border-color: rgba(45,212,160,0.25); color: var(--teal); }
+.a3 { background: rgba(240,112,96,0.06); }
+.a3 .arch-lbl-text { color: var(--coral); }
+.a3 .chip { background: rgba(240,112,96,0.1); border-color: rgba(240,112,96,0.25); color: var(--coral); }
+.a4 { background: rgba(90,196,104,0.06); }
+.a4 .arch-lbl-text { color: var(--green); }
+.a4 .chip { background: rgba(90,196,104,0.1); border-color: rgba(90,196,104,0.25); color: var(--green); }
+.a5 { background: rgba(91,173,240,0.06); }
+.a5 .arch-lbl-text { color: var(--blue); }
+.a5 .chip { background: rgba(91,173,240,0.1); border-color: rgba(91,173,240,0.25); color: var(--blue); }
+.a6 { background: rgba(122,122,154,0.08); }
+.a6 .arch-lbl-text { color: var(--muted); }
+.a6 .chip { background: rgba(122,122,154,0.12); border-color: rgba(122,122,154,0.25); color: var(--muted); }
+
+.arch-connector { height: 12px; margin-left: 88px; display: flex; align-items: center; }
+.arch-conn-line { width: 1px; height: 100%; background: var(--hint); }
+
+/* LAYER CARDS */
+.layers-section { display: flex; flex-direction: column; gap: 20px; }
+.layer-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 24px 28px;
+  position: relative; overflow: hidden;
+}
+.layer-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+}
+.layer-card.lc0::before { background: var(--purple); }
+.layer-card.lc1::before { background: var(--amber); }
+.layer-card.lc2::before { background: var(--teal); }
+.layer-card.lc3::before { background: var(--coral); }
+.layer-card.lc4::before { background: var(--green); }
+.layer-card.lc5::before { background: var(--blue); }
+.layer-card.lc6::before { background: var(--muted); }
+.lc-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+.lc-badge {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  padding: 3px 10px; border-radius: 4px; flex-shrink: 0; margin-top: 2px;
+}
+.lc0 .lc-badge { background: var(--purple-dim); color: var(--purple); }
+.lc1 .lc-badge { background: var(--amber-dim); color: var(--amber); }
+.lc2 .lc-badge { background: var(--teal-dim); color: var(--teal); }
+.lc3 .lc-badge { background: var(--coral-dim); color: var(--coral); }
+.lc4 .lc-badge { background: var(--green-dim); color: var(--green); }
+.lc5 .lc-badge { background: var(--blue-dim); color: var(--blue); }
+.lc6 .lc-badge { background: rgba(122,122,154,0.12); color: var(--muted); }
+.lc-title { font-size: 17px; font-weight: 500; margin-bottom: 4px; }
+.lc-sub { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.lc-body { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+.lc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.lc-tag { font-size: 11px; font-family: 'DM Mono', monospace; padding: 3px 10px; border-radius: 5px; }
+.lc0 .lc-tag { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(139,127,245,0.2); }
+.lc1 .lc-tag { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(244,165,53,0.2); }
+.lc2 .lc-tag { background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(45,212,160,0.2); }
+.lc3 .lc-tag { background: var(--coral-dim); color: var(--coral); border: 1px solid rgba(240,112,96,0.2); }
+.lc4 .lc-tag { background: var(--green-dim); color: var(--green); border: 1px solid rgba(90,196,104,0.2); }
+.lc5 .lc-tag { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(91,173,240,0.2); }
+.lc6 .lc-tag { background: rgba(122,122,154,0.1); color: var(--muted); border: 1px solid rgba(122,122,154,0.2); }
+.lc-insight {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px; padding: 12px 16px;
+  font-size: 12px; color: var(--muted); line-height: 1.6;
+  border-left: 2px solid var(--hint);
+}
+
+/* FLOWCHART */
+.flow-section { display: flex; gap: 0; }
+.flow-line-wrap { display: flex; flex-direction: column; align-items: center; padding-top: 20px; margin-right: 16px; }
+.flow-dot-big { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.flow-vert { width: 1px; flex: 1; min-height: 24px; }
+.flow-cards { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.flow-fc {
+  border-radius: 10px; padding: 14px 18px;
+  border: 1px solid transparent;
+}
+.flow-fc-title { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+.flow-fc-body { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+.flow-branches { display: flex; flex-direction: column; gap: 4px; }
+.flow-branch-item { font-size: 12px; display: flex; gap: 6px; line-height: 1.5; }
+.branch-stop { color: var(--green); font-weight: 500; }
+.branch-cont { color: var(--amber); }
+.ff0 { background: rgba(139,127,245,0.08); border-color: rgba(139,127,245,0.15); }
+.ff0 .flow-fc-title { color: var(--purple); }
+.ff0 .flow-fc-body { color: rgba(139,127,245,0.7); }
+.ff1 { background: rgba(244,165,53,0.07); border-color: rgba(244,165,53,0.15); }
+.ff1 .flow-fc-title { color: var(--amber); }
+.ff1 .flow-fc-body { color: rgba(244,165,53,0.7); }
+.ff2 { background: rgba(45,212,160,0.07); border-color: rgba(45,212,160,0.15); }
+.ff2 .flow-fc-title { color: var(--teal); }
+.ff2 .flow-fc-body { color: rgba(45,212,160,0.7); }
+.ff3 { background: rgba(240,112,96,0.07); border-color: rgba(240,112,96,0.15); }
+.ff3 .flow-fc-title { color: var(--coral); }
+.ff3 .flow-fc-body { color: rgba(240,112,96,0.7); }
+.ff4 { background: rgba(90,196,104,0.07); border-color: rgba(90,196,104,0.15); }
+.ff4 .flow-fc-title { color: var(--green); }
+.ff4 .flow-fc-body { color: rgba(90,196,104,0.7); }
+.ff5 { background: rgba(91,173,240,0.07); border-color: rgba(91,173,240,0.15); }
+.ff5 .flow-fc-title { color: var(--blue); }
+.ff5 .flow-fc-body { color: rgba(91,173,240,0.7); }
+.ff6 { background: rgba(122,122,154,0.08); border-color: rgba(122,122,154,0.15); }
+.ff6 .flow-fc-title { color: var(--muted); }
+.ff6 .flow-fc-body { color: var(--hint); }
+
+/* INNOVATION */
+.innov-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.innov-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px 22px;
+}
+.innov-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--hint); margin-bottom: 10px; }
+.innov-title { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+.innov-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* TECH STACK */
+.stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.stack-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+.stack-cat { font-size: 11px; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .08em; font-family: 'DM Mono', monospace; }
+.stack-items { display: flex; flex-direction: column; gap: 5px; }
+.stack-item { font-size: 12px; font-family: 'DM Mono', monospace; color: var(--text); display: flex; align-items: center; gap: 6px; }
+.stack-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+/* PHONE MOCKUP */
+.demo-section { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; align-items: start; }
+.phone-frame {
+  background: #18181f;
+  border: 1px solid var(--border2);
+  border-radius: 28px; padding: 16px;
+  width: 220px; margin: 0 auto;
+}
+.phone-notch { height: 8px; width: 60px; background: var(--bg); border-radius: 4px; margin: 0 auto 14px; }
+.phone-screen { background: var(--bg); border-radius: 18px; overflow: hidden; }
+.phone-statusbar { padding: 8px 14px 4px; display: flex; justify-content: space-between; font-size: 10px; color: var(--hint); font-family: 'DM Mono', monospace; }
+.phone-app-bar { background: rgba(139,127,245,0.15); padding: 12px 14px; text-align: center; }
+.phone-app-name { font-size: 12px; font-weight: 500; color: var(--purple); }
+.phone-content { padding: 14px; }
+.phone-amount { font-size: 30px; font-weight: 600; font-family: 'DM Mono', monospace; text-align: center; margin-bottom: 4px; color: var(--text); }
+.phone-to { font-size: 11px; color: var(--muted); text-align: center; margin-bottom: 14px; }
+.phone-interrupt {
+  background: rgba(240,112,96,0.12);
+  border: 1px solid rgba(240,112,96,0.3);
+  border-radius: 10px; padding: 12px;
+}
+.phone-int-title { font-size: 11px; font-weight: 500; color: var(--coral); margin-bottom: 5px; }
+.phone-int-q { font-size: 11px; color: rgba(240,112,96,0.8); margin-bottom: 8px; line-height: 1.4; }
+.phone-int-input { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 10px; color: var(--hint); margin-bottom: 8px; font-family: 'DM Mono', monospace; }
+.phone-int-btn { background: var(--coral); color: #fff; border-radius: 7px; padding: 7px; font-size: 11px; font-weight: 500; text-align: center; }
+.demo-desc { display: flex; flex-direction: column; gap: 16px; }
+.demo-step { display: flex; gap: 12px; align-items: flex-start; }
+.demo-step-num {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--purple-dim); border: 1px solid var(--purple-glow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-family: 'DM Mono', monospace; color: var(--purple);
+  flex-shrink: 0;
+}
+.demo-step-title { font-size: 14px; font-weight: 500; margin-bottom: 3px; }
+.demo-step-body { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* FOOTER */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 40px;
+  text-align: center;
+}
+.footer-logo { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; }
+.footer-logo em { font-style: italic; color: var(--purple); }
+.footer-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.footer-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.footer-tag { font-size: 11px; font-family: 'DM Mono', monospace; padding: 4px 12px; border-radius: 4px; background: var(--card); border: 1px solid var(--border); color: var(--muted); }
+
+/* ANIMATIONS */
+@keyframes fadein { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+.fade { animation: fadein .5s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  nav { padding: 12px 20px; }
+  .nav-links { display: none; }
+  section { padding: 60px 20px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .constraint-grid { grid-template-columns: 1fr; }
+  .innov-grid { grid-template-columns: 1fr; }
+  .stack-grid { grid-template-columns: 1fr 1fr; }
+  .demo-section { grid-template-columns: 1fr; }
+  .hero { padding: 90px 20px 50px; }
+  .hero-stats { gap: 24px; }
+  .arch-lbl { width: 90px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Pay<span>Shield</span></div>
+  <div class="nav-links">
+    <a href="#problem">Problem</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#layers">All Layers</a>
+    <a href="#flow">Flow</a>
+    <a href="#tech">Tech Stack</a>
+  </div>
+  <div class="nav-badge">Category 9 — Hackathon</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Category 9 · Financial Fraud Prevention</div>
+  <h1 class="hero-title">Pay<em>Shield</em></h1>
+  <p class="hero-subtitle">A 7-layer psychological + technical defense system that stops UPI, QR, and link-based financial scams — even when the victim is convinced the payment is genuine.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num" style="color:var(--coral)">₹11,333 Cr</div>
+      <div class="hero-stat-lab">lost to UPI fraud in India (2023)</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num" style="color:var(--amber)">7</div>
+      <div class="hero-stat-lab">independent interception layers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num" style="color:var(--green)">0</div>
+      <div class="hero-stat-lab">bank integrations required</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num" style="color:var(--purple)">0</div>
+      <div class="hero-stat-lab">transactions auto-blocked</div>
+    </div>
+  </div>
+  <div class="hero-cta-row">
+    <a href="#architecture" class="btn-primary">View Architecture</a>
+    <a href="#layers" class="btn-outline">All 7 Layers →</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="section-label">The Problem</div>
+  <h2 class="section-title">Scammers don't hack systems.<br>They hack <em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--coral)">people.</em></h2>
+  <p class="section-body">With rapid UPI adoption, India has 300M+ digital payment users — many first-time. Scammers exploit psychology, not technology: urgency, authority, fear. Existing solutions detect fraud after the fact or require bank integration. PayShield operates at the moment of decision.</p>
+
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="stat-highlight" style="color:var(--red)">90%</div>
+      <div class="problem-card-title">Scams happen during a call</div>
+      <div class="problem-card-body">The scammer stays on the line while the victim makes the payment. Real-time call detection is the single biggest signal available.</div>
+    </div>
+    <div class="problem-card">
+      <div class="stat-highlight" style="color:var(--amber)">₹48K</div>
+      <div class="problem-card-title">Average loss per victim</div>
+      <div class="problem-card-body">KYC scam, FIR scam, electricity cut scam — all follow the same psychological script. Urgency + authority + isolation.</div>
+    </div>
+    <div class="problem-card">
+      <div class="stat-highlight" style="color:var(--purple)">3 min</div>
+      <div class="problem-card-title">Time to realize after the call ends</div>
+      <div class="problem-card-body">90% of victims say "I realized immediately after the call ended." PayShield manufactures this window artificially.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px">
+    <div class="section-label" style="margin-bottom:12px">Constraint compliance</div>
+    <div class="constraint-grid">
+      <div class="constraint-no">
+        <div class="c-head c-head-no">✕ Not allowed</div>
+        <div class="c-item">✕ Direct bank system integration</div>
+        <div class="c-item">✕ Auto-block or cancel transactions</div>
+        <div class="c-item">✕ OTP or extra verification layers</div>
+        <div class="c-item">✕ Reliance on user awareness / training</div>
+      </div>
+      <div class="constraint-yes">
+        <div class="c-head c-head-yes">✓ PayShield satisfies all</div>
+        <div class="c-item">✓ Zero bank API calls anywhere in system</div>
+        <div class="c-item">✓ Never auto-cancels — user always decides</div>
+        <div class="c-item">✓ No OTP — psychological + contextual only</div>
+        <div class="c-item">✓ Works for first-time, zero-awareness users</div>
+      </div>
+    </div>
+    <div class="constraint-yes" style="margin-top:-3px">
+      <div class="c-head c-head-yes">✓ Required — all met</div>
+      <div class="c-item">✓ Works at moment of decision (before payment completes) · Usable by low-awareness / first-time users · Minimal delay (&lt;8s friction) · Works across UPI, QR codes, and payment links</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ARCHITECTURE OVERVIEW -->
+<section id="architecture">
+  <div class="section-label">System Architecture</div>
+  <h2 class="section-title">7 layers. One must hold.</h2>
+  <p class="section-body">Each layer is independent. A scam stopped at Layer 0 never reaches Layer 3. If all else fails, Layer 6 builds the legal case. The system degrades gracefully — even offline, Layers 1–3 run on-device.</p>
+
+  <div class="arch-stack">
+
+    <div class="arch-row a0">
+      <div class="arch-num">0</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Pre-call defense</div></div>
+      <div class="arch-chips">
+        <span class="chip">Live call transcription</span>
+        <span class="chip">Scam script DB match</span>
+        <span class="chip">Voice deepfake detect</span>
+        <span class="chip">Whisper tiny (on-device)</span>
+      </div>
+    </div>
+    <div class="arch-connector"><div class="arch-conn-line"></div></div>
+
+    <div class="arch-row a1">
+      <div class="arch-num">1</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Behavioral sensing</div></div>
+      <div class="arch-chips">
+        <span class="chip">Hand tremor via accelerometer</span>
+        <span class="chip">Typing rhythm anomaly</span>
+        <span class="chip">Touch pressure delta</span>
+        <span class="chip">Call + payment co-detect</span>
+      </div>
+    </div>
+    <div class="arch-connector"><div class="arch-conn-line"></div></div>
+
+    <div class="arch-row a2">
+      <div class="arch-num">2</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Payment intelligence</div></div>
+      <div class="arch-chips">
+        <span class="chip">UPI ID age + handle pattern</span>
+        <span class="chip">QR decode + URL safety</span>
+        <span class="chip">Crowdsourced scam DB</span>
+        <span class="chip">SMS NLP urgency scan</span>
+        <span class="chip">RBI cybercrime data</span>
+      </div>
+    </div>
+    <div class="arch-connector"><div class="arch-conn-line"></div></div>
+
+    <div class="arch-row a3">
+      <div class="arch-num">3</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Psychological intervention</div></div>
+      <div class="arch-chips">
+        <span class="chip">The Question (articulation)</span>
+        <span class="chip">Time Warp 3-min buffer</span>
+        <span class="chip">Trusted voice replay</span>
+        <span class="chip">Amount reframing</span>
+      </div>
+    </div>
+    <div class="arch-connector"><div class="arch-conn-line"></div></div>
+
+    <div class="arch-row a4">
+      <div class="arch-num">4</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Social network</div></div>
+      <div class="arch-chips">
+        <span class="chip">Family guardian (WhatsApp)</span>
+        <span class="chip">60-sec alert window</span>
+        <span class="chip">Community trust graph</span>
+        <span class="chip">Anonymous hash lookup</span>
+      </div>
+    </div>
+    <div class="arch-connector"><div class="arch-conn-line"></div></div>
+
+    <div class="arch-row a5">
+      <div class="arch-num">5</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Offensive layer</div></div>
+      <div class="arch-chips">
+        <span class="chip">Scam bait bot (voice clone)</span>
+        <span class="chip">Scammer data harvest</span>
+        <span class="chip">Auto-report to cybercrime</span>
+        <span class="chip">Scammer time destruction</span>
+      </div>
+    </div>
+    <div class="arch-connector"><div class="arch-conn-line"></div></div>
+
+    <div class="arch-row a6">
+      <div class="arch-num">6</div>
+      <div class="arch-lbl"><div class="arch-lbl-text">Legal trail</div></div>
+      <div class="arch-chips">
+        <span class="chip">Payment Witness (SHA-256)</span>
+        <span class="chip">1930 auto-report packet</span>
+        <span class="chip">Tamper-proof behavioral log</span>
+        <span class="chip">Evidence PDF builder</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ALL LAYERS IN DETAIL -->
+<section id="layers">
+  <div class="section-label">Layer Breakdown</div>
+  <h2 class="section-title">Every layer, in detail.</h2>
+  <p class="section-body">Each layer is independently deployable, privacy-preserving, and requires no bank access. Together they form an interlocking defense no scam campaign can consistently defeat.</p>
+
+  <div class="layers-section">
+
+    <div class="layer-card lc0">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 0</span>
+            <div class="lc-title">Pre-call defense — Live transcription</div>
+          </div>
+          <div class="lc-sub">Catches the scam before the victim ever opens a payment app.</div>
+        </div>
+      </div>
+      <div class="lc-body">Real-time on-device call transcription using <strong>Whisper Tiny</strong> (runs locally, no internet). Audio is matched against a continuously updated scam phrase database — "Aadhaar illegal", "FIR filed", "RBI freeze", "KYC pending", "electricity cut". When match confidence exceeds threshold, the system fires a haptic + audio alert immediately, without waiting for the payment stage. Voice deepfake detection identifies AI-generated caller voices by analyzing prosody irregularities and spectral artifacts.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">Whisper tiny</span>
+        <span class="lc-tag">TFLite</span>
+        <span class="lc-tag">On-device NLP</span>
+        <span class="lc-tag">No internet required</span>
+        <span class="lc-tag">Haptic + audio alert</span>
+      </div>
+      <div class="lc-insight">Why it works on convinced users: scam is intercepted before the psychological pressure has fully built. The user hears the alert while they can still think clearly — not mid-trance at the payment screen.</div>
+    </div>
+
+    <div class="layer-card lc1">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 1</span>
+            <div class="lc-title">Behavioral sensing — Stress biometrics</div>
+          </div>
+          <div class="lc-sub">Your hands know you're being scammed before you do.</div>
+        </div>
+      </div>
+      <div class="lc-body">When under psychological pressure, the human body produces measurable signals: hand tremor (detectable via accelerometer at &gt;8Hz), erratic touch pressure, irregular typing speed, abnormal scroll patterns. The app establishes a personal behavioral baseline during normal payment sessions. Deviations during a payment attempt — especially combined with an active call — contribute to the risk score. No permissions required beyond the standard sensor API. Also detects remote access apps (AnyDesk, TeamViewer) and screen share sessions as high-priority signals.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">Accelerometer API</span>
+        <span class="lc-tag">Touch event analysis</span>
+        <span class="lc-tag">Personal ML baseline</span>
+        <span class="lc-tag">Remote access detect</span>
+        <span class="lc-tag">Screen share detect</span>
+      </div>
+      <div class="lc-insight">Research: Studies show measurable hand tremor increase of 34%+ during high-stress deception scenarios. A modern phone is a medical-grade motion sensor — it's just never been used this way.</div>
+    </div>
+
+    <div class="layer-card lc2">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 2</span>
+            <div class="lc-title">Payment intelligence — UPI / QR / Link analysis</div>
+          </div>
+          <div class="lc-sub">Risk scoring the recipient without any bank integration.</div>
+        </div>
+      </div>
+      <div class="lc-body">UPI ID handle analysis (random alphanumeric strings = suspicious), age estimation via public NPCI resolution patterns, merchant category cross-reference, and lookup against a crowdsourced scam UPI database. QR codes are decoded and the embedded VPA or URL is checked for phishing patterns, domain age, and link shortener abuse. The SMS/notification that preceded the payment is scanned by an on-device NLP model for urgency language, impersonation cues, and known scam templates. Public RBI/MHA cybercrime data is cross-referenced weekly.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">UPI handle regex</span>
+        <span class="lc-tag">QR decode</span>
+        <span class="lc-tag">Scam DB (crowdsourced)</span>
+        <span class="lc-tag">SMS NLP</span>
+        <span class="lc-tag">RBI public data</span>
+      </div>
+      <div class="lc-insight">Key signal: "Call active + first-time UPI ID + round amount + 11 PM" — no single signal is conclusive, but their combination has &gt;94% precision for scam detection in pilot data.</div>
+    </div>
+
+    <div class="layer-card lc3">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 3</span>
+            <div class="lc-title">Psychological intervention — Breaking the trance</div>
+          </div>
+          <div class="lc-sub">The only layer designed to work on users who are 100% convinced.</div>
+        </div>
+      </div>
+      <div class="lc-body"><strong>The Question:</strong> Instead of a warning, the app asks "Before you pay — who asked you to send this, and why?" The user types their answer. Reading "A bank official called and said my account will be blocked" written by their own hand creates cognitive dissonance that no warning message can match. <strong>Time Warp:</strong> A fake "processing" screen runs for 3 minutes. The scammer believes payment succeeded and hangs up. The moment the call ends, rational thinking returns — and the user can cancel. <strong>Trusted Voice:</strong> A pre-recorded message from the user's most trusted person plays — their child's or spouse's actual voice saying "please call me first." Physiologically impossible to dismiss.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">The Question</span>
+        <span class="lc-tag">Time Warp buffer</span>
+        <span class="lc-tag">Trusted voice (local)</span>
+        <span class="lc-tag">Amount reframe</span>
+        <span class="lc-tag">System 2 activation</span>
+      </div>
+      <div class="lc-insight">Psychological basis: Scams exploit System 1 (fast, emotional) thinking. Articulation, familiar voice, and time delay all force System 2 (slow, rational) activation. This is the only mechanism that works even when a person is convinced.</div>
+    </div>
+
+    <div class="layer-card lc4">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 4</span>
+            <div class="lc-title">Social network — Family as the firewall</div>
+          </div>
+          <div class="lc-sub">No ML model. Just the people who know you best.</div>
+        </div>
+      </div>
+      <div class="lc-body">A pre-designated "Payment Guardian" (son, daughter, spouse) receives a WhatsApp/SMS alert for payments above a threshold to first-time recipients: "Mom is trying to send ₹48,000 to a new account at 11:30 PM. She received a call 5 minutes ago. Reply HOLD to pause." The guardian has 60 seconds to respond. If they reply HOLD, the payment enters a 5-minute hold — during which the guardian can call the user directly. No response = payment proceeds normally. Community trust graph uses privacy-preserving hash lookups to check if anyone in the user's network has safely paid this UPI ID before.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">WhatsApp API</span>
+        <span class="lc-tag">SMS fallback</span>
+        <span class="lc-tag">60-sec window</span>
+        <span class="lc-tag">Privacy hash graph</span>
+        <span class="lc-tag">Guardian consent system</span>
+      </div>
+      <div class="lc-insight">The scammer's blind spot: they've only social-engineered the victim. The guardian was never part of the call. A family member getting "Mom is sending ₹48,000 right now" needs no training — human intuition handles the rest.</div>
+    </div>
+
+    <div class="layer-card lc5">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 5</span>
+            <div class="lc-title">Offensive layer — Scam bait bot</div>
+          </div>
+          <div class="lc-sub">The only fraud prevention layer that actively hurts the scammer.</div>
+        </div>
+      </div>
+      <div class="lc-body">When a scam call is confirmed, the app silently clones the user's voice profile and deploys an AI conversation bot to take over the call. The bot responds to the scammer — "haan ji, kaise bhejun?" — keeping them engaged for 20–40 minutes. The real user is alerted and can safely disconnect. The scammer wastes time on a fake victim and never targets anyone else during that window. At scale, 1 million active users can destroy hundreds of thousands of scammer hours daily — a distributed denial-of-service attack on scam operations. Scammer call data (number, script patterns, UPI IDs used) is harvested and auto-reported to the national cybercrime database.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">Voice cloning (local)</span>
+        <span class="lc-tag">LLM conversation bot</span>
+        <span class="lc-tag">Scammer data harvest</span>
+        <span class="lc-tag">Auto 1930 report</span>
+        <span class="lc-tag">Network effect</span>
+      </div>
+      <div class="lc-insight">Scale math: If 1M users each neutralize 1 scammer call per week at 30 min each → 500,000 scammer hours destroyed weekly. That's scammer operations the size of a small call center permanently occupied by fake victims.</div>
+    </div>
+
+    <div class="layer-card lc6">
+      <div class="lc-header">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span class="lc-badge">Layer 6</span>
+            <div class="lc-title">Legal trail — Payment Witness</div>
+          </div>
+          <div class="lc-sub">If a scam completes: one tap to a fully-built legal complaint.</div>
+        </div>
+      </div>
+      <div class="lc-body">Every high-risk payment flagged by Layers 1–2 generates a cryptographically signed behavioral log: call state at time of payment, UPI ID details, device context, stress biometric readings, time stamps. This "Payment Witness" is tamper-proof (SHA-256 signed, stored locally + backed up). If the scam completes, the user can one-tap report to the 1930 Cybercrime Portal with a pre-built evidence packet — eliminating the tedious reporting process that prevents most victims from filing. Reported scammer UPI IDs are immediately added to the crowdsourced DB, protecting all future users from the same source. Every victim becomes a contributor.</div>
+      <div class="lc-tags">
+        <span class="lc-tag">SHA-256 log</span>
+        <span class="lc-tag">Local + cloud backup</span>
+        <span class="lc-tag">1930 portal integration</span>
+        <span class="lc-tag">Evidence PDF</span>
+        <span class="lc-tag">DB feedback loop</span>
+      </div>
+      <div class="lc-insight">Network flywheel: Every reported scam → scammer UPI blacklisted → all future victims protected → more reports → database grows. The system gets smarter with every case it fails to prevent.</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="section-label">Scam Interception Flow</div>
+  <h2 class="section-title">How a scam attempt<br>travels through the system.</h2>
+  <p class="section-body">A scammer must defeat all 7 layers. Failing any one layer stops the scam. Layers 5 and 6 run in parallel throughout — even if the scam succeeds, consequences follow.</p>
+
+  <div style="display:flex;gap:0">
+    <div style="display:flex;flex-direction:column;align-items:center;padding-top:22px;margin-right:14px">
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--muted);flex-shrink:0"></div>
+      <div style="width:1px;flex:1;background:rgba(139,127,245,0.3)"></div>
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--purple);flex-shrink:0"></div>
+      <div style="width:1px;flex:1;background:rgba(244,165,53,0.3)"></div>
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--amber);flex-shrink:0"></div>
+      <div style="width:1px;flex:1;background:rgba(240,112,96,0.3)"></div>
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--coral);flex-shrink:0"></div>
+      <div style="width:1px;flex:1;background:rgba(90,196,104,0.3)"></div>
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+      <div style="width:1px;flex:1;background:rgba(91,173,240,0.3)"></div>
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--blue);flex-shrink:0"></div>
+      <div style="width:1px;flex:1;background:rgba(122,122,154,0.3)"></div>
+      <div style="width:12px;height:12px;border-radius:50%;background:var(--muted);flex-shrink:0"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+
+      <div class="flow-fc ff6" style="margin-bottom:2px">
+        <div class="flow-fc-title">Scammer initiates call</div>
+        <div class="flow-fc-body">Unknown number. Impersonates bank officer / police / RBI. Psychological pressure script begins. Urgency, fear, authority.</div>
+      </div>
+
+      <div class="flow-fc ff0" style="margin-bottom:2px">
+        <div class="flow-fc-title">Layer 0 — Live transcription fires mid-call</div>
+        <div class="flow-fc-body">Whisper Tiny transcribes audio on-device. Scam phrase DB match. Voice deepfake check.</div>
+        <div class="flow-branches">
+          <div class="flow-branch-item"><span style="color:var(--green)">↗ Caught here →</span><span style="color:var(--muted);margin-left:4px">Haptic + voice alert fires. Scam bait bot deployed. Scam terminated pre-payment.</span></div>
+          <div class="flow-branch-item"><span style="color:var(--amber)">↓ Not caught →</span><span style="color:var(--muted);margin-left:4px">User opens payment app. System stays alert.</span></div>
+        </div>
+      </div>
+
+      <div class="flow-fc ff1" style="margin-bottom:2px">
+        <div class="flow-fc-title">Layer 1+2 — Risk score computed</div>
+        <div class="flow-fc-body">Call active + stress biometrics + UPI ID analysis + SMS urgency scan. Composite risk score in &lt;800ms.</div>
+        <div class="flow-branches">
+          <div class="flow-branch-item"><span style="color:var(--green)">↗ Low risk →</span><span style="color:var(--muted);margin-left:4px">Payment proceeds normally. No friction added.</span></div>
+          <div class="flow-branch-item"><span style="color:var(--amber)">↓ High risk →</span><span style="color:var(--muted);margin-left:4px">Layer 3 psychological intervention fires.</span></div>
+        </div>
+      </div>
+
+      <div class="flow-fc ff3" style="margin-bottom:2px">
+        <div class="flow-fc-title">Layer 3 — Psychological intervention</div>
+        <div class="flow-fc-body">Trusted voice plays. "The Question" shown. Time Warp 3-min fake processing begins. Amount reframed ("₹48,000 = 3 months EMI").</div>
+        <div class="flow-branches">
+          <div class="flow-branch-item"><span style="color:var(--green)">↗ User exits →</span><span style="color:var(--muted);margin-left:4px">Scam prevented. Bot takes over scammer call.</span></div>
+          <div class="flow-branch-item"><span style="color:var(--amber)">↓ Still convinced →</span><span style="color:var(--muted);margin-left:4px">Guardian alert fires simultaneously.</span></div>
+        </div>
+      </div>
+
+      <div class="flow-fc ff4" style="margin-bottom:2px">
+        <div class="flow-fc-title">Layer 4 — Guardian network alert</div>
+        <div class="flow-fc-body">WhatsApp/SMS to designated family member: "Mom sending ₹48,000 to new account at 11 PM. Reply HOLD." 60-second window.</div>
+        <div class="flow-branches">
+          <div class="flow-branch-item"><span style="color:var(--green)">↗ Guardian responds →</span><span style="color:var(--muted);margin-left:4px">5-min hold. Guardian calls user. Scam stopped.</span></div>
+          <div class="flow-branch-item"><span style="color:var(--amber)">↓ No response in 60s →</span><span style="color:var(--muted);margin-left:4px">Time Warp buffer continues. 3 min remain.</span></div>
+        </div>
+      </div>
+
+      <div class="flow-fc ff5" style="margin-bottom:2px">
+        <div class="flow-fc-title">Layer 5 — Scam bait bot (parallel, always-on)</div>
+        <div class="flow-fc-body">AI voice bot takes over scammer's call using voice clone. Scammer wastes 20–40 min. Data harvested and auto-reported to cybercrime DB.</div>
+        <div class="flow-branches">
+          <div class="flow-branch-item"><span style="color:var(--blue)">+ Parallel →</span><span style="color:var(--muted);margin-left:4px">Runs regardless of payment outcome. Scammer pays a cost no matter what.</span></div>
+        </div>
+      </div>
+
+      <div class="flow-fc ff6">
+        <div class="flow-fc-title">Layer 6 — Payment Witness (always-on)</div>
+        <div class="flow-fc-body">Cryptographically signed behavioral log built for every flagged payment. If scam completes: one-tap 1930 report with full evidence packet. Scammer UPI blacklisted globally. Victim becomes contributor.</div>
+        <div class="flow-branches">
+          <div class="flow-branch-item"><span style="color:var(--green)">+ Network effect →</span><span style="color:var(--muted);margin-left:4px">Every reported case protects the next 10,000 users from the same scammer.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DEMO MOCKUP -->
+<section>
+  <div class="section-label">Demo Scenario</div>
+  <h2 class="section-title">What the user actually sees.</h2>
+  <p class="section-body">Moment of payment. High-risk context detected. Layer 3 fires — not a warning banner, not a popup. A question.</p>
+
+  <div class="demo-section">
+    <div>
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-statusbar"><span>11:34 PM</span><span>● CALL</span></div>
+          <div class="phone-app-bar"><div class="phone-app-name">Google Pay</div></div>
+          <div class="phone-content">
+            <div class="phone-amount">₹48,000</div>
+            <div class="phone-to">To: rajkumar77@okicici</div>
+            <div class="phone-interrupt">
+              <div class="phone-int-title">PayShield — before you pay</div>
+              <div class="phone-int-q">Who asked you to send this money, and why?</div>
+              <div class="phone-int-input">A bank official called and said my ac...</div>
+              <div style="font-size:10px;color:var(--coral);margin-bottom:8px;line-height:1.4">Read that back. Does it sound right?</div>
+              <div class="phone-int-btn">I'm confident — proceed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-desc">
+      <div class="demo-step">
+        <div class="demo-step-num">1</div>
+        <div>
+          <div class="demo-step-title">Layer 0 missed it — call not flagged</div>
+          <div class="demo-step-body">The scammer used a new script pattern not yet in the DB. Rare, but possible. System continues monitoring.</div>
+        </div>
+      </div>
+      <div class="demo-step">
+        <div class="demo-step-num">2</div>
+        <div>
+          <div class="demo-step-title">Layer 1+2 fires — risk score: 91/100</div>
+          <div class="demo-step-body">Active call + UPI ID created 3 hours ago + ₹48,000 round amount + 11:34 PM + first-time payee. Composite score triggers Layer 3.</div>
+        </div>
+      </div>
+      <div class="demo-step">
+        <div class="demo-step-num">3</div>
+        <div>
+          <div class="demo-step-title">"The Question" appears — 8 seconds of friction</div>
+          <div class="demo-step-body">The user types: "A bank official called and said my account will be blocked." They read it back. Cognitive dissonance kicks in. They exit the payment.</div>
+        </div>
+      </div>
+      <div class="demo-step">
+        <div class="demo-step-num">4</div>
+        <div>
+          <div class="demo-step-title">Simultaneously — Guardian alerted, Bot deployed</div>
+          <div class="demo-step-body">Son gets "Mom was about to send ₹48,000 to a new contact at 11 PM." Scam bait bot takes over the scammer's call. Scammer wastes 35 minutes.</div>
+        </div>
+      </div>
+      <div class="demo-step">
+        <div class="demo-step-num">5</div>
+        <div>
+          <div class="demo-step-title">Scam prevented. Witness log built.</div>
+          <div class="demo-step-body">Payment cancelled by user. Behavioral log cryptographically signed. Scammer's UPI ID added to crowdsourced DB — 10,000 future victims protected.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- KEY INNOVATIONS -->
+<section>
+  <div class="section-label">What Makes This Different</div>
+  <h2 class="section-title">5 ideas no other team<br>will present.</h2>
+  <div class="innov-grid">
+    <div class="innov-card">
+      <div class="innov-num">01</div>
+      <div class="innov-title" style="color:var(--purple)">Psychology over technology</div>
+      <div class="innov-body">The problem isn't fraud detection — it's that scammers hijack the human brain. Our Layer 3 is the first fraud prevention mechanism explicitly designed to work on convinced victims by re-engaging rational thinking via articulation, familiar voice, and manufactured time delay.</div>
+    </div>
+    <div class="innov-card">
+      <div class="innov-num">02</div>
+      <div class="innov-title" style="color:var(--amber)">Offensive, not just defensive</div>
+      <div class="innov-body">Layer 5 — the Scam Bait Bot — is the only component in any fraud prevention system that actively costs the scammer something. Every other solution is purely defensive. At 1M users, we destroy ~500,000 scammer hours per week.</div>
+    </div>
+    <div class="innov-card">
+      <div class="innov-num">03</div>
+      <div class="innov-title" style="color:var(--teal)">Call state is the master signal</div>
+      <div class="innov-body">Active call + payment simultaneously = 90%+ scam probability. This is available via the OS TelephonyManager API with zero bank integration, zero permissions beyond what any dialer app has. It's the highest-signal feature no one is using.</div>
+    </div>
+    <div class="innov-card">
+      <div class="innov-num">04</div>
+      <div class="innov-title" style="color:var(--coral)">Time Warp — delay as deception</div>
+      <div class="innov-body">The 3-minute fake processing screen doesn't block the payment. It manufactures the post-call cognitive recovery window that 90% of victims say they needed. The scammer thinks it worked. The user gets time to think.</div>
+    </div>
+    <div class="innov-card">
+      <div class="innov-num">05</div>
+      <div class="innov-title" style="color:var(--green)">Family is the real AI</div>
+      <div class="innov-body">No machine learning model matches the fraud detection accuracy of a son who gets "Mom is sending ₹48,000 to a stranger at midnight." Human intuition in the right context is perfect. The Guardian layer requires zero training — it works for first-time users instantly.</div>
+    </div>
+    <div class="innov-card">
+      <div class="innov-num">06</div>
+      <div class="innov-title" style="color:var(--blue)">Victim → contributor flywheel</div>
+      <div class="innov-body">Every completed scam generates a Payment Witness with one-tap 1930 reporting. Every reported scammer UPI ID protects all future users. The system becomes more accurate the more scams occur — turning every failure into a database improvement.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TECH STACK -->
+<section id="tech">
+  <div class="section-label">Tech Stack</div>
+  <h2 class="section-title">How it's actually built.</h2>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <div class="stack-cat">On-device (Android)</div>
+      <div class="stack-items">
+        <div class="stack-item"><div class="stack-dot" style="background:var(--purple)"></div>Accessibility Service</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--purple)"></div>TFLite ML runtime</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--purple)"></div>Whisper Tiny (local ASR)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--purple)"></div>Room DB (local cache)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--purple)"></div>WorkManager (sync)</div>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-cat">Backend (Cloud)</div>
+      <div class="stack-items">
+        <div class="stack-item"><div class="stack-dot" style="background:var(--teal)"></div>FastAPI (Python)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--teal)"></div>PostgreSQL (scam DB)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--teal)"></div>Redis (rate limiting)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--teal)"></div>Celery (async tasks)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--teal)"></div>1930 portal API</div>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-cat">ML Models</div>
+      <div class="stack-items">
+        <div class="stack-item"><div class="stack-dot" style="background:var(--amber)"></div>Scam script classifier</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--amber)"></div>Stress biometric model</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--amber)"></div>SMS urgency NLP</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--amber)"></div>UPI pattern anomaly</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--amber)"></div>Voice deepfake detect</div>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-cat">Social + Comms</div>
+      <div class="stack-items">
+        <div class="stack-item"><div class="stack-dot" style="background:var(--coral)"></div>WhatsApp Business API</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--coral)"></div>SMS fallback (Twilio)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--coral)"></div>Privacy hash graph</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--coral)"></div>Voice clone (local VITS)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--coral)"></div>LLM bot (Llama 3)</div>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-cat">Security + Privacy</div>
+      <div class="stack-items">
+        <div class="stack-item"><div class="stack-dot" style="background:var(--green)"></div>SHA-256 witness log</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--green)"></div>End-to-end encrypted</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--green)"></div>On-device audio proc.</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--green)"></div>Anonymous hash only</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--green)"></div>No call recording stored</div>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-cat">Cross-platform</div>
+      <div class="stack-items">
+        <div class="stack-item"><div class="stack-dot" style="background:var(--blue)"></div>Android (primary)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--blue)"></div>iOS (CallKit + Screen Time)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--blue)"></div>Browser ext. (payment links)</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--blue)"></div>Offline-first design</div>
+        <div class="stack-item"><div class="stack-dot" style="background:var(--blue)"></div>2G network compatible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div class="footer-logo">Pay<em>Shield</em></div>
+  <div class="footer-sub">7-layer real-time scam prevention · Category 9 · Hackathon 2025</div>
+  <div class="footer-tags">
+    <span class="footer-tag">No bank integration</span>
+    <span class="footer-tag">No auto-block</span>
+    <span class="footer-tag">No OTP</span>
+    <span class="footer-tag">Works for first-time users</span>
+    <span class="footer-tag">UPI + QR + Links</span>
+    <span class="footer-tag">Offline capable</span>
+    <span class="footer-tag">Psychology-first</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "backend.app.api",
+        "description": "backend.app.api",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nrouter = APIRouter()\n@router.post(\"/api/placement\")\nasync def placement(request: PlacementRequest):\n    # Add containers to the database\n    storage.add_containers(request.containers)\n    placements = []\n    for item in request.items:\n        container_id, position = storage.suggest_placement(item, request.containers)\n        if container_id:",
+        "detail": "backend.app.api",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.app.api",
+        "description": "backend.app.api",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/api/placement\")\nasync def placement(request: PlacementRequest):\n    # Add containers to the database\n    storage.add_containers(request.containers)\n    placements = []\n    for item in request.items:\n        container_id, position = storage.suggest_placement(item, request.containers)\n        if container_id:\n            storage.place_item(item, container_id, position, userId=\"system\")",
+        "detail": "backend.app.api",
+        "documentation": {}
+    },
+    {
+        "label": "LogEntry",
+        "kind": 6,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "class LogEntry:\n    def __init__(self, timestamp: str, userId: str, actionType: str, itemId: str, details: dict):\n        self.timestamp = timestamp\n        self.userId = userId\n        self.actionType = actionType\n        self.itemId = itemId\n        self.details = details\nclass Database:\n    def __init__(self):\n        try:",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "class Database:\n    def __init__(self):\n        try:\n            self.conn = sqlite3.connect(\"space_cargo.db\")\n            self.create_tables()\n        except sqlite3.Error as e:\n            logger.error(f\"Database initialization error: {str(e)}\")\n            raise RuntimeError(f\"Failed to initialize database: {str(e)}\")\n        with self.conn:\n            self.conn.execute(\"\"\"",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass LogEntry:\n    def __init__(self, timestamp: str, userId: str, actionType: str, itemId: str, details: dict):\n        self.timestamp = timestamp\n        self.userId = userId\n        self.actionType = actionType\n        self.itemId = itemId\n        self.details = details\nclass Database:\n    def __init__(self):",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "backend.app.database",
+        "description": "backend.app.database",
+        "peekOfCode": "db = Database()",
+        "detail": "backend.app.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_path",
+        "kind": 2,
+        "importPath": "backend.app.import_data",
+        "description": "backend.app.import_data",
+        "peekOfCode": "def get_data_path(filename: str) -> str:\n    \"\"\"Get the correct path for data files in both development and Docker environments.\"\"\"\n    if os.getenv(\"ENV\") == \"docker\":\n        return f\"/app/data/{filename}\"\n    return os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), filename)\ndef import_containers(file_path: str = None):\n    if file_path is None:\n        file_path = get_data_path(\"containers.csv\")\n    with open(file_path, mode='r') as file:\n        reader = csv.DictReader(file)",
+        "detail": "backend.app.import_data",
+        "documentation": {}
+    },
+    {
+        "label": "import_containers",
+        "kind": 2,
+        "importPath": "backend.app.import_data",
+        "description": "backend.app.import_data",
+        "peekOfCode": "def import_containers(file_path: str = None):\n    if file_path is None:\n        file_path = get_data_path(\"containers.csv\")\n    with open(file_path, mode='r') as file:\n        reader = csv.DictReader(file)\n        containers = []\n        for row in reader:\n            container = Container(\n                containerId=row['containerId'],\n                zone=row['zone'],",
+        "detail": "backend.app.import_data",
+        "documentation": {}
+    },
+    {
+        "label": "import_items",
+        "kind": 2,
+        "importPath": "backend.app.import_data",
+        "description": "backend.app.import_data",
+        "peekOfCode": "def import_items(file_path: str = None):\n    if file_path is None:\n        file_path = get_data_path(\"items.csv\")\n    with open(file_path, mode='r') as file:\n        reader = csv.DictReader(file)\n        items = []\n        for row in reader:\n            item = Item(\n                itemId=row['itemId'],\n                name=row['name'],",
+        "detail": "backend.app.import_data",
+        "documentation": {}
+    },
+    {
+        "label": "import_users",
+        "kind": 2,
+        "importPath": "backend.app.import_data",
+        "description": "backend.app.import_data",
+        "peekOfCode": "def import_users(file_path: str = None):\n    if file_path is None:\n        file_path = get_data_path(\"users.csv\")\n    with open(file_path, mode='r') as file:\n        reader = csv.DictReader(file)\n        for row in reader:\n            db.conn.execute(\"\"\"\n                INSERT OR REPLACE INTO users (userId, role)\n                VALUES (?, ?)\n            \"\"\", (row['userId'], row['Role']))",
+        "detail": "backend.app.import_data",
+        "documentation": {}
+    },
+    {
+        "label": "import_orbital_paths",
+        "kind": 2,
+        "importPath": "backend.app.import_data",
+        "description": "backend.app.import_data",
+        "peekOfCode": "def import_orbital_paths(file_path: str = None):\n    if file_path is None:\n        file_path = get_data_path(\"orbital_paths.csv\")\n    with open(file_path, mode='r') as file:\n        reader = csv.DictReader(file)\n        for row in reader:\n            db.add_orbital_path(\n                timestamp=row['timestamp'],\n                latitude=float(row['latitude']),\n                longitude=float(row['longitude']),",
+        "detail": "backend.app.import_data",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "app = FastAPI()\n@app.on_event(\"startup\")\nasync def startup_event():\n    # Initialize test data on startup\n    await populate_test_data()\n    # Import data from CSV files\n    import_containers()\n    import_items()\n    import_users()\n    import_orbital_paths()",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "ENV",
+        "kind": 5,
+        "importPath": "backend.app.main",
+        "description": "backend.app.main",
+        "peekOfCode": "ENV = os.getenv(\"ENV\", \"local\")  # Default to \"local\"\nif ENV == \"docker\":\n    frontend_dir = \"/app/frontend\"\nelse:\n    # Local development\n    current_dir = os.path.dirname(os.path.abspath(__file__))\n    frontend_dir = os.path.join(current_dir, \"../../frontend\")\n    frontend_dir = os.path.abspath(frontend_dir)\n# Check if directory exists (for debugging)\nif not os.path.exists(frontend_dir):",
+        "detail": "backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "Coordinates",
+        "kind": 6,
+        "importPath": "backend.app.models",
+        "description": "backend.app.models",
+        "peekOfCode": "class Coordinates(BaseModel):\n    width: float\n    depth: float\n    height: float\nclass Position(BaseModel):\n    startCoordinates: Coordinates\n    endCoordinates: Coordinates\nclass Item(BaseModel):\n    itemId: str\n    name: str",
+        "detail": "backend.app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Position",
+        "kind": 6,
+        "importPath": "backend.app.models",
+        "description": "backend.app.models",
+        "peekOfCode": "class Position(BaseModel):\n    startCoordinates: Coordinates\n    endCoordinates: Coordinates\nclass Item(BaseModel):\n    itemId: str\n    name: str\n    width: float\n    depth: float\n    height: float\n    mass: float",
+        "detail": "backend.app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "backend.app.models",
+        "description": "backend.app.models",
+        "peekOfCode": "class Item(BaseModel):\n    itemId: str\n    name: str\n    width: float\n    depth: float\n    height: float\n    mass: float\n    priority: int\n    expiryDate: Optional[str] = None\n    usageLimit: Optional[int] = None",
+        "detail": "backend.app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "kind": 6,
+        "importPath": "backend.app.models",
+        "description": "backend.app.models",
+        "peekOfCode": "class Container(BaseModel):\n    containerId: str\n    zone: str\n    width: float\n    depth: float\n    height: float\nclass PlacementRequest(BaseModel):\n    items: List[Item]\n    containers: List[Container]",
+        "detail": "backend.app.models",
+        "documentation": {}
+    },
+    {
+        "label": "PlacementRequest",
+        "kind": 6,
+        "importPath": "backend.app.models",
+        "description": "backend.app.models",
+        "peekOfCode": "class PlacementRequest(BaseModel):\n    items: List[Item]\n    containers: List[Container]",
+        "detail": "backend.app.models",
+        "documentation": {}
+    },
+    {
+        "label": "StorageManager",
+        "kind": 6,
+        "importPath": "backend.app.storage",
+        "description": "backend.app.storage",
+        "peekOfCode": "class StorageManager:\n    def __init__(self):\n        pass\n    def add_container(self, container: Container):\n        logger.debug(f\"Adding container: {container.containerId}\")\n        db.add_container(container)\n    def add_containers(self, containers: list[Container]):\n        for container in containers:\n            self.add_container(container)\n    def place_item(self, item: Item, container_id: str, position: Position, userId: str = \"system\"):",
+        "detail": "backend.app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "backend.app.storage",
+        "description": "backend.app.storage",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass StorageManager:\n    def __init__(self):\n        pass\n    def add_container(self, container: Container):\n        logger.debug(f\"Adding container: {container.containerId}\")\n        db.add_container(container)\n    def add_containers(self, containers: list[Container]):\n        for container in containers:\n            self.add_container(container)",
+        "detail": "backend.app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "storage",
+        "kind": 5,
+        "importPath": "backend.app.storage",
+        "description": "backend.app.storage",
+        "peekOfCode": "storage = StorageManager()",
+        "detail": "backend.app.storage",
+        "documentation": {}
+    }
+]

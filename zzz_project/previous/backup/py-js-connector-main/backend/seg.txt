@@ -1,0 +1,57 @@
+import tensorflow as tf
+import numpy as np
+import os
+import csv
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), "..", "..")))
+
+from utils.preprocessing import preprocess_image
+
+# Load the trained models
+fracture_model_path = r"C:\z_projects\diagnosis\xray\models\xray_fracture_classification_model.keras"
+detection_model_path = r"C:\z_projects\diagnosis\xray\models\xray_detection_model.keras"
+fracture_model = tf.keras.models.load_model(fracture_model_path)
+detection_model = tf.keras.models.load_model(detection_model_path)
+
+# Define class labels
+FRACTURE_CLASS_NAMES = ["No Fracture", "Fracture"]
+DETECTION_CLASS_NAMES = ["Not X-ray", "X-ray"]
+
+# Function to make a prediction
+def predict_image(image_path, model, class_names):
+    image = preprocess_image(image_path)
+    prediction = model.predict(image)[0]  # Get prediction
+    predicted_class = np.argmax(prediction)  # Get class index
+    confidence = prediction[predicted_class] * 100  # Convert to percentage
+
+    print(f"Prediction: {class_names[predicted_class]} ({confidence:.2f}%)")
+    return class_names[predicted_class], confidence
+
+# Function to save results to CSV
+def save_results_to_csv(image_path, predicted_class, confidence, csv_filename="predictions.csv"):
+    file_exists = os.path.isfile(csv_filename)
+    with open(csv_filename, mode='a', newline='') as file:
+        writer = csv.writer(file)
+        if not file_exists:
+            writer.writerow(["Image Path", "Prediction", "Confidence"])
+        writer.writerow([image_path, predicted_class, f"{confidence:.2f}%"])
+    print(f"Saved prediction to {csv_filename}")
+
+# Main script
+if _name_ == "_main_":
+    image_path = input("Enter the path to an image: ").strip('"')
+    
+    if not os.path.exists(image_path):
+        print("Invalid file path. Please enter a valid image path.")
+    else:
+        try:
+            # First, check if the image is an X-ray
+            is_xray, confidence = predict_image(image_path, detection_model, DETECTION_CLASS_NAMES)
+            if is_xray == "X-ray":
+                # If it is an X-ray, predict fracture
+                predicted_class, confidence = predict_image(image_path, fracture_model, FRACTURE_CLASS_NAMES)
+                save_results_to_csv(image_path, predicted_class, confidence)
+            else:
+                print("The provided image is not an X-ray.")
+        except ValueError as e:
+            print(e)

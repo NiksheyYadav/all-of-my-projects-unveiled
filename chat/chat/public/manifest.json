@@ -1,0 +1,23 @@
+{
+  "name": "FlowMind",
+  "short_name": "FlowMind",
+  "description": "AI-Powered Productivity Tool",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0c29",
+  "theme_color": "#0f0c29",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.flowmind.app"
+    }
+  ],
+  "prefer_related_applications": true
+}

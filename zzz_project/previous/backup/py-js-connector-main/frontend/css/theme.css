@@ -1,0 +1,233 @@
+/* Theme CSS */
+body.light-mode {
+  --bg-color: var(--light-bg);
+  --bg-secondary: var(--light-bg-secondary);
+  --text-color: var(--light-text);
+  --text-secondary: var(--light-text-secondary);
+  --border-color: var(--light-border);
+  --card-bg: var(--light-card-bg);
+  --hover-bg: var(--light-hover-bg);
+}
+
+body.dark-mode {
+  --bg-color: var(--dark-bg);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-color: var(--dark-text);
+  --text-secondary: var(--dark-text-secondary);
+  --border-color: var(--dark-border);
+  --card-bg: var(--dark-card-bg);
+  --hover-bg: var(--dark-hover-bg);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.sidebar {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.logo {
+  border-color: var(--border-color);
+}
+
+.nav-item {
+  color: var(--text-secondary);
+}
+
+.nav-item:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-color);
+}
+
+.user-info {
+  border-color: var(--border-color);
+}
+
+.user-email {
+  color: var(--text-secondary);
+}
+
+.logout-btn {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+.logout-btn:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-color);
+}
+
+.header {
+  border-color: var(--border-color);
+}
+
+.page-header p,
+.welcome-section p {
+  color: var(--text-secondary);
+}
+
+.dashboard-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.card-content p {
+  color: var(--text-secondary);
+}
+
+.dashboard-section {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.section-header p {
+  color: var(--text-secondary);
+}
+
+.action-btn.secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.action-btn.secondary:hover {
+  background-color: var(--hover-bg);
+}
+
+.activity-item {
+  background-color: var(--bg-secondary);
+}
+
+.activity-details p {
+  color: var(--text-secondary);
+}
+
+.tabs {
+  border-color: var(--border-color);
+}
+
+.tab-btn {
+  color: var(--text-secondary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  border-color: var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.toggle-password {
+  color: var(--text-secondary);
+}
+
+.secondary-btn {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.secondary-btn:hover {
+  background-color: var(--hover-bg);
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+}
+
+.modal-header {
+  border-color: var(--border-color);
+}
+
+.close-modal {
+  color: var(--text-secondary);
+}
+
+.modal-footer {
+  border-color: var(--border-color);
+}
+
+.empty-icon {
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+}
+
+.upload-dropzone {
+  border-color: var(--border-color);
+}
+
+.upload-icon {
+  color: var(--text-secondary);
+}
+
+.upload-formats {
+  color: var(--text-secondary);
+}
+
+.progress-bar {
+  background-color: var(--bg-secondary);
+}
+
+.progress-step:not(:last-child)::after {
+  background-color: var(--border-color);
+}
+
+.step-icon {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.step-text {
+  color: var(--text-secondary);
+}
+
+.upload-preview {
+  background-color: var(--bg-secondary);
+}
+
+.preview-image {
+  background-color: var(--bg-color);
+}
+
+.result-item {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.result-date {
+  color: var(--text-secondary);
+}
+
+.appointment-date {
+  background-color: var(--bg-secondary);
+}
+
+.date-time {
+  color: var(--text-secondary);
+}
+
+.appointment-description {
+  color: var(--text-secondary);
+}
+
+.image-type-btn {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.info-section h3 {
+  border-color: var(--border-color);
+}
+

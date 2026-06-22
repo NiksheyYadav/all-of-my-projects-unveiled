@@ -1,0 +1,45 @@
+{
+  "llm": {
+    "provider": "anthropic",
+    "api_key": "",
+    "model": "claude-3-5-sonnet-20241022",
+    "temperature": 0.7
+  },
+  "vision": {
+    "enabled": true,
+    "cache_screenshots": true,
+    "cache_duration_seconds": 30
+  },
+  "speech": {
+    "enabled": true,
+    "model": "base",
+    "language": "en",
+    "wake_word_enabled": false,
+    "wake_word": "hey agent"
+  },
+  "tts": {
+    "enabled": true,
+    "voice": "default",
+    "rate": 150,
+    "volume": 0.9
+  },
+  "safety": {
+    "emergency_stop_key": "ctrl+shift+esc",
+    "log_level": "INFO",
+    "log_retention_days": 30,
+    "enable_confirmations": true
+  },
+  "permissions": {
+    "default_capabilities": [
+      "read_screen",
+      "open_application",
+      "type_text"
+    ],
+    "require_confirmation": [
+      "delete_file",
+      "modify_system_settings",
+      "network_request",
+      "send_message"
+    ]
+  }
+}

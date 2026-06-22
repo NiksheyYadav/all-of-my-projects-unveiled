@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Writer AI 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="material-icons logo-icon">auto_awesome</span>
+            <h1>RESEARCH WRITER <span style="color: var(--primary-color); font-size: 0.8em;">2.0</span></h1>
+        </div>
+        <div class="header-actions">
+            <button class="btn" id="settings-btn" title="Settings">
+                <span class="material-icons">settings</span>
+            </button>
+            <button class="btn" id="help-btn" title="Help">
+                <span class="material-icons">help_outline</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <button class="new-chat-btn" id="new-research-btn">
+                <span class="material-icons">add</span>
+                NEW RESEARCH
+            </button>
+
+            <div class="history-list" id="history-list">
+                <!-- History items will be added here -->
+            </div>
+        </aside>
+
+        <div class="content-area">
+            <!-- Welcome Screen -->
+            <div class="welcome-screen" id="welcome-screen">
+                <div class="welcome-icon">
+                    <span class="material-icons" style="font-size: 80px;">psychology</span>
+                </div>
+                <h2 class="welcome-title">INITIALIZE RESEARCH PROTOCOL</h2>
+                <p class="welcome-subtitle">
+                    Advanced autonomous agent capable of deep recursive analysis, multi-modal synthesis, and structured
+                    academic reporting.
+                </p>
+
+                <div class="input-container">
+                    <textarea class="research-input" id="topic-input" placeholder="Enter research directive..."
+                        rows="1"></textarea>
+
+                    <div class="input-actions">
+                        <div class="toggle-container" title="Enable recursive planning and enhanced reasoning">
+                            <input type="checkbox" id="deep-think-toggle" style="display: none;">
+                            <div class="toggle-switch"></div>
+                            <span>DEEP THINK MODE</span>
+                        </div>
+
+                        <button class="send-btn" id="start-btn" disabled>
+                            <span class="material-icons">arrow_upward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Format Description (Collapsible) -->
+                <div style="width: 100%; max-width: 800px; margin-bottom: 20px;">
+                    <details
+                        style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; cursor: pointer;">
+                        <summary style="color: var(--text-secondary); font-size: 14px; font-weight: 500;">
+                            <span class="material-icons"
+                                style="vertical-align: middle; font-size: 16px;">format_align_left</span>
+                            Custom Formatting Instructions
+                        </summary>
+                        <textarea id="format-instruction" class="research-input"
+                            style="font-size: 14px; margin-top: 10px; min-height: 80px;"
+                            placeholder="E.g., Focus on financial implications, use bullet points for results, include a glossary..."></textarea>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Results Container -->
+            <div class="results-container" id="results-container">
+                <div class="document-header">
+                    <h2 class="document-title" id="doc-title">Research Report</h2>
+                    <div class="action-buttons">
+                        <button class="btn" id="copy-btn" title="Copy Markdown">
+                            <span class="material-icons">content_copy</span> Copy
+                        </button>
+                        <button class="btn" id="download-btn" title="Download Markdown">
+                            <span class="material-icons">download</span> MD
+                        </button>
+                        <button class="btn" id="download-word-btn" title="Download Word">
+                            <span class="material-icons">description</span> Word
+                        </button>
+                        <button class="btn" id="download-pdf-btn" title="Download PDF">
+                            <span class="material-icons">picture_as_pdf</span> PDF
+                        </button>
+                    </div>
+                </div>
+
+                <div class="markdown-content" id="markdown-output">
+                    <!-- Content will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">NEURAL PROCESSING ACTIVE</div>
+
+        <div class="live-logs" id="live-logs">
+            <!-- Logs will stream here -->
+            <div class="log-entry info">> System Initialized</div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">System Configuration</h3>
+                <button class="close-btn" id="close-settings">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Search Depth</label>
+                    <select class="form-select" id="setting-depth">
+                        <option value="basic">Basic (Fast)</option>
+                        <option value="comprehensive" selected>Comprehensive (Standard)</option>
+                        <option value="deep">Deep Research (Slow)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Max Sources</label>
+                    <input type="number" class="form-input" id="setting-max-sources" value="20">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Citation Style</label>
+                    <select class="form-select" id="setting-citation">
+                        <option value="IEEE" selected>IEEE</option>
+                        <option value="APA">APA</option>
+                        <option value="MLA">MLA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" id="setting-images" checked> Include Images & Diagrams
+                    </label>
+                </div>
+                <button class="btn btn-primary" id="save-settings"
+                    style="width: 100%; justify-content: center; margin-top: 20px;">
+                    SAVE CONFIGURATION
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

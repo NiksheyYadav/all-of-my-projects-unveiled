@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Results - MedVision AI</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/logo.svg" alt="MedVision AI Logo">
+        <h1>MedVision AI</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="appointments.html" class="nav-item">
+          <i class="fas fa-calendar"></i>
+          <span>Appointments</span>
+        </a>
+        <a href="results.html" class="nav-item active">
+          <i class="fas fa-file-medical"></i>
+          <span>My Results</span>
+        </a>
+        <a href="history.html" class="nav-item">
+          <i class="fas fa-history"></i>
+          <span>Medical History</span>
+        </a>
+        <a href="upload.html" class="nav-item">
+          <i class="fas fa-upload"></i>
+          <span>Upload Images</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+      <div class="user-info">
+        <div class="user-avatar">J</div>
+        <div class="user-details">
+          <p class="user-name">John Doe</p>
+          <p class="user-email">patient@example.com</p>
+        </div>
+      </div>
+      <a href="#" class="logout-btn" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Log out</span>
+      </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Patient Portal</h2>
+        <div class="user-avatar">J</div>
+      </header>
+
+      <div class="content">
+        <section class="page-header">
+          <h1>My Results</h1>
+          <p>View and manage your medical imaging results</p>
+        </section>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="all">All Results</button>
+          <button class="tab-btn" data-tab="mri">MRI</button>
+          <button class="tab-btn" data-tab="ct">CT Scan</button>
+          <button class="tab-btn" data-tab="xray">X-Ray</button>
+        </div>
+
+        <div class="tab-content active" id="all-tab">
+          <section class="results-section">
+            <h2>All Results</h2>
+            <p>All your medical imaging results</p>
+
+            <div class="results-list" id="allResultsList">
+              <!-- Results will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="mri-tab">
+          <section class="results-section">
+            <h2>MRI Results</h2>
+            <p>Your MRI scan results</p>
+
+            <div class="results-list" id="mriResultsList">
+              <!-- MRI results will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="ct-tab">
+          <section class="results-section">
+            <h2>CT Scan Results</h2>
+            <p>Your CT scan results</p>
+
+            <div class="results-list" id="ctResultsList">
+              <!-- CT scan results will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="xray-tab">
+          <section class="results-section">
+            <h2>X-Ray Results</h2>
+            <p>Your X-Ray results</p>
+
+            <div class="results-list" id="xrayResultsList">
+              <!-- X-Ray results will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Result Item Template -->
+  <template id="resultTemplate">
+    <div class="result-item">
+      <div class="result-image">
+        <img src="/placeholder.svg" alt="Medical scan image">
+      </div>
+      <div class="result-details">
+        <div class="result-header">
+          <h3 class="result-title"></h3>
+          <span class="result-tag"></span>
+        </div>
+        <p class="result-date"></p>
+        <div class="result-info">
+          <div class="info-row">
+            <div class="info-item">
+              <span class="info-label">Patient ID:</span>
+              <span class="patient-id"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Scan Type:</span>
+              <span class="scan-type"></span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-item">
+              <span class="info-label">Confidence:</span>
+              <span class="confidence"></span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Analysis Type:</span>
+              <span class="analysis-type"></span>
+            </div>
+          </div>
+          <div class="info-row notes-row">
+            <div class="info-item">
+              <span class="info-label">Notes:</span>
+              <span class="notes"></span>
+            </div>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button class="primary-btn view-details-btn">
+            <i class="fas fa-eye"></i>
+            <span>View Details</span>
+          </button>
+          <button class="secondary-btn download-btn">
+            <i class="fas fa-download"></i>
+            <span>Download</span>
+          </button>
+          <button class="secondary-btn report-btn">
+            <i class="fas fa-file-alt"></i>
+            <span>Report</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Result Detail Modal -->
+  <div class="modal" id="resultDetailModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalResultTitle">Result Details</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="result-detail-image">
+          <img id="modalResultImage" src="/placeholder.svg" alt="Medical scan image">
+        </div>
+        <div class="result-detail-info">
+          <div class="info-section">
+            <h3>Patient Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Patient ID:</span>
+                <span id="modalPatientId"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Patient Name:</span>
+                <span id="modalPatientName"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Date:</span>
+                <span id="modalResultDate"></span>
+              </div>
+            </div>
+          </div>
+          <div class="info-section">
+            <h3>Scan Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Scan Type:</span>
+                <span id="modalScanType"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Body Part:</span>
+                <span id="modalBodyPart"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Analysis Type:</span>
+                <span id="modalAnalysisType"></span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Confidence:</span>
+                <span id="modalConfidence"></span>
+              </div>
+            </div>
+          </div>
+          <div class="info-section">
+            <h3>Notes</h3>
+            <p id="modalNotes"></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="secondary-btn" id="modalDownloadBtn">
+          <i class="fas fa-download"></i>
+          <span>Download</span>
+        </button>
+        <button class="secondary-btn" id="modalReportBtn">
+          <i class="fas fa-file-alt"></i>
+          <span>Report</span>
+        </button>
+        <button class="primary-btn" id="modalSendSmsBtn">
+          <i class="fas fa-sms"></i>
+          <span>Send via SMS</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/results.js"></script>
+</body>
+</html>
+

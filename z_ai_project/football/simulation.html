@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Football Simulation with RL and User Controls</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #score { position: absolute; top: 10px; left: 10px; color: white; font-family: Arial; font-size: 20px; }
+        #fileInput { position: absolute; top: 40px; left: 10px; }
+        #stopButton { position: absolute; top: 70px; left: 10px; }
+        #digitalScoreboard {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: monospace;
+            font-size: 48px;
+            color: #fff;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 40px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="score">Team A: 0 | Team B: 0</div>
+    <input type="file" id="fileInput" accept=".csv,.xlsx">
+    <button id="stopButton">Reset</button>
+    <input type="file" id="trajectoryInput" accept=".json" style="position: absolute; top: 100px; left: 10px;" />
+    <div id="digitalScoreboard"></div>
+    <script>
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {
+            'ai_policies.csv': `team,kick_strength,defend_range,attack_speed
+A,15,70,7
+B,12,80,5`
+        };
+        function filledCell(cell) {
+            return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+                try {
+                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                    var firstSheetName = workbook.SheetNames[0];
+                    var worksheet = workbook.Sheets[firstSheetName];
+                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                    var filteredData = jsonData.filter(row => row.some(filledCell));
+                    var headerRowIndex = filteredData.findIndex((row, index) =>
+                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                    );
+                    if (headerRowIndex === -1 || headerRowIndex > 25) {
+                        headerRowIndex = 0;
+                    }
+                    var csv = XLSX.utils.sheet_to_csv(XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)));
+                    return csv;
+                } catch (e) {
+                    console.error('Error processing XLSX:', e);
+                    return "";
+                }
+            }
+            return gk_fileData[filename] || "";
+        }
+
+        async function main() {
+            // Initialize Pyodide
+            let pyodide = await loadPyodide();
+            // Load AI policies
+            const aiPoliciesCsv = loadFileData('ai_policies.csv');
+            pyodide.globals.set('ai_policies_csv', aiPoliciesCsv);
+
+            // Keyboard input handling
+            let keys = { left: false, right: false, up: false, down: false, space: false };
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') keys.left = true;
+                if (e.key === 'ArrowRight') keys.right = true;
+                if (e.key === 'ArrowUp') keys.up = true;
+                if (e.key === 'ArrowDown') keys.down = true;
+                if (e.key === ' ') keys.space = true;
+            });
+            document.addEventListener('keyup', (e) => {
+                if (e.key === 'ArrowLeft') keys.left = false;
+                if (e.key === 'ArrowRight') keys.right = false;
+                if (e.key === 'ArrowUp') keys.up = false;
+                if (e.key === 'ArrowDown') keys.down = false;
+                if (e.key === ' ') keys.space = false;
+            });
+            pyodide.globals.set('keys', keys);
+
+            // File input handling
+            const fileInput = document.getElementById('fileInput');
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    if (file.name.endsWith('.xlsx')) {
+                        gk_isXlsx = true;
+                        gk_xlsxFileLookup[file.name] = true;
+                        gk_fileData[file.name] = event.target.result.split(',')[1];
+                        pyodide.globals.set('ai_policies_csv', loadFileData(file.name));
+                    } else {
+                        gk_isXlsx = false;
+                        reader.readAsText(file);
+                        reader.onload = () => {
+                            gk_fileData[file.name] = reader.result;
+                            pyodide.globals.set('ai_policies_csv', loadFileData(file.name));
+                        };
+                    }
+                };
+                if (file.name.endsWith('.xlsx')) reader.readAsDataURL(file);
+                else reader.readAsText(file);
+            });
+
+            // Reset button
+            document.getElementById('stopButton').onclick = () => pyodide.runPython('running = False');
+
+            // Python game logic
+            await pyodide.runPythonAsync(String.raw(`
+import math
+import asyncio
+from js import document, update_js
+import io
+import csv
+
+# Parse AI policies
+def parse_policies(csv_data):
+    policies = {}
+    csv_file = io.StringIO(csv_data)
+    reader = csv.DictReader(csv_file)
+    for row in reader:
+        team = row['team']
+        try:
+            policies[team] = {
+                'kick_strength': float(row['kick_strength']),
+                'defend_range': float(row['defend_range']),
+                'attack_speed': float(row['attack_speed'])
+            }
+        except (KeyError, ValueError) as e:
+            print(f"CSV parse error: {e}, row: {row}")
+    return policies
+
+ai_policies = parse_policies(ai_policies_csv)
+
+# Simulated RL policy
+rl_policy = {
+    'A': {'kick': [0.8, 12], 'hold': [0.5, 3], 'defend': [0.6, 5], 'attack': [0.7, 6]},
+    'B': {'kick': [0.7, 10], 'hold': [0.4, 2.5], 'defend': [0.5, 4], 'attack': [0.6, 5]}
+}
+
+# Game state
+player_a_pos = [100, 300, 0]
+player_b_pos = [700, 300, 0]
+ball_pos = [400, 300, 0]
+ball_velocity = [0, 0, 0]
+player_radius = 10
+ball_radius = 5
+ball_friction = 0.98
+score_a = 0
+score_b = 0
+FIELD_WIDTH = 800
+FIELD_HEIGHT = 600
+GOAL_WIDTH = 20
+GOAL_HEIGHT = 100
+GOAL_A = (50, FIELD_HEIGHT // 2)
+GOAL_B = (FIELD_WIDTH - 50, FIELD_HEIGHT // 2)
+is_user_controlled = True
+running = True
+
+def ai_decision(player_pos, opponent_pos, ball_pos, goal_pos, team):
+    policy = ai_policies.get(team, {'kick_strength': 10, 'defend_range': 50, 'attack_speed': 5})
+    rl_probs = rl_policy[team]
+    distance_to_ball = math.hypot(player_pos[0] - ball_pos[0], player_pos[1] - ball_pos[1])
+    distance_to_goal = math.hypot(player_pos[0] - goal_pos[0], player_pos[1] - goal_pos[1])
+    distance_to_opponent = math.hypot(player_pos[0] - opponent_pos[0], player_pos[1] - opponent_pos[1])
+    
+    if distance_to_ball < player_radius + ball_radius and rl_probs['kick'][0] > 0.7:
+        return "kick", goal_pos, policy['kick_strength'] * rl_probs['kick'][1]
+    elif distance_to_opponent < policy['defend_range'] and distance_to_ball < 100 and rl_probs['defend'][0] > 0.5:
+        return "defend", opponent_pos, policy['attack_speed'] * rl_probs['defend'][1]
+    elif distance_to_ball < 100 and rl_probs['hold'][0] > 0.4:
+        return "hold", ball_pos, policy['attack_speed'] * rl_probs['hold'][1] * 0.5
+    else:
+        return "attack", ball_pos, policy['attack_speed'] * rl_probs['attack'][1]
+
+def move_player(player_pos, target_pos, speed):
+    dx = target_pos[0] - player_pos[0]
+    dy = target_pos[1] - player_pos[1]
+    dist = math.hypot(dx, dy)
+    if dist > 1:
+        dx, dy = dx / dist * speed, dy / dist * speed
+        player_pos[0] += dx
+        player_pos[1] += dy
+    player_pos[0] = max(player_radius, min(FIELD_WIDTH - player_radius, player_pos[0]))
+    player_pos[1] = max(player_radius, min(FIELD_HEIGHT - player_radius, player_pos[1]))
+
+def kick_ball(player_pos, ball_pos, goal_pos, kick_strength):
+    distance = math.hypot(player_pos[0] - ball_pos[0], player_pos[1] - ball_pos[1])
+    if distance < player_radius + ball_radius:
+        direction_x = goal_pos[0] - ball_pos[0]
+        direction_y = goal_pos[1] - ball_pos[1]
+        magnitude = math.hypot(direction_x, direction_y)
+        if magnitude != 0:
+            ball_velocity[0] = kick_strength * direction_x / magnitude
+            ball_velocity[1] = kick_strength * direction_y / magnitude
+
+def update_ball():
+    global score_a, score_b
+    ball_pos[0] += ball_velocity[0]
+    ball_pos[1] += ball_velocity[1]
+    ball_velocity[0] *= ball_friction
+    ball_velocity[1] *= ball_friction
+    if ball_pos[0] < ball_radius:
+        ball_pos[0] = ball_radius
+        ball_velocity[0] = -ball_velocity[0]
+    if ball_pos[0] > FIELD_WIDTH - ball_radius:
+        ball_pos[0] = FIELD_WIDTH - ball_radius
+        ball_velocity[0] = -ball_velocity[0]
+    if ball_pos[1] < ball_radius:
+        ball_pos[1] = ball_radius
+        ball_velocity[1] = -ball_velocity[1]
+    if ball_pos[1] > FIELD_HEIGHT - ball_radius:
+        ball_pos[1] = FIELD_HEIGHT - ball_radius
+        ball_velocity[1] = -ball_velocity[1]
+    if (GOAL_A[0] - GOAL_WIDTH // 2 <= ball_pos[0] <= GOAL_A[0] + GOAL_WIDTH // 2 and
+        GOAL_A[1] - GOAL_HEIGHT // 2 <= ball_pos[1] <= GOAL_A[1] + GOAL_HEIGHT // 2):
+        score_b += 1
+        reset_ball()
+    elif (GOAL_B[0] - GOAL_WIDTH // 2 <= ball_pos[0] <= GOAL_B[0] + GOAL_WIDTH // 2 and
+          GOAL_B[1] - GOAL_HEIGHT // 2 <= ball_pos[1] <= GOAL_B[1] + GOAL_HEIGHT // 2):
+        score_a += 1
+        reset_ball()
+    document.getElementById('score').innerText = f"Team A: {score_a} | Team B: {score_b}"
+
+def reset_ball():
+    ball_pos[0], ball_pos[1] = 400, 300
+    ball_velocity[0], ball_velocity[1] = 0, 0
+
+async def update_loop():
+    pass
+`));
+}
+main();
+</script>
+<script>
+// Three.js scene setup
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x222244); // Set a non-black background for debugging
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 3000);
+const renderer = new THREE.WebGLRenderer();
+renderer.setClearColor(0x222244); // Set renderer background color
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// Debug cube at field center
+const debugGeometry = new THREE.BoxGeometry(20, 20, 20);
+const debugMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+const debugCube = new THREE.Mesh(debugGeometry, debugMaterial);
+debugCube.position.set(400, 10, 300); // Center of field
+scene.add(debugCube);
+
+// Stadium field
+const fieldGeometry = new THREE.PlaneGeometry(800, 600);
+const fieldMaterial = new THREE.MeshBasicMaterial({ color: 0x228B22 }); // green
+const field = new THREE.Mesh(fieldGeometry, fieldMaterial);
+field.rotation.x = -Math.PI / 2;
+scene.add(field);
+
+// Players and ball
+let playerA, playerB, ball;
+const playerAGeometry = new THREE.SphereGeometry(10, 32, 32);
+const playerAMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+playerA = new THREE.Mesh(playerAGeometry, playerAMaterial);
+playerA.position.set(100, 10, 300); // X, Y (height), Z
+scene.add(playerA);
+
+const playerBGeometry = new THREE.SphereGeometry(10, 32, 32);
+const playerBMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+playerB = new THREE.Mesh(playerBGeometry, playerBMaterial);
+playerB.position.set(700, 10, 300);
+scene.add(playerB);
+
+const ballGeometry = new THREE.SphereGeometry(5, 32, 32);
+const ballMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+ball = new THREE.Mesh(ballGeometry, ballMaterial);
+ball.position.set(400, 5, 300);
+scene.add(ball);
+
+// Arena walls (lower and thinner)
+const wallMaterial = new THREE.MeshBasicMaterial({ color: 0xe0e0e0 });
+const wallThickness = 10;
+const wallHeight = 30;
+const wall1 = new THREE.Mesh(new THREE.BoxGeometry(800, wallHeight, wallThickness), wallMaterial);
+wall1.position.set(400, wallHeight / 2, 0); // Z=0 (near side)
+scene.add(wall1);
+const wall2 = new THREE.Mesh(new THREE.BoxGeometry(800, wallHeight, wallThickness), wallMaterial);
+wall2.position.set(400, wallHeight / 2, 600); // Z=600 (far side)
+scene.add(wall2);
+const wall3 = new THREE.Mesh(new THREE.BoxGeometry(wallThickness, wallHeight, 600), wallMaterial);
+wall3.position.set(0, wallHeight / 2, 300); // X=0 (left)
+scene.add(wall3);
+const wall4 = new THREE.Mesh(new THREE.BoxGeometry(wallThickness, wallHeight, 600), wallMaterial);
+wall4.position.set(800, wallHeight / 2, 300); // X=800 (right)
+scene.add(wall4);
+
+// Grid field
+const gridHelper = new THREE.GridHelper(800, 8, 0x444444, 0x888888);
+gridHelper.position.set(400, 1, 300); // Centered, just above field
+scene.add(gridHelper);
+
+// Remove the old wallBg if it exists
+if (typeof wallBg !== 'undefined' && wallBg) scene.remove(wallBg);
+// Add tiled wall background as a plane far behind the field
+const wallTexture = new THREE.TextureLoader().load('https://threejs.org/examples/textures/uv_grid_opengl.jpg');
+const wallBgMaterial = new THREE.MeshBasicMaterial({ map: wallTexture });
+const wallBgPlane = new THREE.Mesh(new THREE.PlaneGeometry(1600, 900), wallBgMaterial);
+wallBgPlane.position.set(400, 450, -500); // Move further back and up
+wallBgPlane.rotation.x = -Math.PI / 2.5; // Tilt slightly
+scene.add(wallBgPlane);
+
+// Improve goals: add net (simple lines)
+function createGoal(x, color) {
+    const goalGroup = new THREE.Group();
+    const postMaterial = new THREE.MeshBasicMaterial({ color: color });
+    const post1 = new THREE.Mesh(new THREE.BoxGeometry(5, 40, 5), postMaterial);
+    post1.position.set(x, 20, 250);
+    goalGroup.add(post1);
+    const post2 = new THREE.Mesh(new THREE.BoxGeometry(5, 40, 5), postMaterial);
+    post2.position.set(x, 20, 350);
+    goalGroup.add(post2);
+    const crossbar = new THREE.Mesh(new THREE.BoxGeometry(5, 5, 100), postMaterial);
+    crossbar.position.set(x, 40, 300);
+    goalGroup.add(crossbar);
+    // Add net (lines)
+    const netMaterial = new THREE.LineBasicMaterial({ color: color, opacity: 0.5, transparent: true });
+    for (let i = 0; i <= 5; i++) {
+        const netGeo = new THREE.BufferGeometry().setFromPoints([
+            new THREE.Vector3(x + (x < 400 ? 2.5 : -2.5), 40, 250 + i * 20),
+            new THREE.Vector3(x + (x < 400 ? 20 : -20), 0, 250 + i * 20)
+        ]);
+        const netLine = new THREE.Line(netGeo, netMaterial);
+        goalGroup.add(netLine);
+    }
+    return goalGroup;
+}
+// Remove old goals before adding new ones
+if (typeof goalA !== 'undefined' && goalA) scene.remove(goalA);
+if (typeof goalB !== 'undefined' && goalB) scene.remove(goalB);
+const goalA = createGoal(50, 0xffa500); // orange
+scene.add(goalA);
+const goalB = createGoal(750, 0x2196f3); // blue
+scene.add(goalB);
+
+// Scoreboard (simple box)
+const scoreboardMaterial = new THREE.MeshBasicMaterial({ color: 0x222222 });
+const scoreboard = new THREE.Mesh(new THREE.BoxGeometry(120, 40, 2), scoreboardMaterial);
+scoreboard.position.set(400, 90, 300); // Centered above field
+scene.add(scoreboard);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+scene.add(ambientLight);
+const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+dirLight.position.set(400, 500, 400);
+scene.add(dirLight);
+
+// Camera (higher and angled down)
+camera.position.set(400, 700, 900);
+camera.lookAt(new THREE.Vector3(400, 0, 300)); // Ensure lookAt uses a Vector3
+
+// Animation loop
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+animate();
+
+// Trajectory playback for PPO agent
+let trajectory = null;
+let playbackIndex = 0;
+let playbackInterval = null;
+
+const trajectoryInput = document.getElementById('trajectoryInput');
+trajectoryInput.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        try {
+            trajectory = JSON.parse(event.target.result);
+            playbackIndex = 0;
+            startTrajectoryPlayback();
+        } catch (err) {
+            alert('Invalid trajectory file!');
+        }
+    };
+    reader.readAsText(file);
+});
+
+function startTrajectoryPlayback() {
+    if (!trajectory) return;
+    if (playbackInterval) clearInterval(playbackInterval);
+    playbackInterval = setInterval(function() {
+        if (playbackIndex >= trajectory.length) {
+            clearInterval(playbackInterval);
+            return;
+        }
+        var step = trajectory[playbackIndex];
+        // obs: [player_a_x, player_a_y, player_b_x, player_b_y, ball_x, ball_y, ball_vx, ball_vy]
+        if (typeof playerA !== 'undefined' && playerA) playerA.position.set(step.obs[0], playerA.position.y || 10, step.obs[1]);
+        if (typeof playerB !== 'undefined' && playerB) playerB.position.set(step.obs[2], playerB.position.y || 10, step.obs[3]);
+        if (typeof ball !== 'undefined' && ball) ball.position.set(step.obs[4], ball.position.y || 5, step.obs[5]);
+        document.getElementById('score').innerText = 'Step: ' + step.step + ' | Reward: ' + step.reward;
+        playbackIndex++;
+    }, 1000 / 60); // 60 FPS
+}
+
+// Add HTML digital scoreboard overlay
+let scoreboardDiv = document.getElementById('digitalScoreboard');
+if (!scoreboardDiv) {
+    scoreboardDiv = document.createElement('div');
+    scoreboardDiv.id = 'digitalScoreboard';
+    scoreboardDiv.style.position = 'absolute';
+    scoreboardDiv.style.top = '20px';
+    scoreboardDiv.style.left = '50%';
+    scoreboardDiv.style.transform = 'translateX(-50%)';
+    scoreboardDiv.style.fontFamily = 'monospace';
+    scoreboardDiv.style.fontSize = '48px';
+    scoreboardDiv.style.color = '#fff';
+    scoreboardDiv.style.background = 'rgba(0,0,0,0.7)';
+    scoreboardDiv.style.padding = '10px 40px';
+    scoreboardDiv.style.borderRadius = '10px';
+    scoreboardDiv.style.textAlign = 'center';
+    scoreboardDiv.style.zIndex = '10';
+    document.body.appendChild(scoreboardDiv);
+}
+function updateDigitalScoreboard(a, b, time) {
+    scoreboardDiv.innerHTML = `<span style='font-size:32px;'>⏱️ ${time}</span><br><span>${a} : ${b}</span>`;
+}
+// Call updateDigitalScoreboard(0, 0, 10) initially
+updateDigitalScoreboard(0, 0, 10);
+</script>
+</body>
+</html>

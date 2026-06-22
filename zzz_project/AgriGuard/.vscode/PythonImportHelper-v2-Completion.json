@@ -1,0 +1,278 @@
+[
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "torch.optim",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.optim",
+        "description": "torch.optim",
+        "detail": "torch.optim",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "kind": 2,
+        "importPath": "scripts.preprocess",
+        "description": "scripts.preprocess",
+        "peekOfCode": "def preprocess_image(img_path, size=(128, 128)):\n    \"\"\"\n    Read an image, resize it to the specified size, and normalize to [0, 1].\n    Args:\n        img_path (str): Path to the input image\n        size (tuple): Target size (default: (128, 128))\n    Returns:\n        numpy.ndarray: Preprocessed image array\n    \"\"\"\n    # Read image",
+        "detail": "scripts.preprocess",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_dataset",
+        "kind": 2,
+        "importPath": "scripts.preprocess",
+        "description": "scripts.preprocess",
+        "peekOfCode": "def preprocess_dataset(in_dir, out_dir, size=(128, 128)):\n    \"\"\"\n    Preprocess all images in the input directory and its subdirectories, saving as .npy files.\n    Args:\n        in_dir (str): Input directory with raw images\n        out_dir (str): Output directory for processed .npy files\n        size (tuple): Target size (default: (128, 128))\n    \"\"\"\n    # Create output directory if it doesn't exist\n    os.makedirs(out_dir, exist_ok=True)",
+        "detail": "scripts.preprocess",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.preprocess",
+        "description": "scripts.preprocess",
+        "peekOfCode": "def main():\n    # Define base directories\n    base_dir = r\"C:\\zzz_project\\AgriGuard\\data\"\n    image_data_dir = os.path.join(base_dir, \"image_data\")\n    processed_data_dir = os.path.join(base_dir, \"processed_data\")\n    # List of subdirectories to process\n    subdirs = [\"pests\", \"lai\", \"progression\"]\n    # Preprocess each dataset\n    for subdir in subdirs:\n        in_dir = os.path.join(image_data_dir, subdir)",
+        "detail": "scripts.preprocess",
+        "documentation": {}
+    },
+    {
+        "label": "PestCNN",
+        "kind": 6,
+        "importPath": "scripts.train_pests",
+        "description": "scripts.train_pests",
+        "peekOfCode": "class PestCNN(nn.Module):\n    def __init__(self):\n        super(PestCNN, self).__init__()\n        self.conv1 = nn.Conv2d(3, 16, 3, padding=1)  # Input: 3 channels (RGB)\n        self.conv2 = nn.Conv2d(16, 32, 3, padding=1)\n        self.pool = nn.MaxPool2d(2, 2)\n        self.fc1 = nn.Linear(32 * 32 * 32, 128)  # Adjust based on 128x128 input\n        self.fc2 = nn.Linear(128, 2)  # 2 classes: no_pest, pest\n        self.relu = nn.ReLU()\n    def forward(self, x):",
+        "detail": "scripts.train_pests",
+        "documentation": {}
+    },
+    {
+        "label": "PestDataset",
+        "kind": 6,
+        "importPath": "scripts.train_pests",
+        "description": "scripts.train_pests",
+        "peekOfCode": "class PestDataset(Dataset):\n    def __init__(self, data_dir, transform=None):\n        self.data_dir = data_dir\n        self.transform = transform\n        self.image_paths = []\n        self.labels = []\n        for label, subdir in enumerate([\"no_pest\", \"pest\"]):\n            subdir_path = os.path.join(data_dir, subdir)\n            print(f\"Checking subdirectory: {subdir_path}\")\n            if os.path.exists(subdir_path):",
+        "detail": "scripts.train_pests",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "scripts.train_pests",
+        "description": "scripts.train_pests",
+        "peekOfCode": "def train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=50):\n    device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n    model = model.to(device)\n    train_losses = []\n    val_losses = []\n    val_accuracies = []\n    for epoch in range(num_epochs):\n        model.train()\n        running_loss = 0.0\n        for inputs, labels in train_loader:",
+        "detail": "scripts.train_pests",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.train_pests",
+        "description": "scripts.train_pests",
+        "peekOfCode": "def main():\n    # Define data directory\n    data_dir = r\"C:\\zzz_project\\AgriGuard\\data\\processed_data\\pests\"\n    # Load dataset\n    dataset = PestDataset(data_dir)\n    if len(dataset) == 0:\n        print(\"Error: No images loaded. Check directory and subdirectories.\")\n        return\n    # Split dataset\n    train_paths, val_paths, train_labels, val_labels = train_test_split(",
+        "detail": "scripts.train_pests",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_green_ratio",
+        "kind": 2,
+        "importPath": "green_pixel_ratio",
+        "description": "green_pixel_ratio",
+        "peekOfCode": "def calculate_green_ratio(img_path):\n    img = cv2.imread(img_path)\n    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)\n    lower_green = np.array([35, 50, 50])\n    upper_green = np.array([85, 255, 255])\n    mask = cv2.inRange(img, lower_green, upper_green)\n    green_pixels = cv2.countNonZero(mask)\n    total_pixels = img.shape[0] * img.shape[1]\n    ratio = (green_pixels / total_pixels) * 4\n    return min(max(ratio, 0.1), 4.0)",
+        "detail": "green_pixel_ratio",
+        "documentation": {}
+    },
+    {
+        "label": "lai_dir",
+        "kind": 5,
+        "importPath": "green_pixel_ratio",
+        "description": "green_pixel_ratio",
+        "peekOfCode": "lai_dir = r\"C:\\zzz_project\\AgriGuard\\data\\image_data\\lai\"\nfor img_file in os.listdir(lai_dir):\n    if img_file.endswith(\".jpg\"):\n        lai = calculate_green_ratio(os.path.join(lai_dir, img_file))\n        print(f\"{img_file}: LAI = {lai:.2f}\")",
+        "detail": "green_pixel_ratio",
+        "documentation": {}
+    },
+    {
+        "label": "source_dir",
+        "kind": 5,
+        "importPath": "move_files",
+        "description": "move_files",
+        "peekOfCode": "source_dir = r\"C:\\Users\\IQBAL SINGH\\Downloads\\plantvillage dataset\\color\"  # Adjust your source path\ntarget_dir = r\"C:\\zzz_project\\AgriGuard\\data\\image_data\\progression\"\nos.makedirs(target_dir, exist_ok=True)\n# Debug: Check if source directory exists\nif not os.path.exists(source_dir):\n    print(f\"Error: Source directory {source_dir} does not exist!\")\nelse:\n    print(f\"Found source directory with contents: {os.listdir(source_dir)}\")\n# Identify subfolders with healthy and affected images\nhealthy_folders = [f for f in os.listdir(source_dir) if \"healthy\" in f.lower()]  # Case-insensitive",
+        "detail": "move_files",
+        "documentation": {}
+    },
+    {
+        "label": "target_dir",
+        "kind": 5,
+        "importPath": "move_files",
+        "description": "move_files",
+        "peekOfCode": "target_dir = r\"C:\\zzz_project\\AgriGuard\\data\\image_data\\progression\"\nos.makedirs(target_dir, exist_ok=True)\n# Debug: Check if source directory exists\nif not os.path.exists(source_dir):\n    print(f\"Error: Source directory {source_dir} does not exist!\")\nelse:\n    print(f\"Found source directory with contents: {os.listdir(source_dir)}\")\n# Identify subfolders with healthy and affected images\nhealthy_folders = [f for f in os.listdir(source_dir) if \"healthy\" in f.lower()]  # Case-insensitive\naffected_folders = [f for f in os.listdir(source_dir) if any(keyword in f.lower() for keyword in [\"blight\", \"spot\", \"rot\", \"scab\", \"mildew\", \"rust\", \"disease\"])]",
+        "detail": "move_files",
+        "documentation": {}
+    },
+    {
+        "label": "healthy_folders",
+        "kind": 5,
+        "importPath": "move_files",
+        "description": "move_files",
+        "peekOfCode": "healthy_folders = [f for f in os.listdir(source_dir) if \"healthy\" in f.lower()]  # Case-insensitive\naffected_folders = [f for f in os.listdir(source_dir) if any(keyword in f.lower() for keyword in [\"blight\", \"spot\", \"rot\", \"scab\", \"mildew\", \"rust\", \"disease\"])]\nprint(f\"Healthy folders found: {healthy_folders}\")\nprint(f\"Affected folders found: {affected_folders}\")\n# Target number of base images (e.g., 20 sequences x 1 base image per sequence)\ntarget_base_count = 20\n# Move base images\nbase_count = 0\nfor folder_type, folders in [(\"healthy\", healthy_folders), (\"affected\", affected_folders)]:\n    if not folders:",
+        "detail": "move_files",
+        "documentation": {}
+    },
+    {
+        "label": "affected_folders",
+        "kind": 5,
+        "importPath": "move_files",
+        "description": "move_files",
+        "peekOfCode": "affected_folders = [f for f in os.listdir(source_dir) if any(keyword in f.lower() for keyword in [\"blight\", \"spot\", \"rot\", \"scab\", \"mildew\", \"rust\", \"disease\"])]\nprint(f\"Healthy folders found: {healthy_folders}\")\nprint(f\"Affected folders found: {affected_folders}\")\n# Target number of base images (e.g., 20 sequences x 1 base image per sequence)\ntarget_base_count = 20\n# Move base images\nbase_count = 0\nfor folder_type, folders in [(\"healthy\", healthy_folders), (\"affected\", affected_folders)]:\n    if not folders:\n        print(f\"No {folder_type} folders found with current filter. Skipping this type.\")",
+        "detail": "move_files",
+        "documentation": {}
+    },
+    {
+        "label": "target_base_count",
+        "kind": 5,
+        "importPath": "move_files",
+        "description": "move_files",
+        "peekOfCode": "target_base_count = 20\n# Move base images\nbase_count = 0\nfor folder_type, folders in [(\"healthy\", healthy_folders), (\"affected\", affected_folders)]:\n    if not folders:\n        print(f\"No {folder_type} folders found with current filter. Skipping this type.\")\n        continue\n    selected_folders = random.sample(folders, min(5, len(folders)))  # Pick up to 5 folders per type for more variety\n    print(f\"Selected {folder_type} folders: {selected_folders}\")\n    for folder in selected_folders:",
+        "detail": "move_files",
+        "documentation": {}
+    },
+    {
+        "label": "base_count",
+        "kind": 5,
+        "importPath": "move_files",
+        "description": "move_files",
+        "peekOfCode": "base_count = 0\nfor folder_type, folders in [(\"healthy\", healthy_folders), (\"affected\", affected_folders)]:\n    if not folders:\n        print(f\"No {folder_type} folders found with current filter. Skipping this type.\")\n        continue\n    selected_folders = random.sample(folders, min(5, len(folders)))  # Pick up to 5 folders per type for more variety\n    print(f\"Selected {folder_type} folders: {selected_folders}\")\n    for folder in selected_folders:\n        img_dir = os.path.join(source_dir, folder)\n        if os.path.isdir(img_dir):",
+        "detail": "move_files",
+        "documentation": {}
+    },
+    {
+        "label": "PestCNN",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class PestCNN(nn.Module):\n    def __init__(self):\n        super(PestCNN, self).__init__()\n        self.conv1 = nn.Conv2d(3, 16, 3, padding=1)  # Input: 3 channels (RGB)\n        self.conv2 = nn.Conv2d(16, 32, 3, padding=1)\n        self.pool = nn.MaxPool2d(2, 2)\n        self.fc1 = nn.Linear(32 * 32 * 32, 128)  # Adjust based on 128x128 input\n        self.fc2 = nn.Linear(128, 2)  # 2 classes: no_pest, pest\n        self.relu = nn.ReLU()\n    def forward(self, x):",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "test_model",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def test_model(model_path, test_image_paths):\n    # Load the trained model\n    model = PestCNN()\n    model.load_state_dict(torch.load(model_path))\n    model.eval()\n    predictions = []\n    confidences = []\n    image_names = []\n    # Make predictions for all test images\n    with torch.no_grad():",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "plot_predictions",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def plot_predictions(image_names, predictions, confidences):\n    # Set style for better visualization\n    sns.set_style(\"whitegrid\")\n    # Map predictions to labels\n    labels = [\"No Pest\" if pred == 0 else \"Pest\" for pred in predictions]\n    # Create a bar plot\n    plt.figure(figsize=(12, 6))\n    bars = plt.bar(range(len(image_names)), confidences, color=['green' if pred == 0 else 'red' for pred in predictions])\n    plt.xticks(range(len(image_names)), image_names, rotation=45, ha=\"right\")\n    plt.xlabel(\"Image File\")",
+        "detail": "test",
+        "documentation": {}
+    }
+]

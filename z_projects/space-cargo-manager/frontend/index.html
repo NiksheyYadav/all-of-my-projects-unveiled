@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StellarSync</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+</head>
+<body>
+    <!-- New full-page background container -->
+    <div id="background-animation"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="OrbitPulse Logo">
+            <span>StellarSync</span>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/api/export/arrangement" download>Export Arrangement</a>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>MANAGE YOUR SPACE CARGO</h1>
+        <p>Efficiently Track and Organize Cargo with StellarSync</p>
+        <a href="#main-content" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Content Section -->
+    <section id="main-content" class="content">
+        <div class="intro glass-box">
+            <h2>OPTIMIZE YOUR SPACE MISSION</h2>
+            <p>Streamline cargo management with real-time tracking, waste management, and simulation tools for space missions.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <img src="assets/track.png" alt="Track Cargo">
+                <h3>Track Cargo</h3>
+                <p>Locate items in real-time with our advanced search and retrieval system.</p>
+            </div>
+            <div class="feature">
+                <img src="assets/waste.png" alt="Waste Management">
+                <h3>Manage Waste</h3>
+                <p>Identify and handle waste efficiently to optimize space and resources.</p>
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-section">
+                <h3>Search Item</h3>
+                <input type="text" id="itemId" placeholder="Enter Item ID">
+                <button onclick="searchItem()">Search</button>
+                <div id="result"></div>
+            </div>
+            <div class="form-section">
+                <h3>Retrieve Item</h3>
+                <input type="text" id="retrieveItemId" placeholder="Enter Item ID">
+                <input type="text" id="retrieveUserId" placeholder="Enter User ID">
+                <input type="text" id="retrieveTimestamp" placeholder="Enter Timestamp (YYYY-MM-DDTHH:MM:SS)">
+                <button onclick="retrieveItem()">Retrieve</button>
+                <div id="retrieveResult"></div>
+            </div>
+            <div class="form-section">
+                <h3>Import Items</h3>
+                <input type="file" id="itemsFile" accept=".csv">
+                <button onclick="importItems()">Import</button>
+                <div id="importItemsResult"></div>
+            </div>
+            <div class="form-section">
+                <h3>Import Containers</h3>
+                <input type="file" id="containersFile" accept=".csv">
+                <button onclick="importContainers()">Import</button>
+                <div id="importContainersResult"></div>
+            </div>
+            <div class="form-section">
+                <h3>Simulate Day</h3>
+                <input type="text" id="simulateDate" placeholder="Enter Date (YYYY-MM-DDTHH:MM:SS)">
+                <input type="text" id="simulateUserId" placeholder="Enter User ID">
+                <button onclick="simulateDay()">Simulate</button>
+                <div id="simulateResult"></div>
+            </div>
+            <div class="form-section">
+                <h3>View Logs</h3>
+                <button onclick="viewLogs()">View Logs</button>
+                <div id="logs"></div>
+            </div>
+            <div class="form-section" id="waste">
+                <h3>Manage Waste</h3>
+                <input type="text" id="wasteDate" placeholder="Enter Date (YYYY-MM-DD)">
+                <button onclick="identifyWaste()">Identify Waste</button>
+                <div id="wasteResult"></div>
+                
+                <h3>Return Plan</h3>
+                <input type="number" id="maxWeight" placeholder="Max Weight">
+                <select id="weightUnit">
+                    <option value="kg">kg</option>
+                    <option value="lbs">lbs</option>
+                </select>
+                <input type="text" id="undockingContainer" placeholder="Undocking Container ID">
+                <button onclick="generateReturnPlan()">Generate Plan</button>
+                <div id="returnPlanResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orbital Data Visualization -->
+    <section id="orbital-data" class="content">
+        <h2>Orbital Data Visualization</h2>
+        <div id="orbital-visualization"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 StellarSync. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Load the application script -->
+    <script src="script.js"></script>
+    <!-- New Three.js background script -->
+    <script src="earth-background.js"></script>
+</body>
+</html>

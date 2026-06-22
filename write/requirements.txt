@@ -1,0 +1,13 @@
+requests
+beautifulsoup4
+lxml
+markdown2
+pypdf2
+flask
+flask-cors
+google-generativeai
+python-docx
+markdown2
+reportlab
+
+Pillow

@@ -1,0 +1,82 @@
+# strategies/rule_based.py
+
+import pandas as pd
+import numpy as np
+import talib
+from typing import Dict
+
+class TechnicalIndicators:
+    def __init__(self, data: pd.DataFrame):
+        self.data = data
+        self.close = data['close'].values
+        self.high = data['high'].values
+        self.low = data['low'].values
+        self.volume = data['volume'].values
+        
+    def calculate_indicators(self) -> Dict:
+        """Calculate all technical indicators"""
+        indicators = {}
+
+        # Moving Averages
+        indicators['sma_20'] = talib.SMA(self.close, timeperiod=20)
+        indicators['ema_12'] = talib.EMA(self.close, timeperiod=12)
+        indicators['ema_26'] = talib.EMA(self.close, timeperiod=26)
+
+        # Momentum
+        indicators['rsi'] = talib.RSI(self.close, timeperiod=14)
+        indicators['macd'], indicators['macd_signal'], indicators['macd_hist'] = talib.MACD(self.close)
+
+        # Volatility
+        indicators['bb_upper'], indicators['bb_middle'], indicators['bb_lower'] = talib.BBANDS(self.close)
+        indicators['atr'] = talib.ATR(self.high, self.low, self.close, timeperiod=14)
+
+        # Volume
+        indicators['vwap'] = self.calculate_vwap()
+        indicators['volume_sma'] = talib.SMA(self.volume, timeperiod=20)
+
+        return indicators
+
+    def calculate_vwap(self) -> np.ndarray:
+        """Volume Weighted Average Price"""
+        typical_price = (self.high + self.low + self.close) / 3
+        vwap = np.cumsum(typical_price * self.volume) / np.cumsum(self.volume)
+        return vwap
+
+
+class RuleBasedStrategy:
+    def __init__(self, name: str):
+        self.name = name
+        self.signals = []
+        
+    def ema_crossover_strategy(self, indicators: Dict) -> str:
+        """EMA Crossover Strategy"""
+        ema_12 = indicators['ema_12'][-1]
+        ema_26 = indicators['ema_26'][-1]
+        ema_12_prev = indicators['ema_12'][-2]
+        ema_26_prev = indicators['ema_26'][-2]
+        
+        if ema_12 > ema_26 and ema_12_prev <= ema_26_prev:
+            return "BUY"
+        elif ema_12 < ema_26 and ema_12_prev >= ema_26_prev:
+            return "SELL"
+        return "HOLD"
+    
+    def rsi_divergence_strategy(self, indicators: Dict, price_data: pd.DataFrame) -> str:
+        """RSI Divergence Strategy"""
+        rsi = indicators['rsi'][-1]
+        
+        if rsi < 30:
+            return "BUY"
+        elif rsi > 70:
+            return "SELL"
+        return "HOLD"
+    
+    def vwap_strategy(self, indicators: Dict, current_price: float) -> str:
+        """VWAP-based Intraday Strategy"""
+        vwap = indicators['vwap'][-1]
+        
+        if current_price > vwap * 1.002:
+            return "BUY"
+        elif current_price < vwap * 0.998:
+            return "SELL"
+        return "HOLD"

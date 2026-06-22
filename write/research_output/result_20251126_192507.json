@@ -1,0 +1,90 @@
+{
+  "research_plan": {
+    "topic": "Artificial intelligence in healthcare",
+    "research_id": "20251126_192507",
+    "subtopics": [
+      "History and background of Artificial intelligence in healthcare",
+      "Current state of Artificial intelligence in healthcare",
+      "Key concepts and definitions in Artificial intelligence in healthcare",
+      "Major developments in Artificial intelligence in healthcare",
+      "Challenges and controversies in Artificial intelligence in healthcare",
+      "Future trends and predictions for Artificial intelligence in healthcare",
+      "Impact and implications of Artificial intelligence in healthcare",
+      "Case studies and examples of Artificial intelligence in healthcare"
+    ],
+    "research_questions": [
+      "What is Artificial intelligence in healthcare?",
+      "Why is Artificial intelligence in healthcare important?",
+      "How does Artificial intelligence in healthcare work?",
+      "What are the main benefits and drawbacks of Artificial intelligence in healthcare?",
+      "What are the latest developments in Artificial intelligence in healthcare?",
+      "Who are the key players/experts in Artificial intelligence in healthcare?"
+    ],
+    "keywords": [
+      "intelligence",
+      "Artificial intelligence in healthcare analysis",
+      "Artificial intelligence in healthcare study",
+      "Artificial intelligence in healthcare research",
+      "healthcare",
+      "artificial",
+      "Artificial intelligence in healthcare",
+      "in"
+    ],
+    "created_at": "2025-11-26T19:25:07.304077"
+  },
+  "sources_collected": 9,
+  "sources_used": 9,
+  "document_path": "research_output\\research_20251126_192507.md",
+  "synthesis": {
+    "topic": "Artificial intelligence in healthcare",
+    "sections": {
+      "History and background of Artificial intelligence in healthcare": {
+        "subtopic": "History and background of Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Current state of Artificial intelligence in healthcare": {
+        "subtopic": "Current state of Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Key concepts and definitions in Artificial intelligence in healthcare": {
+        "subtopic": "Key concepts and definitions in Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Major developments in Artificial intelligence in healthcare": {
+        "subtopic": "Major developments in Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Challenges and controversies in Artificial intelligence in healthcare": {
+        "subtopic": "Challenges and controversies in Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Future trends and predictions for Artificial intelligence in healthcare": {
+        "subtopic": "Future trends and predictions for Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Impact and implications of Artificial intelligence in healthcare": {
+        "subtopic": "Impact and implications of Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      },
+      "Case studies and examples of Artificial intelligence in healthcare": {
+        "subtopic": "Case studies and examples of Artificial intelligence in healthcare",
+        "content": [],
+        "sources": []
+      }
+    },
+    "key_findings": [
+      "Multiple sources confirm the significance of this topic",
+      "Recent research shows continued development in this area",
+      "Expert consensus supports current understanding",
+      "Emerging trends indicate future directions"
+    ],
+    "sources_used": 9
+  }
+}

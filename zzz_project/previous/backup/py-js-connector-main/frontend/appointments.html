@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - MedVision AI</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/logo.svg" alt="MedVision AI Logo">
+        <h1>MedVision AI</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="appointments.html" class="nav-item active">
+          <i class="fas fa-calendar"></i>
+          <span>Appointments</span>
+        </a>
+        <a href="results.html" class="nav-item">
+          <i class="fas fa-file-medical"></i>
+          <span>My Results</span>
+        </a>
+        <a href="history.html" class="nav-item">
+          <i class="fas fa-history"></i>
+          <span>Medical History</span>
+        </a>
+        <a href="upload.html" class="nav-item">
+          <i class="fas fa-upload"></i>
+          <span>Upload Images</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+      <div class="user-info">
+        <div class="user-avatar">J</div>
+        <div class="user-details">
+          <p class="user-name">John Doe</p>
+          <p class="user-email">patient@example.com</p>
+        </div>
+      </div>
+      <a href="#" class="logout-btn" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Log out</span>
+      </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Patient Portal</h2>
+        <div class="user-avatar">J</div>
+      </header>
+
+      <div class="content">
+        <section class="page-header">
+          <h1>Appointments</h1>
+          <p>View and manage your medical appointments</p>
+        </section>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="upcoming">Upcoming</button>
+          <button class="tab-btn" data-tab="past">Past</button>
+          <button class="tab-btn" data-tab="book">Book Appointment</button>
+        </div>
+
+        <div class="tab-content active" id="upcoming-tab">
+          <section class="appointments-section">
+            <h2>Upcoming Appointments</h2>
+            <p>Your scheduled medical appointments</p>
+
+            <div class="appointments-list" id="upcomingAppointmentsList">
+              <!-- Appointment items will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="past-tab">
+          <section class="appointments-section">
+            <h2>Past Appointments</h2>
+            <p>Your previous medical appointments</p>
+
+            <div class="appointments-list" id="pastAppointmentsList">
+              <!-- Past appointment items will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-content" id="book-tab">
+          <section class="book-appointment-section">
+            <h2>Book a New Appointment</h2>
+            <p>Schedule a new medical appointment</p>
+
+            <form id="bookAppointmentForm" class="appointment-form">
+              <div class="form-group">
+                <label for="appointmentType">Appointment Type</label>
+                <select id="appointmentType" name="appointmentType" required>
+                  <option value="">Select appointment type</option>
+                  <option value="general">General Checkup</option>
+                  <option value="radiology">Radiology</option>
+                  <option value="cardiology">Cardiology</option>
+                  <option value="neurology">Neurology</option>
+                  <option value="orthopedics">Orthopedics</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="doctor">Doctor</label>
+                <select id="doctor" name="doctor" required>
+                  <option value="">Select doctor</option>
+                  <option value="dr-jane-smith">Dr. Jane Smith</option>
+                  <option value="dr-john-doe">Dr. John Doe</option>
+                  <option value="dr-sarah-johnson">Dr. Sarah Johnson</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="appointmentDate">Date</label>
+                  <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="appointmentTime">Time</label>
+                  <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Notes (Optional)</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Add any additional information"></textarea>
+              </div>
+
+              <button type="submit" class="primary-btn">Book Appointment</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Appointment Template -->
+  <template id="appointmentTemplate">
+    <div class="appointment-item">
+      <div class="appointment-date">
+        <div class="date-number"></div>
+        <div class="date-month"></div>
+        <div class="date-time"></div>
+      </div>
+      <div class="appointment-details">
+        <h3 class="appointment-type"></h3>
+        <p class="appointment-description"></p>
+        <div class="appointment-info">
+          <div class="info-item">
+            <i class="fas fa-user-md"></i>
+            <span class="doctor-name"></span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="location"></span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <span class="duration"></span>
+          </div>
+        </div>
+        <div class="appointment-actions">
+          <button class="secondary-btn reschedule-btn">Reschedule</button>
+          <button class="danger-btn cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Scripts -->
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/appointments.js"></script>
+</body>
+</html>
+

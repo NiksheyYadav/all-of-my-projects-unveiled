@@ -1,0 +1,27 @@
+Epoch 1/10
+WARNING:tensorflow:From C:\Users\IQBAL SINGH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\IQBAL SINGH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+393/393 [==============================] - 1755s 4s/step - loss: 0.0514 - accuracy: 0.9898 - val_loss: 0.0463 - val_accuracy: 0.9891
+Epoch 2/10
+393/393 [==============================] - 1773s 5s/step - loss: 0.0410 - accuracy: 0.9899 - val_loss: 0.0411 - val_accuracy: 0.9891
+Epoch 3/10
+393/393 [==============================] - 1778s 5s/step - loss: 0.0413 - accuracy: 0.9899 - val_loss: 0.0405 - val_accuracy: 0.9891
+Epoch 4/10
+393/393 [==============================] - 1788s 5s/step - loss: 0.0403 - accuracy: 0.9899 - val_loss: 0.0471 - val_accuracy: 0.9891
+Epoch 5/10
+393/393 [==============================] - 1789s 5s/step - loss: 0.0399 - accuracy: 0.9899 - val_loss: 0.0409 - val_accuracy: 0.9891
+Epoch 6/10
+393/393 [==============================] - 1804s 5s/step - loss: 0.0397 - accuracy: 0.9898 - val_loss: 0.0416 - val_accuracy: 0.9891
+Epoch 7/10
+393/393 [==============================] - 1808s 5s/step - loss: 0.0385 - accuracy: 0.9899 - val_loss: 0.0386 - val_accuracy: 0.9891
+Epoch 8/10
+393/393 [==============================] - 1790s 5s/step - loss: 0.0384 - accuracy: 0.9899 - val_loss: 0.0387 - val_accuracy: 0.9891
+Epoch 9/10
+393/393 [==============================] - 1788s 5s/step - loss: 0.0385 - accuracy: 0.9899 - val_loss: 0.0384 - val_accuracy: 0.9893
+Epoch 10/10
+393/393 [==============================] - 1753s 4s/step - loss: 0.0380 - accuracy: 0.9898 - val_loss: 0.0378 - val_accuracy: 0.9891
+C:\Users\IQBAL SINGH\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\keras\src\engine\training.py:3103: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
+  saving_api.save_model(
+Segmentation Model Trained and Saved Successfully!

@@ -1,0 +1,45 @@
+slvncljnjsfjflsdljlxjljs
+hello hello hey hello 123 123 123
+
+
+logo
+Skip Navigation Links
+Academic 
+Examination 
+Placements 
+Hostel 
+Lms 
+Administration 
+FAQs
+User Image 
+Student Related
+Exam Registration NEW
+Exam Registration NEW
+Student Name NIKSHEY YADAV
+RRN No 231302221
+Semester/Trimester IV
+Degree / Branch Bachelor of Technology / Computer Science and Engineering.
+Scheme Bachelor of Technology-Computer Science and Engineering-2023-2024-Computer Science and Engineering Department (CSED)-Semester-[1302]
+Session Even 2024-25
+Is Processing Fee 0
+Is Certificate Fee 0
+Subjects Fee 0.00
+Late Fee Late Fee From - 02/05/2025 500.00
+Total Fee 500.00
+Paid Fee 
+Courses List
+ All	COURSE CODE	COURSE NAME	CREDIT	COURSE TYPE	EXAM TYPE
+	130204111	Database Management Systems	2.00	Theory	REGULAR
+	130204112	Database Management Systems Lab	2.00	Practical	REGULAR
+	130204113	Design and Analysis of Algorithms	2.00	Theory	REGULAR
+	130204114	Design and Analysis of Algorithm Lab	2.00	Practical	REGULAR
+	130204115	Object Oriented Programming using Java	2.00	Theory	REGULAR
+	130204116	Object Oriented Programming using Java Lab	2.00	Practical	REGULAR
+	130204117	SEC-II (Embeded system development)	2.00	Practical	REGULAR
+	130204120	AI in Healthcare	3.00	Theory	REGULAR
+	130204129	Data Analysis using Python	2.00	Theory	REGULAR
+	130204130	Data Analysis using Python lab	2.00	Practical	REGULAR
+	AECC01002	Environmental Science	2.00	Theory	REGULAR
+	VASE02046	Statistical Quality Control & Reliability	2.00	Theory	REGULAR
+  
+© 2025 MasterSoft. All Rights Reserved.

@@ -6,6 +6,10 @@ param(
     [string]$Tag = "folder-backup-2026-05-23",
     [int]$ChunkMB = 1800,
     [string]$GhExe = "C:\Program Files\GitHub CLI\gh.exe",
+    [int]$UploadRetries = 5,
+    [int]$RetryDelaySeconds = 20,
+    [switch]$UseCurlUpload,
+    [switch]$ResumeExisting,
     [switch]$ExcludeGenerated,
     [switch]$DryRun
 )
@@ -24,7 +28,11 @@ function New-SafeName {
     $safe = $Value -replace "^[A-Za-z]:\\", ""
     $safe = $safe -replace "[\\/]+", "__"
     $safe = $safe -replace "[^A-Za-z0-9._-]", "_"
-    return $safe.Trim("_")
+    $safe = $safe.Trim("_")
+    if ($safe.StartsWith(".")) {
+        $safe = "default" + $safe
+    }
+    return $safe
 }
 
 function Ensure-Release {
@@ -50,12 +58,156 @@ function Ensure-Release {
     }
 }
 
+function Get-RepoParts {
+    param([string]$Repo)
+    $parts = $Repo.Split("/", 2)
+    if ($parts.Count -ne 2) {
+        throw "Repo must be in OWNER/NAME format: $Repo"
+    }
+    return @{ Owner = $parts[0]; Name = $parts[1] }
+}
+
+function Get-GitHubToken {
+    param([string]$GhExe)
+    if ($script:CachedGitHubToken) {
+        return $script:CachedGitHubToken
+    }
+
+    $token = (& $GhExe auth token).Trim()
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($token)) {
+        throw "Could not read GitHub token from gh auth token"
+    }
+
+    $script:CachedGitHubToken = $token
+    return $script:CachedGitHubToken
+}
+
+function New-CurlConfigFile {
+    param([string]$Token)
+    $path = [System.IO.Path]::GetTempFileName()
+    @(
+        'header = "Accept: application/vnd.github+json"',
+        ('header = "Authorization: Bearer ' + $Token + '"'),
+        'header = "X-GitHub-Api-Version: 2022-11-28"'
+    ) | Set-Content -LiteralPath $path -Encoding ASCII
+    return $path
+}
+
+function Invoke-GitHubCurlJson {
+    param(
+        [string]$Url,
+        [string]$Method = "GET",
+        [string]$GhExe
+    )
+
+    $token = Get-GitHubToken -GhExe $GhExe
+    $config = New-CurlConfigFile -Token $token
+    $output = [System.IO.Path]::GetTempFileName()
+    try {
+        & curl.exe -4 -fsSL --retry 3 --retry-delay 5 --retry-all-errors --connect-timeout 30 -X $Method --config $config -o $output $Url
+        if ($LASTEXITCODE -ne 0) {
+            throw "curl request failed for $Url"
+        }
+        $raw = Get-Content -LiteralPath $output -Raw
+        if ([string]::IsNullOrWhiteSpace($raw)) {
+            return $null
+        }
+        return ($raw | ConvertFrom-Json)
+    } finally {
+        Remove-Item -LiteralPath $config,$output -Force -ErrorAction SilentlyContinue
+    }
+}
+
+function Get-ReleaseIdCurl {
+    param([string]$Repo, [string]$Tag, [string]$GhExe)
+    if ($script:CachedReleaseId) {
+        return $script:CachedReleaseId
+    }
+
+    $parts = Get-RepoParts -Repo $Repo
+    $escapedTag = [System.Uri]::EscapeDataString($Tag)
+    $url = "https://api.github.com/repos/$($parts.Owner)/$($parts.Name)/releases/tags/$escapedTag"
+    $release = Invoke-GitHubCurlJson -Url $url -GhExe $GhExe
+    if (-not $release -or -not $release.id) {
+        throw "Could not get release id for $Repo tag $Tag"
+    }
+
+    $script:CachedReleaseId = [string]$release.id
+    return $script:CachedReleaseId
+}
+
+function Find-ReleaseAssetCurl {
+    param([string]$Repo, [string]$ReleaseId, [string]$AssetName, [string]$GhExe)
+    $parts = Get-RepoParts -Repo $Repo
+    for ($page = 1; $page -le 20; $page++) {
+        $url = "https://api.github.com/repos/$($parts.Owner)/$($parts.Name)/releases/$ReleaseId/assets?per_page=100&page=$page"
+        $assets = Invoke-GitHubCurlJson -Url $url -GhExe $GhExe
+        if (-not $assets -or $assets.Count -eq 0) {
+            return $null
+        }
+
+        foreach ($asset in $assets) {
+            if ($asset.name -eq $AssetName) {
+                return $asset
+            }
+        }
+    }
+    return $null
+}
+
+function Upload-AssetWithCurl {
+    param(
+        [string]$Repo,
+        [string]$Tag,
+        [string]$GhExe,
+        [string]$FilePath,
+        [string]$LocalSha256,
+        [switch]$ResumeExisting
+    )
+
+    $parts = Get-RepoParts -Repo $Repo
+    $releaseId = Get-ReleaseIdCurl -Repo $Repo -Tag $Tag -GhExe $GhExe
+    $assetName = Split-Path -Leaf $FilePath
+    $existing = Find-ReleaseAssetCurl -Repo $Repo -ReleaseId $releaseId -AssetName $assetName -GhExe $GhExe
+
+    if ($ResumeExisting -and $existing -and $existing.digest -and $LocalSha256) {
+        if ($existing.digest.ToLowerInvariant() -eq ("sha256:" + $LocalSha256.ToLowerInvariant())) {
+            Write-Host "Verified existing asset, skipping upload: $assetName"
+            return
+        }
+    }
+
+    if ($existing -and $existing.id) {
+        $deleteUrl = "https://api.github.com/repos/$($parts.Owner)/$($parts.Name)/releases/assets/$($existing.id)"
+        [void](Invoke-GitHubCurlJson -Url $deleteUrl -Method "DELETE" -GhExe $GhExe)
+    }
+
+    $token = Get-GitHubToken -GhExe $GhExe
+    $config = New-CurlConfigFile -Token $token
+    $response = [System.IO.Path]::GetTempFileName()
+    try {
+        $escapedAssetName = [System.Uri]::EscapeDataString($assetName)
+        $uploadUrl = "https://uploads.github.com/repos/$($parts.Owner)/$($parts.Name)/releases/$releaseId/assets?name=$escapedAssetName"
+        & curl.exe -4 -sS --fail-with-body --retry 5 --retry-delay 10 --retry-all-errors --connect-timeout 30 --max-time 1200 -X POST --config $config -H "Content-Type: application/octet-stream" --data-binary "@$FilePath" -o $response $uploadUrl
+        if ($LASTEXITCODE -ne 0) {
+            throw "curl upload failed for $FilePath"
+        }
+    } finally {
+        Remove-Item -LiteralPath $config,$response -Force -ErrorAction SilentlyContinue
+    }
+}
+
 function Upload-Asset {
     param(
         [string]$Repo,
         [string]$Tag,
         [string]$GhExe,
         [string]$FilePath,
+        [int]$UploadRetries,
+        [int]$RetryDelaySeconds,
+        [switch]$UseCurlUpload,
+        [string]$LocalSha256,
+        [switch]$ResumeExisting,
         [switch]$DryRun
     )
 
@@ -64,9 +216,24 @@ function Upload-Asset {
         return
     }
 
-    & $GhExe release upload $Tag $FilePath --repo $Repo --clobber
-    if ($LASTEXITCODE -ne 0) {
-        throw "Failed to upload $FilePath"
+    for ($attempt = 1; $attempt -le $UploadRetries; $attempt++) {
+        try {
+            if ($UseCurlUpload) {
+                Upload-AssetWithCurl -Repo $Repo -Tag $Tag -GhExe $GhExe -FilePath $FilePath -LocalSha256 $LocalSha256 -ResumeExisting:$ResumeExisting
+            } else {
+                & $GhExe release upload $Tag $FilePath --repo $Repo --clobber
+                if ($LASTEXITCODE -ne 0) {
+                    throw "gh release upload failed for $FilePath"
+                }
+            }
+            return
+        } catch {
+            if ($attempt -ge $UploadRetries) {
+                throw "Failed to upload $FilePath after $UploadRetries attempt(s): $($_.Exception.Message)"
+            }
+            Write-Warning "Upload failed for $FilePath. Retrying attempt $($attempt + 1)/$UploadRetries in $RetryDelaySeconds seconds."
+            Start-Sleep -Seconds $RetryDelaySeconds
+        }
     }
 }
 
@@ -82,8 +249,27 @@ function Join-ProcessArguments {
     return ($quoted -join " ")
 }
 
+function Get-Sha256Hex {
+    param([string]$FilePath)
+    $stream = [System.IO.File]::OpenRead($FilePath)
+    try {
+        $sha256 = [System.Security.Cryptography.SHA256]::Create()
+        try {
+            $bytes = $sha256.ComputeHash($stream)
+            return (($bytes | ForEach-Object { $_.ToString("x2") }) -join "")
+        } finally {
+            $sha256.Dispose()
+        }
+    } finally {
+        $stream.Dispose()
+    }
+}
+
 Assert-Tool -ToolPath "tar.exe" -Name "tar"
 Assert-Tool -ToolPath $GhExe -Name "GitHub CLI"
+if ($UseCurlUpload) {
+    Assert-Tool -ToolPath "curl.exe" -Name "curl"
+}
 
 $resolved = (Resolve-Path -LiteralPath $Path).Path
 if (-not (Test-Path -LiteralPath $resolved -PathType Container)) {
@@ -128,6 +314,10 @@ function Close-And-UploadChunk {
         [string]$Repo,
         [string]$Tag,
         [string]$GhExe,
+        [int]$UploadRetries,
+        [int]$RetryDelaySeconds,
+        [switch]$UseCurlUpload,
+        [switch]$ResumeExisting,
         [switch]$DryRun
     )
 
@@ -137,11 +327,11 @@ function Close-And-UploadChunk {
 
     $ChunkStream.Flush()
     $ChunkStream.Dispose()
-    $hash = (Get-FileHash -LiteralPath $ChunkPath -Algorithm SHA256).Hash.ToLowerInvariant()
+    $hash = Get-Sha256Hex -FilePath $ChunkPath
     $size = (Get-Item -LiteralPath $ChunkPath).Length
     $line = "$hash  $(Split-Path -Leaf $ChunkPath)  $size"
     Add-Content -LiteralPath $ManifestPath -Value $line
-    Upload-Asset -Repo $Repo -Tag $Tag -GhExe $GhExe -FilePath $ChunkPath -DryRun:$DryRun
+    Upload-Asset -Repo $Repo -Tag $Tag -GhExe $GhExe -FilePath $ChunkPath -UploadRetries $UploadRetries -RetryDelaySeconds $RetryDelaySeconds -UseCurlUpload:$UseCurlUpload -LocalSha256 $hash -ResumeExisting:$ResumeExisting -DryRun:$DryRun
     Remove-Item -LiteralPath $ChunkPath -Force
 }
 
@@ -163,6 +353,8 @@ try {
             "dist",
             "build",
             "coverage",
+            "skills",
+            ".claude/skills",
             "logs",
             "tmp",
             "temp",
@@ -203,7 +395,7 @@ try {
             $currentBytes += $toWrite
 
             if ($currentBytes -ge $chunkBytes) {
-                Close-And-UploadChunk -ChunkPath $chunkPath -ChunkStream $chunkStream -ManifestPath $manifestPath -Repo $Repo -Tag $Tag -GhExe $GhExe -DryRun:$DryRun
+                Close-And-UploadChunk -ChunkPath $chunkPath -ChunkStream $chunkStream -ManifestPath $manifestPath -Repo $Repo -Tag $Tag -GhExe $GhExe -UploadRetries $UploadRetries -RetryDelaySeconds $RetryDelaySeconds -UseCurlUpload:$UseCurlUpload -ResumeExisting:$ResumeExisting -DryRun:$DryRun
                 $uploaded += (Split-Path -Leaf $chunkPath)
                 $part++
                 $currentBytes = 0
@@ -221,7 +413,7 @@ try {
     }
 
     if ($currentBytes -gt 0) {
-        Close-And-UploadChunk -ChunkPath $chunkPath -ChunkStream $chunkStream -ManifestPath $manifestPath -Repo $Repo -Tag $Tag -GhExe $GhExe -DryRun:$DryRun
+        Close-And-UploadChunk -ChunkPath $chunkPath -ChunkStream $chunkStream -ManifestPath $manifestPath -Repo $Repo -Tag $Tag -GhExe $GhExe -UploadRetries $UploadRetries -RetryDelaySeconds $RetryDelaySeconds -UseCurlUpload:$UseCurlUpload -ResumeExisting:$ResumeExisting -DryRun:$DryRun
         $uploaded += (Split-Path -Leaf $chunkPath)
         $chunkStream = $null
         $chunkPath = $null
@@ -236,7 +428,8 @@ try {
 
     Add-Content -LiteralPath $manifestPath -Value ""
     Add-Content -LiteralPath $manifestPath -Value "restore_command=copy /b $safeName.tar.part-* $safeName.tar && tar -xf $safeName.tar"
-    Upload-Asset -Repo $Repo -Tag $Tag -GhExe $GhExe -FilePath $manifestPath -DryRun:$DryRun
+    $manifestHash = Get-Sha256Hex -FilePath $manifestPath
+    Upload-Asset -Repo $Repo -Tag $Tag -GhExe $GhExe -FilePath $manifestPath -UploadRetries $UploadRetries -RetryDelaySeconds $RetryDelaySeconds -UseCurlUpload:$UseCurlUpload -LocalSha256 $manifestHash -ResumeExisting:$ResumeExisting -DryRun:$DryRun
 
     Write-Host "Uploaded $($uploaded.Count) chunk(s) plus manifest for $resolved"
 } finally {

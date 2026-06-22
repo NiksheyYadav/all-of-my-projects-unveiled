@@ -1,0 +1,29 @@
+Image Path,Prediction,Confidence
+C:\z_projects\diagnosis\mri\dataset\classification\test\meningioma\meningioma_252.jpg,Meningioma,73.32%
+C:\z_projects\diagnosis\mri\dataset\classification\test\meningioma\meningioma_593_aug_2.jpg,Glioma,43.98%
+C:\z_projects\diagnosis\mri\dataset\classification\test\meningioma\meningioma_434.jpg,Meningioma,62.21%
+C:\z_projects\diagnosis\mri\dataset\classification\test\notumor\notumor_221.jpg,Glioma,42.69%
+C:\z_projects\diagnosis\mri\dataset\classification\test\notumor\notumor_187.jpg,No Tumor,99.40%
+C:\z_projects\diagnosis\mri\dataset\classification\test\notumor\notumor_1577.jpg,No Tumor,99.95%
+C:\z_projects\diagnosis\mri\dataset\classification\test\pituitary\pituitary_16.jpg,Pituitary,81.75%
+C:\z_projects\diagnosis\mri\dataset\classification\test\pituitary\pituitary_190_aug_1.jpg,Pituitary,88.61%
+C:\z_projects\diagnosis\mri\dataset\classification\test\pituitary\pituitary_413.jpg,Pituitary,88.66%
+C:\z_projects\diagnosis\mri\dataset\classification\test\pituitary\pituitary_1252.jpg,Pituitary,90.82%
+C:\z_projects\diagnosis\mri\dataset\classification\training\meningioma\meningioma_265.jpg,Meningioma,46.74%
+C:\z_projects\diagnosis\mri\dataset\classification\training\meningioma\meningioma_353.jpg,Pituitary,37.86%
+C:\z_projects\diagnosis\mri\dataset\classification\training\meningioma\meningioma_663.jpg,No Tumor,87.21%
+C:\z_projects\diagnosis\mri\dataset\classification\test\notumor\notumor_221.jpg,Glioma,54.96%
+C:\z_projects\diagnosis\mri\dataset\classification\test\meningioma\meningioma_1223.jpg,Meningioma,99.73%
+mri\dataset\classification\test\meningioma\meningioma_912.jpg,Meningioma,55.61%
+C:\z_projects\diagnosis\mri\dataset\classification\test\meningioma\meningioma_988.jpg,Meningioma,99.63%
+C:\Users\IQBAL SINGH\Downloads\OIP.jpg,No Tumor,60.43%
+C:\z_projects\diagnosis\mri\dataset\classification\test\notumor\notumor_932.jpg,No Tumor,99.92%
+C:\z_projects\diagnosis\mri\dataset\classification\test\notumor\notumor_221.jpg,No Tumor,100.00%
+C:\z_projects\diagnosis\mri\dataset\classification\training\meningioma\meningioma_353.jpg,Meningioma,96.77%
+C:\z_projects\diagnosis\xray\dataset\test\fractured\1-rotated2-rotated2.jpg,Fracture,62.44%
+C:\z_projects\diagnosis\xray\dataset\test\fractured\3-rotated1-rotated3-rotated1 - Copy (1).jpg,Fracture,63.11%
+C:\z_projects\diagnosis\xray\dataset\test\fractured\4-rotated2-rotated3-rotated3 - Copy.jpg,Fracture,64.49%
+C:\z_projects\diagnosis\xray\dataset\test\not fractured\2-rotated2-rotated1.jpg,Fracture,63.01%
+C:\z_projects\diagnosis\xray\dataset\test\fractured\1-rotated2-rotated2-rotated3 - Copy.jpg,Fracture,64.07%
+C:\z_projects\diagnosis\xray\dataset\test\not fractured\1-rotated1-rotated2-rotated1-rotated1 (1).jpg,Fracture,68.59%
+C:\z_projects\diagnosis\xray\dataset\test\fractured\4-rotated2.jpg,Fracture,65.81%
