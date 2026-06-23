@@ -29,6 +29,13 @@ Repository: `NiksheyYadav/all-of-my-projects-unveiled`
 Visibility: private, so research data, experiments, and accidental local files
 are not exposed publicly.
 
+Release backup tag: `folder-backup-2026-05-23`
+
+Backup helper scripts:
+
+- `tools/upload-folder-release.ps1`
+- `tools/upload-standalone-folders.ps1`
+
 ## Restore Notes
 
 Clone this repository for the index and source files. Download matching GitHub

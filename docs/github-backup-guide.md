@@ -33,6 +33,13 @@ Sources:
 5. Verify by cloning/downloading to a separate location.
 6. Only after verification, remove local folders to reclaim disk space.
 
+Current release tag for archived folder chunks: `folder-backup-2026-05-23`
+
+Helper scripts used in this workspace:
+
+- `tools/upload-folder-release.ps1`
+- `tools/upload-standalone-folders.ps1`
+
 ## Restore Release Chunks
 
 If a folder was uploaded as chunked tar parts:
